@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://delphuy.github.io</id>
+    <title>辉哥哥</title>
+    <updated>2020-03-08T02:45:43.312Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://delphuy.github.io"/>
+    <link rel="self" href="https://delphuy.github.io/atom.xml"/>
+    <subtitle>无限意蕴枯欲尽，悠悠闲处作奇峰</subtitle>
+    <logo>https://delphuy.github.io/images/avatar.png</logo>
+    <icon>https://delphuy.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, 辉哥哥</rights>
+</feed>
