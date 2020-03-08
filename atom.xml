@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://delphuy.github.io</id>
+    <id>https://huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-08T12:32:04.947Z</updated>
+    <updated>2020-03-08T12:34:08.948Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://delphuy.github.io"/>
-    <link rel="self" href="https://delphuy.github.io/atom.xml"/>
+    <link rel="alternate" href="https://huigg.xyz"/>
+    <link rel="self" href="https://huigg.xyz/atom.xml"/>
     <subtitle>无限意蕴枯欲尽，悠悠闲处作奇峰</subtitle>
-    <logo>https://delphuy.github.io/images/avatar.png</logo>
-    <icon>https://delphuy.github.io/favicon.ico</icon>
+    <logo>https://huigg.xyz/images/avatar.png</logo>
+    <icon>https://huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
     <entry>
         <title type="html"><![CDATA[2020年春 随笔_02]]></title>
-        <id>https://delphuy.github.io/post/2020-nian-chun-sui-bi-_02/</id>
-        <link href="https://delphuy.github.io/post/2020-nian-chun-sui-bi-_02/">
+        <id>https://huigg.xyz/post/2020-nian-chun-sui-bi-_02/</id>
+        <link href="https://huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
         </link>
         <updated>2020-03-08T03:08:11.000Z</updated>
         <summary type="html"><![CDATA[<p>天气  晴<br>
@@ -41,8 +41,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[ 2020年春  随笔_01]]></title>
-        <id>https://delphuy.github.io/post/2020-nian-chun-sui-bi-_01/</id>
-        <link href="https://delphuy.github.io/post/2020-nian-chun-sui-bi-_01/">
+        <id>https://huigg.xyz/post/2020-nian-chun-sui-bi-_01/</id>
+        <link href="https://huigg.xyz/post/2020-nian-chun-sui-bi-_01/">
         </link>
         <updated>2020-03-08T03:06:52.000Z</updated>
         <summary type="html"><![CDATA[<p>1月22日抵汉，当夜封城。</p>
@@ -58,8 +58,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[安家了]]></title>
-        <id>https://delphuy.github.io/post/an-jia-liao/</id>
-        <link href="https://delphuy.github.io/post/an-jia-liao/">
+        <id>https://huigg.xyz/post/an-jia-liao/</id>
+        <link href="https://huigg.xyz/post/an-jia-liao/">
         </link>
         <updated>2020-03-08T03:04:58.000Z</updated>
         <summary type="html"><![CDATA[<p>终于上线了。<br>
