@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    辉哥哥
+    安家了 | 辉哥哥
 </title>
 <link rel="shortcut icon" href="https://delphuy.github.io/favicon.ico?v=1583636935029">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -19,6 +19,14 @@
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -93,21 +101,79 @@
     });
 </script>
 
-            <div class="tags-container main-container">
-                <div class="tags-group">
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            安家了
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2020-03-08</time>
+                            
+                                <a href="https://delphuy.github.io/tag/8wQcBhLah/" class="post-tag i-tag
+                            i-tag-primary">
+                            #GitHub
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://delphuy.github.io/post-images/an-jia-liao.jpg')"></div>
+                            
+                                <div class="post-content">
+                                    <p>终于上线了。<br>
+折腾了2个多小时，GitHub还是不行，不是不稳定，就是打不开。<br>
+还是切换到码云，但此码云非彼马云，不厚道。</p>
+<!-- more -->
+<p>绑定一个域名也要99大洋一年。</p>
+<p>像个扭扭捏捏的小媳妇。</p>
+
+                                </div>
+                    </article>
+                    <!--  -->
                     
-                        <a class="tags-tag i-tag
-                            i-tag-other_3" href="https://delphuy.github.io/tag/VF8mnDrwT/">
-                            随笔
-                        </a>
-                        
-                        <a class="tags-tag i-tag
-                            i-tag-other_3" href="https://delphuy.github.io/tag/8wQcBhLah/">
-                            GitHub
-                        </a>
-                        
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
                 </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                                <!-- id-card -->
+                                
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://delphuy.github.io/images/avatar.png?v=1583636935029)">
+        </div>
+        <h1 class="id_card-title">
+            辉哥哥
+        </h1>
+        <h2 class="id_card-description">
+            无限意蕴枯欲尽，悠悠闲处作奇峰
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+                                    
+
+                </div>
+
+
+
+
             </div>
+
 
             <div class="site-footer">
   Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
@@ -118,7 +184,35 @@
   hljs.initHighlightingOnLoad()
 </script>
 
+
     </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '1952fc525e02a27f710e',
+            clientSecret: '915095c0b96f0ac3ba5369a994e963e51bc32b51',
+            repo: 'master',
+            owner: 'delphuy',
+            admin: ['delphuy'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>
