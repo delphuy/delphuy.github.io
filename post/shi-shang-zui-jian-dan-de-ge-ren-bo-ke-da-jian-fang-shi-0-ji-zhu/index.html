@@ -7,7 +7,7 @@
 <title>
     史上最简单的个人博客搭建方式(0技术) | 辉哥哥
 </title>
-<link rel="shortcut icon" href="https://huigg.xyz/favicon.ico?v=1583805185160">
+<link rel="shortcut icon" href="https://huigg.xyz/favicon.ico?v=1583805668322">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -35,7 +35,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://huigg.xyz">
-                <img class="avatar" src="https://huigg.xyz/images/avatar.png?v=1583805185160" alt="">
+                <img class="avatar" src="https://huigg.xyz/images/avatar.png?v=1583805668322" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -112,7 +112,7 @@
                             <time class="post-time">2020-03-10</time>
                             
                                 <a href="https://huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-">
+                            i-tag-other_4">
                             #GitHub
                         </a>
                                 
@@ -132,13 +132,12 @@
 <p>后来又改用hexo+GitHub的方案，这次非常顺利，但是hexo -d 的命令有一个非常致命的问题，他只会 推送 _post，其他的改动不管(比如我动不动，可能会改点主题的布局、内容之类的)，也不知道是我研究的不对还是怎么的。</p>
 <p>再次抛弃了hexo -d 的命令，打算直接用 Git  push 的命令了。</p>
 <p>某天刷头条，头条居然给我推送了一篇 搭建静态博客的文章(我始终怀疑头条是在疯狂的搜集个人隐私)，提到了一个神器 Gridea，我一看就喜欢上了他，对于我这种懒人没有比这个更好的东西了，难怪人说懒惰推进社会进步。</p>
-<h4 id="事前准备">事前准备</h4>
-<ul>
-<li>GitHub 账户，先注册一个GitHub的账户，如何注册就不说了：<a href="https://note.youdao.com/">github.com</a></li>
-<li>下载Gridea 神器并安装：<a href="https://note.youdao.com/">gridea</a></li>
-</ul>
+<h2 id="事前准备"><strong>事前准备</strong></h2>
+<pre><code>1.  GitHub 账户，先注册一个GitHub的账户，如何注册就不说了：[*github.com*](https://note.youdao.com/) 
+2.  下载Gridea 神器并安装：[*gridea*](https://note.youdao.com/)
+</code></pre>
 <p>万事大吉，准备开工。</p>
-<h5 id="一-github设定">一. GitHub设定</h5>
+<h3 id="一-github设定"><strong>一. GitHub设定</strong></h3>
 <p><strong>1. 获取token</strong></p>
 <p>登录 GitHub 之后，创建一个 Token，勾选上 repo 的相关权限即可。生成之后记得把 Token 复制到你的本地，因为一旦关闭网页将不能再看到它。</p>
 <p>点击这里可以进入 创建token的页面：<a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew">创建token</a></p>
@@ -150,20 +149,18 @@
 接下来就是创建仓库，存放构建后的网站文件。创建一个公开仓库，名为 用户名.github.io。（将用户名替换为你的 GitHub 用户名）</p>
 <figure data-type="image" tabindex="3"><img src="https://huigg.xyz/post-images/1583804962652.png" alt="" loading="lazy"></figure>
 <p>离成功已经很近了！</p>
-<h5 id="二-gridea设定">二. Gridea设定</h5>
+<h3 id="二-gridea设定"><strong>二. Gridea设定</strong></h3>
 <p><strong>1. 远程连接设定</strong></p>
 <p>打开 Gridea 进行远程设置。按照下图的示例进行设置，然后点击「检测远程链接」，进行配置检查。</p>
 <figure data-type="image" tabindex="4"><img src="https://huigg.xyz/post-images/1583804996997.jpg" alt="" loading="lazy"></figure>
 <p>这一步就是设定Gridea这个工具与刚注册的GitHub账户、页面之间的连接，请按图上说明进行设定。</p>
 <p>设定完成后，点击最左侧的 【同步】按钮，将内容同步到GitHub，你的博客就创建成功了。可以点开</p>
-<blockquote>
-<p>https://***<mark>xxxx</mark>***.github.io  这个域名查看 ，其中的 <em><strong><mark>xxxx</mark></strong></em> 换成你的GitHub 用户名</p>
-</blockquote>
+<pre><code>https://***==xxxx==***.github.io  这个域名查看 ，其中的 ***==xxxx==*** 换成你的GitHub 用户名
+</code></pre>
 <p><strong>2. 主题设定</strong></p>
 <p>Gridea提供了许多的主题，可以下载到本机，本机主题和源码存储的目录应该是</p>
-<blockquote>
-<p>C:\Users\xxxx \Documents\Gridea\themes</p>
-</blockquote>
+<pre><code> C:\Users\xxxx \Documents\Gridea\themes 
+</code></pre>
 <p>其中的 <em><strong>xxxx</strong></em> 换成你的本机的用户名，或者从左下角，进入 Gridea 设置，</p>
 <figure data-type="image" tabindex="5"><img src="https://huigg.xyz/post-images/1583804969653.jpg" alt="" loading="lazy"></figure>
 <p>找到站点源文件路径</p>
@@ -202,18 +199,10 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li>
+<li><a href="#%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87"><strong>事前准备</strong></a>
 <ul>
-<li>
-<ul>
-<li><a href="#%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87">事前准备</a>
-<ul>
-<li><a href="#%E4%B8%80-github%E8%AE%BE%E5%AE%9A">一. GitHub设定</a></li>
-<li><a href="#%E4%BA%8C-gridea%E8%AE%BE%E5%AE%9A">二. Gridea设定</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a href="#%E4%B8%80-github%E8%AE%BE%E5%AE%9A"><strong>一. GitHub设定</strong></a></li>
+<li><a href="#%E4%BA%8C-gridea%E8%AE%BE%E5%AE%9A"><strong>二. Gridea设定</strong></a></li>
 </ul>
 </li>
 </ul>
