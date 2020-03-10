@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-09T01:56:03.928Z</updated>
+    <updated>2020-03-10T01:53:11.799Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://huigg.xyz"/>
     <link rel="self" href="https://huigg.xyz/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://huigg.xyz/images/avatar.png</logo>
     <icon>https://huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[史上最简单的个人博客搭建方式(0技术)]]></title>
+        <id>https://huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/</id>
+        <link href="https://huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">
+        </link>
+        <updated>2020-03-10T00:56:09.000Z</updated>
+        <summary type="html"><![CDATA[<p>本次春节号称史上最烂的春节。</p>
+<p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
+<p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
+<p>------ 扯远了。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本次春节号称史上最烂的春节。</p>
+<p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
+<p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
+<p>------ 扯远了。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020年春 随笔_02]]></title>
         <id>https://huigg.xyz/post/2020-nian-chun-sui-bi-_02/</id>
