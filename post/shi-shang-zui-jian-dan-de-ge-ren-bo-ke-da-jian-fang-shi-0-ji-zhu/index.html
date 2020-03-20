@@ -7,14 +7,14 @@
 <title>
     史上最简单的个人博客搭建方式(0技术) | 辉哥哥
 </title>
-<link rel="shortcut icon" href="https://huigg.xyz/favicon.ico?v=1584677921109">
+<link rel="shortcut icon" href="https://blog.huigg.xyz/favicon.ico?v=1584677967897">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://huigg.xyz/styles/main.css">
+<link rel="stylesheet" href="https://blog.huigg.xyz/styles/main.css">
 <!-- js -->
 <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
@@ -28,8 +28,8 @@
         <div class="header">
     <div class="nav">
         <div class="logo">
-            <a href="https://huigg.xyz">
-                <img class="avatar" src="https://huigg.xyz/images/avatar.png?v=1584677921109" alt="">
+            <a href="https://blog.huigg.xyz">
+                <img class="avatar" src="https://blog.huigg.xyz/images/avatar.png?v=1584677967897" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -105,14 +105,14 @@
                         <div class="post-info">
                             <time class="post-time">2020-03-10</time>
                             
-                                <a href="https://huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-other_2">
+                                <a href="https://blog.huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
+                            i-tag-primary">
                             #GitHub
                         </a>
                                 
                         </div>
                         
-                            <div class="post-feature-image" style="background-image: url('https://huigg.xyz/post-images/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu.jpg')"></div>
+                            <div class="post-feature-image" style="background-image: url('https://blog.huigg.xyz/post-images/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu.jpg')"></div>
                             
                                 <div class="post-content">
                                     <p>本次春节号称史上最烂的春节。</p>
@@ -139,18 +139,18 @@
 <p><strong>1. 获取token</strong></p>
 <p>登录 GitHub 之后，创建一个 Token，勾选上 repo 的相关权限即可。生成之后记得把 Token 复制到你的本地，因为一旦关闭网页将不能再看到它。</p>
 <p>点击这里可以进入 创建token的页面：<a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fsettings%2Ftokens%2Fnew">创建token</a></p>
-<figure data-type="image" tabindex="1"><img src="https://huigg.xyz/post-images/1583804915183.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://blog.huigg.xyz/post-images/1583804915183.png" alt="" loading="lazy"></figure>
 <p>勾选 repo相关的几个权限即可，完成后提交，可以得到一个 token的 字符串。</p>
-<figure data-type="image" tabindex="2"><img src="https://huigg.xyz/post-images/1583804956471.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://blog.huigg.xyz/post-images/1583804956471.png" alt="" loading="lazy"></figure>
 <p>将这个字符串，复制下来，存到本机的一个记事本。</p>
 <p><strong>2. 创建仓库</strong><br>
 接下来就是创建仓库，存放构建后的网站文件。创建一个公开仓库，名为 用户名.github.io。（将用户名替换为你的 GitHub 用户名）</p>
-<figure data-type="image" tabindex="3"><img src="https://huigg.xyz/post-images/1583804962652.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://blog.huigg.xyz/post-images/1583804962652.png" alt="" loading="lazy"></figure>
 <p>离成功已经很近了！</p>
 <h3 id="二-gridea设定"><strong>二. Gridea设定</strong></h3>
 <p><strong>1. 远程连接设定</strong></p>
 <p>打开 Gridea 进行远程设置。按照下图的示例进行设置，然后点击「检测远程链接」，进行配置检查。</p>
-<figure data-type="image" tabindex="4"><img src="https://huigg.xyz/post-images/1583804996997.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://blog.huigg.xyz/post-images/1583804996997.jpg" alt="" loading="lazy"></figure>
 <p>这一步就是设定Gridea这个工具与刚注册的GitHub账户、页面之间的连接，请按图上说明进行设定。</p>
 <p>设定完成后，点击最左侧的 【同步】按钮，将内容同步到GitHub，你的博客就创建成功了。可以点开</p>
 <blockquote>
@@ -162,9 +162,9 @@
 <p>C:\Users\xxxx \Documents\Gridea\themes</p>
 </blockquote>
 <p>其中的 <em><strong>xxxx</strong></em> 换成你的本机的用户名，或者从左下角，进入 Gridea 设置，</p>
-<figure data-type="image" tabindex="5"><img src="https://huigg.xyz/post-images/1583804969653.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://blog.huigg.xyz/post-images/1583804969653.jpg" alt="" loading="lazy"></figure>
 <p>找到站点源文件路径</p>
-<figure data-type="image" tabindex="6"><img src="https://huigg.xyz/post-images/1583805006491.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://blog.huigg.xyz/post-images/1583805006491.jpg" alt="" loading="lazy"></figure>
 <!-- more -->
 <p>所有下载的主题，都可以放到这里，然后重启Grid后就能看见。</p>
 <p><strong>3. 发布文章</strong></p>
@@ -176,7 +176,7 @@
                     
                         <div class="next-post">
                             <div class="next">下一篇</div>
-                            <a href="https://huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
+                            <a href="https://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
                                 <h3 class="post-title">
                                     2020年春 随笔_02
                                 </h3>
@@ -269,7 +269,7 @@
 
             <div class="site-footer">
   Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="https://huigg.xyz/atom.xml" target="_blank">RSS</a>
+  <a class="rss" href="https://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
