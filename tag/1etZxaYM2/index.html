@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    GitHub | 辉哥哥
+    局域网 | 辉哥哥
 </title>
 <link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1584967080592">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -99,75 +99,59 @@
                     
     <div class="i-card">
         <b>标签：#
-        GitHub</b>
+        局域网</b>
     </div>
     
         
             <article class="post i-card">
                 <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">
-                        史上最简单的个人博客搭建方式(0技术)
+                    <a href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/">
+                        如何查询局域网 IP 对应的用户是谁？
                     </a>
                 </h2>
                 <div class="post-info">
-                    <time class="post-time">2020-03-10</time>
+                    <time class="post-time">2020-03-20</time>
                     
-                        <a href="http://blog.huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-success">
-            #GitHub
+                        <a href="http://blog.huigg.xyz/tag/1etZxaYM2/" class="post-tag i-tag
+                            i-tag-other_3">
+            #局域网
+        </a>
+                        
+                        <a href="http://blog.huigg.xyz/tag/4Ejdlg0j7l/" class="post-tag i-tag
+                            i-tag-banana">
+            #IP
         </a>
                         
                 </div>
                 <div class="post-article">
                     
-                        <a href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu.jpg) ">
+                        <a href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui.jpg) ">
                         </a>
                         
                             <div class="post-content">
                                 
-                                    <div class="post-content-abstract">
-                                        <p>本次春节号称史上最烂的春节。</p>
-<p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
-<p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
-<p>------ 扯远了。</p>
+                                        <div class="post-content-content">
+                                            
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">Read More ~</a>
-                            </div>
-                </div>
-            </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/an-jia-liao/">
-                        安家了
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2020-03-08</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-info">
-            #GitHub
-        </a>
-                        
-                </div>
-                <div class="post-article">
-                    
-                        <a href="http://blog.huigg.xyz/post/an-jia-liao/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/an-jia-liao.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>终于上线了。<br>
-折腾了2个多小时，GitHub还是不行，不是不稳定，就是打不开。<br>
-还是切换到码云，但此码云非彼马云，不厚道。</p>
+今天碰到一个同事在问，192.168.5.10 这个IP 是谁的？连问3次，确没有人回答
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/an-jia-liao/">Read More ~</a>
+其实，如果有路由后台的情况下，很容易找到。但可惜的是，我们是分公司，网络是由总公司帮忙建设维护，联系起来相当麻烦。所以这条路暂时不通。
+凭我少的可怜的网络知识，突然想到一个命令可能会有帮助，分2步应该就能查到这个人是谁：
+首先查计算机名
+打开CMD，输入命令：
+
+PING -a 192.168.50.10
+
+应该能取得 ping 的对象的机器名，如下：
+
+果然拿到了计算机名：H-01408
+依计算机名查询 用户
+这里就比较容易了，公司的计算机名有要求一定是 H- 工号，取得了计算机名就相当于取得了工号。
+有了工号，要找人就容易多了。
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/">Read More ~</a>
                             </div>
                 </div>
             </article>
