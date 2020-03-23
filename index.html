@@ -7,7 +7,7 @@
 <title>
     辉哥哥
 </title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1584678021521">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1584966985085">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -28,7 +28,7 @@
     <div class="nav">
         <div class="logo">
             <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1584678021521" alt="">
+                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1584966985085" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -100,6 +100,45 @@
         
             <article class="post i-card">
                 <h2 class="post-title">
+                    <a href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/">
+                        如何查询局域网 IP 对应的用户是谁？
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-03-23</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            
+今天碰到一个同事在问，192.168.5.10 这个IP 是谁的？连问3次，确没有人回答
+
+其实，如果有路由后台的情况下，很容易找到。但可惜的是，我们是分公司，网络是由总公司帮忙建设维护，联系起来相当麻烦。所以这条路暂时不通。
+凭我少的可怜的网络知识，突然想到一个命令可能会有帮助，分2步应该就能查到这个人是谁：
+首先查计算机名
+打开CMD，输入命令：
+
+PING -a 192.168.50.10
+
+应该能取得 ping 的对象的机器名，如下：
+
+果然拿到了计算机名：H-01408
+依计算机名查询 用户
+这里就比较容易了，公司的计算机名有要求一定是 H- 工号，取得了计算机名就相当于取得了工号。
+有了工号，要找人就容易多了。
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
                     <a href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">
                         史上最简单的个人博客搭建方式(0技术)
                     </a>
@@ -108,7 +147,7 @@
                     <time class="post-time">2020-03-10</time>
                     
                         <a href="http://blog.huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-warning">
+                            i-tag-other_1">
             #GitHub
         </a>
                         
@@ -143,7 +182,7 @@
                     <time class="post-time">2020-03-08</time>
                     
                         <a href="http://blog.huigg.xyz/tag/VF8mnDrwT/" class="post-tag i-tag
-                            i-tag-success">
+                            i-tag-other_2">
             #随笔
         </a>
                         
@@ -254,7 +293,7 @@
                     <!-- 个人信息 -->
                     
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1584678021521)">
+        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1584966985085)">
         </div>
         <h1 class="id_card-title">
             辉哥哥

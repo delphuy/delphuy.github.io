@@ -5,7 +5,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
-    about | 辉哥哥
+    如何查询局域网 IP 对应的用户是谁？ | 辉哥哥
 </title>
 <link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1584966985085">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
@@ -100,32 +100,44 @@
                 <div id="content" class="main-container-left">
                     <article class="post i-card">
                         <h2 class="post-title">
-                            about
+                            如何查询局域网 IP 对应的用户是谁？
                         </h2>
                         <div class="post-info">
-                            <time class="post-time">2020-03-08</time>
+                            <time class="post-time">2020-03-23</time>
                             
                         </div>
                         
                                 <div class="post-content">
-                                    <h4 id="qq">QQ：</h4>
-<blockquote>
-<p><a href="187351872">187351872</a></p>
+                                    <blockquote>
+<p>今天碰到一个同事在问，192.168.5.10 这个IP 是谁的？连问3次，确没有人回答</p>
 </blockquote>
-<h4 id="mail">mail：</h4>
+<p>其实，如果有路由后台的情况下，很容易找到。但可惜的是，我们是分公司，网络是由总公司帮忙建设维护，联系起来相当麻烦。所以这条路暂时不通。</p>
+<p>凭我少的可怜的网络知识，突然想到一个命令可能会有帮助，分2步应该就能查到这个人是谁：</p>
+<h6 id="首先查计算机名">首先查计算机名</h6>
+<p>打开CMD，输入命令：</p>
 <blockquote>
-<p><a href="mailto:187251972@qq.com">187251972@qq.com</a></p>
+<p>PING -a 192.168.50.10</p>
 </blockquote>
-<h4 id="blog">blog：</h4>
-<blockquote>
-<p><a href="https://huigg.xyz"> https://huigg.xyz</a></p>
-</blockquote>
-<figure data-type="image" tabindex="1"><img src="http://blog.huigg.xyz/post-images/1583899987853.png" alt="" loading="lazy"></figure>
+<p>应该能取得 ping 的对象的机器名，如下：<br>
+<img src="http://blog.huigg.xyz/post-images/1584955912815.jpg" alt="" loading="lazy"></p>
+<p>果然拿到了计算机名：H-01408</p>
+<h6 id="依计算机名查询-用户">依计算机名查询 用户</h6>
+<p>这里就比较容易了，公司的计算机名有要求一定是 H- 工号，取得了计算机名就相当于取得了工号。<br>
+有了工号，要找人就容易多了。</p>
 
                                 </div>
                     </article>
                     <!--  -->
                     
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">
+                                <h3 class="post-title">
+                                    史上最简单的个人博客搭建方式(0技术)
+                                </h3>
+                            </a>
+                        </div>
+                        
                             <div id="disqus_thread"></div>
                             <div id="gitalk-container"></div>
 
@@ -167,9 +179,16 @@
 <ul>
 <li>
 <ul>
-<li><a href="#qq">QQ：</a></li>
-<li><a href="#mail">mail：</a></li>
-<li><a href="#blog">blog：</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%A6%96%E5%85%88%E6%9F%A5%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D">首先查计算机名</a></li>
+<li><a href="#%E4%BE%9D%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%90%8D%E6%9F%A5%E8%AF%A2-%E7%94%A8%E6%88%B7">依计算机名查询 用户</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
