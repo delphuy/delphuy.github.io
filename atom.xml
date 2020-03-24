@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-24T07:26:27.159Z</updated>
+    <updated>2020-03-24T07:35:22.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -78,6 +78,40 @@
 <p>我就这样突如其来的被困在了老家，要说不抱怨是假话，但抱怨多了，负能量满满，也感觉不好。</p>
 <p>于是乎，自我安慰一番，抓紧适应下来。</p>
 <p>这一晃已经45天，武汉像被人按下了静止键，一切都停顿了下来。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[不再年轻]]></title>
+        <id>http://blog.huigg.xyz/post/bu-zai-nian-qing/</id>
+        <link href="http://blog.huigg.xyz/post/bu-zai-nian-qing/">
+        </link>
+        <updated>2010-12-12T13:18:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>不知道是什么时候，对什么都很好奇<br>
+也不知道是什么时候，开始对什么都没兴趣<br>
+突然在2010年的某一天，也许是年末，也许是某一个冬季</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>不知道是什么时候，对什么都很好奇<br>
+也不知道是什么时候，开始对什么都没兴趣<br>
+突然在2010年的某一天，也许是年末，也许是某一个冬季</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[下一站]]></title>
+        <id>http://blog.huigg.xyz/post/xia-yi-zhan/</id>
+        <link href="http://blog.huigg.xyz/post/xia-yi-zhan/">
+        </link>
+        <updated>2008-04-10T07:57:24.000Z</updated>
+        <summary type="html"><![CDATA[<p>2008-04-10 15:57:24</p>
+<pre><code>    马上要走了，离开这个生活了小半年的地方，传说中的蓬莱仙境。
+    蓬莱，又称“蓬壶”。神话中渤海里仙人居住的三座神山之一(另两座为“方丈”、“赢洲”)，西汉元光二年(公元前133年)，汉武帝东巡至蓬莱，望神山不遇，筑一座小城命名为“蓬莱”，遂为名。
+     公司位于蓬莱东北方向，离渤海约2km路左右，来蓬莱之前听说过这里是八仙过海的地方，有个蓬莱阁，关于蓬莱的典故历史，也仅仅局限于这里是明朝抗倭名将戚继光的故里，仅此而已。要离开了，国际惯例，弄点东西纪念纪念。
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>2008-04-10 15:57:24</p>
+<pre><code>    马上要走了，离开这个生活了小半年的地方，传说中的蓬莱仙境。
+    蓬莱，又称“蓬壶”。神话中渤海里仙人居住的三座神山之一(另两座为“方丈”、“赢洲”)，西汉元光二年(公元前133年)，汉武帝东巡至蓬莱，望神山不遇，筑一座小城命名为“蓬莱”，遂为名。
+     公司位于蓬莱东北方向，离渤海约2km路左右，来蓬莱之前听说过这里是八仙过海的地方，有个蓬莱阁，关于蓬莱的典故历史，也仅仅局限于这里是明朝抗倭名将戚继光的故里，仅此而已。要离开了，国际惯例，弄点东西纪念纪念。
+</code></pre>
 ]]></content>
     </entry>
 </feed>
