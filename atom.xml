@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-24T07:55:51.411Z</updated>
+    <updated>2020-03-24T08:27:45.615Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -142,6 +142,40 @@
         <content type="html"><![CDATA[<p>终于还是回家了,老天终究还是没能挡住我的脚步.<br>
 躺在我钟爱的木版床上,无论怎么翻身都不会有掉下去的危险; 听着妈妈每天早上喊我起床的声音,比任何音乐都更催眠;吃着老家特有的肉糕,从没有觉得腻味;还有那令人口水大动的红菜薹炒肉、红莲藕汤、黄陂豆丝、糍粑，以及在武汉吃的那碗不是很地道的热干面。还是有不少遗憾，面窝、油条、豆皮、水饺皮、臭干子等等等等，都叫不全名字了。<br>
 坐在门前，端碗锅巴稀饭，晒着太阳，听着隔壁左右的老乡们聊天，独特的大嗓门，独特的黄陂话，久违了的亲切。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[点绛唇-回不去了]]></title>
+        <id>http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/</id>
+        <link href="http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/">
+        </link>
+        <updated>2008-01-29T12:16:39.000Z</updated>
+        <summary type="html"><![CDATA[<p>漫剪梅枝，<br>
+寒雪如令北风急。<br>
+彤云迭起，<br>
+何日是归期？</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>漫剪梅枝，<br>
+寒雪如令北风急。<br>
+彤云迭起，<br>
+何日是归期？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[流年]]></title>
+        <id>http://blog.huigg.xyz/post/liu-nian/</id>
+        <link href="http://blog.huigg.xyz/post/liu-nian/">
+        </link>
+        <updated>2008-01-19T12:43:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>再捧起当时的月亮<br>
+多情的人儿<br>
+素指拨弦<br>
+又拨动了那经年的念想</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>再捧起当时的月亮<br>
+多情的人儿<br>
+素指拨弦<br>
+又拨动了那经年的念想</p>
 ]]></content>
     </entry>
 </feed>
