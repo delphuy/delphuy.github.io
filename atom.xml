@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-23T12:38:11.140Z</updated>
+    <updated>2020-03-24T07:26:27.159Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -78,21 +78,6 @@
 <p>我就这样突如其来的被困在了老家，要说不抱怨是假话，但抱怨多了，负能量满满，也感觉不好。</p>
 <p>于是乎，自我安慰一番，抓紧适应下来。</p>
 <p>这一晃已经45天，武汉像被人按下了静止键，一切都停顿了下来。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[安家了]]></title>
-        <id>http://blog.huigg.xyz/post/an-jia-liao/</id>
-        <link href="http://blog.huigg.xyz/post/an-jia-liao/">
-        </link>
-        <updated>2020-03-08T03:04:58.000Z</updated>
-        <summary type="html"><![CDATA[<p>终于上线了。<br>
-折腾了2个多小时，GitHub还是不行，不是不稳定，就是打不开。<br>
-还是切换到码云，但此码云非彼马云，不厚道。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>终于上线了。<br>
-折腾了2个多小时，GitHub还是不行，不是不稳定，就是打不开。<br>
-还是切换到码云，但此码云非彼马云，不厚道。</p>
 ]]></content>
     </entry>
 </feed>
