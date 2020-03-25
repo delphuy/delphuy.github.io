@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-25T07:09:49.221Z</updated>
+    <updated>2020-03-25T07:17:28.474Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -96,6 +96,19 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[  烟雨]]></title>
+        <id>http://blog.huigg.xyz/post/yan-yu/</id>
+        <link href="http://blog.huigg.xyz/post/yan-yu/">
+        </link>
+        <updated>2010-04-21T07:14:22.000Z</updated>
+        <summary type="html"><![CDATA[<p>一叶扁舟，半江明月，我从天边而来，看我迷离的江南。<br>
+三尺青锋，一篓唐诗，我自远古而来，看我梦里的江南。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一叶扁舟，半江明月，我从天边而来，看我迷离的江南。<br>
+三尺青锋，一篓唐诗，我自远古而来，看我梦里的江南。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[四月de诗行]]></title>
         <id>http://blog.huigg.xyz/post/si-yue-de-shi-xing/</id>
         <link href="http://blog.huigg.xyz/post/si-yue-de-shi-xing/">
@@ -122,24 +135,5 @@
         <link href="http://blog.huigg.xyz/post/lao-jia/">
         </link>
         <updated>2010-01-23T07:01:20.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[  暗香-岁末]]></title>
-        <id>http://blog.huigg.xyz/post/an-xiang-sui-mo/</id>
-        <link href="http://blog.huigg.xyz/post/an-xiang-sui-mo/">
-        </link>
-        <updated>2009-12-14T07:00:19.000Z</updated>
-        <summary type="html"><![CDATA[<p>长天一碧。<br>
-对晚来天气，骤然风起。<br>
-蟾月依然，一夜星光入牀席。<br>
-极目明波万里，与谁问、流年消息。<br>
-最断魂、门巷疏相，此意不堪摘。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>长天一碧。<br>
-对晚来天气，骤然风起。<br>
-蟾月依然，一夜星光入牀席。<br>
-极目明波万里，与谁问、流年消息。<br>
-最断魂、门巷疏相，此意不堪摘。</p>
-]]></content>
     </entry>
 </feed>
