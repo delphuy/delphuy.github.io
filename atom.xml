@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-25T05:08:21.507Z</updated>
+    <updated>2020-03-25T05:29:04.634Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -96,6 +96,34 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[态度与自我]]></title>
+        <id>http://blog.huigg.xyz/post/tai-du-yu-zi-wo/</id>
+        <link href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
+        </link>
+        <updated>2008-07-14T05:18:43.000Z</updated>
+        <summary type="html"><![CDATA[<p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
+可巧的是，现如今，这个词却被泛滥于各色人等，各种年龄的人中间。居然成了很多人自我标榜的依据。<br>
+我想这应该是一种态度，消极的态度，很能为自己解脱。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
+可巧的是，现如今，这个词却被泛滥于各色人等，各种年龄的人中间。居然成了很多人自我标榜的依据。<br>
+我想这应该是一种态度，消极的态度，很能为自己解脱。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[  新的开始]]></title>
+        <id>http://blog.huigg.xyz/post/xin-de-kai-shi/</id>
+        <link href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
+        </link>
+        <updated>2008-04-14T05:17:36.000Z</updated>
+        <summary type="html"><![CDATA[<p>人的一生会有着很多的开始.<br>
+这个开始一结束,下一个就会自动到来.从一个开始到另一个开始,是个一过程.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>人的一生会有着很多的开始.<br>
+这个开始一结束,下一个就会自动到来.从一个开始到另一个开始,是个一过程.</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[下一站]]></title>
         <id>http://blog.huigg.xyz/post/xia-yi-zhan/</id>
         <link href="http://blog.huigg.xyz/post/xia-yi-zhan/">
@@ -142,40 +170,6 @@
         <content type="html"><![CDATA[<p>终于还是回家了,老天终究还是没能挡住我的脚步.<br>
 躺在我钟爱的木版床上,无论怎么翻身都不会有掉下去的危险; 听着妈妈每天早上喊我起床的声音,比任何音乐都更催眠;吃着老家特有的肉糕,从没有觉得腻味;还有那令人口水大动的红菜薹炒肉、红莲藕汤、黄陂豆丝、糍粑，以及在武汉吃的那碗不是很地道的热干面。还是有不少遗憾，面窝、油条、豆皮、水饺皮、臭干子等等等等，都叫不全名字了。<br>
 坐在门前，端碗锅巴稀饭，晒着太阳，听着隔壁左右的老乡们聊天，独特的大嗓门，独特的黄陂话，久违了的亲切。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[点绛唇-回不去了]]></title>
-        <id>http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/</id>
-        <link href="http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/">
-        </link>
-        <updated>2008-01-29T12:16:39.000Z</updated>
-        <summary type="html"><![CDATA[<p>漫剪梅枝，<br>
-寒雪如令北风急。<br>
-彤云迭起，<br>
-何日是归期？</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>漫剪梅枝，<br>
-寒雪如令北风急。<br>
-彤云迭起，<br>
-何日是归期？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[流年]]></title>
-        <id>http://blog.huigg.xyz/post/liu-nian/</id>
-        <link href="http://blog.huigg.xyz/post/liu-nian/">
-        </link>
-        <updated>2008-01-19T12:43:41.000Z</updated>
-        <summary type="html"><![CDATA[<p>再捧起当时的月亮<br>
-多情的人儿<br>
-素指拨弦<br>
-又拨动了那经年的念想</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>再捧起当时的月亮<br>
-多情的人儿<br>
-素指拨弦<br>
-又拨动了那经年的念想</p>
 ]]></content>
     </entry>
 </feed>
