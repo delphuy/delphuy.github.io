@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-25T08:07:33.325Z</updated>
+    <updated>2020-03-26T06:24:53.166Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -81,6 +81,40 @@
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[和《过零丁洋》]]></title>
+        <id>http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/</id>
+        <link href="http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/">
+        </link>
+        <updated>2018-04-18T06:19:04.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[破阵子·春景]]></title>
+        <id>http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/</id>
+        <link href="http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/">
+        </link>
+        <updated>2017-03-26T06:17:52.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[无题-姓名对]]></title>
+        <id>http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/</id>
+        <link href="http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/">
+        </link>
+        <updated>2017-02-02T06:19:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>舒心似锦秀春意，<br>
+闻去如诗写清风。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>舒心似锦秀春意，<br>
+闻去如诗写清风。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[立冬]]></title>
+        <id>http://blog.huigg.xyz/post/li-dong/</id>
+        <link href="http://blog.huigg.xyz/post/li-dong/">
+        </link>
+        <updated>2016-11-01T06:21:04.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[  十年祭]]></title>
         <id>http://blog.huigg.xyz/post/shi-nian-ji/</id>
         <link href="http://blog.huigg.xyz/post/shi-nian-ji/">
@@ -88,38 +122,10 @@
         <updated>2016-06-30T07:43:52.000Z</updated>
     </entry>
     <entry>
-        <title type="html"><![CDATA[  Mr.Six]]></title>
-        <id>http://blog.huigg.xyz/post/mrsix/</id>
-        <link href="http://blog.huigg.xyz/post/mrsix/">
+        <title type="html"><![CDATA[和诗《我有一壶酒》  ]]></title>
+        <id>http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/</id>
+        <link href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">
         </link>
-        <updated>2015-12-28T07:41:45.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[  昔我往矣，后会无期]]></title>
-        <id>http://blog.huigg.xyz/post/xi-wo-wang-yi-hou-hui-wu-qi/</id>
-        <link href="http://blog.huigg.xyz/post/xi-wo-wang-yi-hou-hui-wu-qi/">
-        </link>
-        <updated>2015-07-14T07:39:03.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[喝火令·春望]]></title>
-        <id>http://blog.huigg.xyz/post/he-huo-ling-chun-wang/</id>
-        <link href="http://blog.huigg.xyz/post/he-huo-ling-chun-wang/">
-        </link>
-        <updated>2014-01-18T07:38:18.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[  风中你的样子]]></title>
-        <id>http://blog.huigg.xyz/post/feng-zhong-ni-de-yang-zi/</id>
-        <link href="http://blog.huigg.xyz/post/feng-zhong-ni-de-yang-zi/">
-        </link>
-        <updated>2011-08-31T07:37:38.000Z</updated>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[  思念是一根藤]]></title>
-        <id>http://blog.huigg.xyz/post/si-nian-shi-yi-gen-teng/</id>
-        <link href="http://blog.huigg.xyz/post/si-nian-shi-yi-gen-teng/">
-        </link>
-        <updated>2011-08-09T07:37:00.000Z</updated>
+        <updated>2016-03-26T06:21:54.000Z</updated>
     </entry>
 </feed>
