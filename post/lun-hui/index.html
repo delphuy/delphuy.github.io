@@ -1,124 +1,106 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-      轮回 | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>  轮回 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-        
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="似乎是一个轮回。
+总结总是在刚开始的时候进行，却在结束的时候结束。漫长的经过是总结的全部，漫长的结果却是总结之外的事情。
+指针已经跳跃到五月末。骄阳一如既往的来临，在燥热而悸动的心里加热。只能说是小结。
+自想跳槽以来，事情似乎一路顺利的发展..." />
+    <meta name="keywords" content="杂录,岁月" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                              轮回
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2010-05-24</time>
-                            
-                                <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_2">
-                            #杂录
-                        </a>
-                                
-                                <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-other_1">
-                            #岁月
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p>似乎是一个轮回。</p>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">  轮回</h2>
+            <div class="post-date">2010-05-24</div>
+            
+            <div class="post-content" v-pre>
+              <p>似乎是一个轮回。</p>
 <p>总结总是在刚开始的时候进行，却在结束的时候结束。漫长的经过是总结的全部，漫长的结果却是总结之外的事情。</p>
 <p>指针已经跳跃到五月末。骄阳一如既往的来临，在燥热而悸动的心里加热。只能说是小结。</p>
 <p>自想跳槽以来，事情似乎一路顺利的发展。年后的第一周便接来了面试，而接下来很顺利的被录用。只不过比较意外的是，我转行了。从制造业走向了IT业，从管理者走向了实践者。</p>
@@ -138,21 +120,30 @@
 <p>将梦想与坚定捆绑</p>
 <p>抖上臂膀，前行。</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="http://blog.huigg.xyz/post/wu-yue-tian-qing-yu-an/">
-                                <h3 class="post-title">
-                                      五月天、青玉案
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="tag">
+                    杂录
+                  </a>
+                
+                  <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="tag">
+                    岁月
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://blog.huigg.xyz/post/wu-yue-tian-qing-yu-an/">
+                  <h3 class="post-title">
+                      五月天、青玉案
+                  </h3>
+                </a>
+              </div>
+            
 
 <!--载入js，在</body>之前插入即可-->
     <!--Leancloud 操作库:-->
@@ -174,77 +165,35 @@
     });
 </script>    
 
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
             
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
+
+          </div>
 
         </div>
+      </div>
     </div>
-    
-                                    
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
+AOS.init();
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            </div>
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
-
-
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
 
 
 
 
 
-</body>
+
+
+  </body>
 </html>

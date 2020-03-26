@@ -1,121 +1,111 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    史上最简单的个人博客搭建方式(0技术) | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>史上最简单的个人博客搭建方式(0技术) | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-        
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="本次春节号称史上最烂的春节。
+在老家农村宅了近50天，老家是武汉的，风暴的中心。
+每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。
+------ 扯远了。
+
+这种状态下，人生都思考了好多次，总想写点什么。于是张罗着自己弄个..." />
+    <meta name="keywords" content="GitHub" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            史上最简单的个人博客搭建方式(0技术)
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2020-03-10</time>
-                            
-                                <a href="http://blog.huigg.xyz/tag/8wQcBhLah/" class="post-tag i-tag
-                            i-tag-primary">
-                            #GitHub
-                        </a>
-                                
-                        </div>
-                        
-                            <div class="post-feature-image" style="background-image: url('http://blog.huigg.xyz/post-images/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu.jpg')"></div>
-                            
-                                <div class="post-content">
-                                    <p>本次春节号称史上最烂的春节。</p>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">史上最简单的个人博客搭建方式(0技术)</h2>
+            <div class="post-date">2020-03-10</div>
+            
+              <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>本次春节号称史上最烂的春节。</p>
 <p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
 <p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
 <p>------ 扯远了。</p>
@@ -170,21 +160,26 @@
 <p><strong>3. 发布文章</strong></p>
 <p>Gridea支持所见即所得的撰写方式，也支持MD语法。新增完文章后，点击同步，等同步完成后，打开你的博客网址，即可看到新增的文章。</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
-                                <h3 class="post-title">
-                                    2020年春 随笔_02
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://blog.huigg.xyz/tag/8wQcBhLah/" class="tag">
+                    GitHub
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
+                  <h3 class="post-title">
+                    2020年春 随笔_02
+                  </h3>
+                </a>
+              </div>
+            
 
 <!--载入js，在</body>之前插入即可-->
     <!--Leancloud 操作库:-->
@@ -206,91 +201,35 @@
     });
 </script>    
 
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E4%BA%8B%E5%89%8D%E5%87%86%E5%A4%87"><strong>事前准备</strong></a></li>
-<li><a href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA"><strong>开始搭建</strong></a>
-<ul>
-<li><a href="#%E4%B8%80-github%E8%AE%BE%E5%AE%9A"><strong>一. GitHub设定</strong></a></li>
-<li><a href="#%E4%BA%8C-gridea%E8%AE%BE%E5%AE%9A"><strong>二. Gridea设定</strong></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+            
+
+          </div>
 
         </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
+      </div>
     </div>
-    
-                            
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
+AOS.init();
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            </div>
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
-
-
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
 
 
 
 
 
-</body>
+
+
+  </body>
 </html>

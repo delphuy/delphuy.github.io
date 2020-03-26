@@ -1,124 +1,105 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    写作情结 | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>写作情结 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-        
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。
+
+小学的时候，以为就是写作文，于是会找很多的书来看，能搜集到的、看到的书都看了。包括一些看不懂的，现在一直还记得一些，有本书叫《雪白血红》，描写林彪和东北军的，很厚，大约..." />
+    <meta name="keywords" content="杂录,岁月" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            写作情结
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2008-10-22</time>
-                            
-                                <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-info">
-                            #杂录
-                        </a>
-                                
-                                <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-error">
-                            #岁月
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p>我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。</p>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">写作情结</h2>
+            <div class="post-date">2008-10-22</div>
+            
+            <div class="post-content" v-pre>
+              <p>我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。</p>
 <!-- more -->
 <p>小学的时候，以为就是写作文，于是会找很多的书来看，能搜集到的、看到的书都看了。包括一些看不懂的，现在一直还记得一些，有本书叫《雪白血红》，描写林彪和东北军的，很厚，大约800多页。可惜，那时候是看不懂的。更多的是看一些童话，小人书，小说等。以至于我小学的时候作文很好。</p>
 <p>到了初中以后，仍然认为我是很喜欢写作文的。可初中三年，我的作文却再也没有能拿奖，永远只能处于一个中上的水平。这让我很受打击。以至于这个情结在这个时候开始出现动摇与迷茫。我很想写，却不是写作文。那是写什么呢？所幸的是，喜欢阅读这个习惯一直延续了下来。初中能够接触到的书比小学多多了。于是觉得应该开始读一些有品位的书，又自认为古文应该是比较好的。所以开始读一些古代名著。红楼、三国、西游、镜花缘、古文观止、诗经、封神演义，易经等等…杂7杂8的，不过这些书也确实增长了我的见识。</p>
@@ -130,21 +111,30 @@
 <p>我终于明白，为什么古代的八股文会遭到抵制了。</p>
 <p>所幸的是，现在我又想写点什么了，这种写作的冲动，仍未泯灭，只是不知道，我现在能写出来的，是否会被人耻笑为文字乐色呢?</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
-                                <h3 class="post-title">
-                                    我们都是老鼠
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="tag">
+                    杂录
+                  </a>
+                
+                  <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="tag">
+                    岁月
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
+                  <h3 class="post-title">
+                    我们都是老鼠
+                  </h3>
+                </a>
+              </div>
+            
 
 <!--载入js，在</body>之前插入即可-->
     <!--Leancloud 操作库:-->
@@ -166,77 +156,35 @@
     });
 </script>    
 
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
             
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
+
+          </div>
 
         </div>
+      </div>
     </div>
-    
-                                    
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
+AOS.init();
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            </div>
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
-
-
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
 
 
 
 
 
-</body>
+
+
+  </body>
 </html>

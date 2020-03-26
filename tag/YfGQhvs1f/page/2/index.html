@@ -1,552 +1,297 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    杂录 | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>杂录 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        杂录</b>
-    </div>
-    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/qiao-he/">
-                          巧合
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2010-04-09</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-info">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-banana">
-            #岁月
-        </a>
-                        
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 杂录</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/qiao-he/">
+                  <h2 class="post-title">  巧合</h2>
+                </a>
+                <div class="post-date">
+                  2010-04-09
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            上班3天了，有时候感觉生活真的是狗日的。
-做惯了信手拈来的工作，习惯了习惯性压力的生活，突然发现，自己离学习多么遥远。似乎回到了高中阶段，每天脑子里思考的却是那些似是而非的术语，程式。生怕自己一个不小心，被别然落下千里。说白了也就一个字，人就是一个贱骨头，需要多折腾，否则真的会锈了。
-当然，所谓生存之上，生活之下，基本包含了我们的全部生活内容。惶惶然中，不自觉的成了“张三族”，在自认为的拼搏奔波中，浑浑噩噩的度过了而立之年的前奏。
-可能是巧合， 又或者是人的生活中的某种潜在规律的使然。
-07年4月，我从一个电子厂的车间生管离职，跳槽到了陶瓷厂，工资从3位数升到了4位数，总算摆脱了负债过日的穷苦。
-08年4月，我又从山东离职，回到了阔别已久的老婆身边，这便印证了一个问题，所谓的男儿志在四方指的是婚后若干年，婚前长期分居是万万不可的，那是一种煎熬，是一种赔本的付出。
-2010年4月，我再次从老东家离职，换到了这个软件公司。所幸的是离老婆还不算远。又是一个从零开始，重新当学生。
-从中文师范专业毕业，历经千辛万苦进入电子厂做生管，拿着每月几百块的工资，专业与职业跨度之大，现实与理想落差之深，不得不说是一个笑话。当然，这也是为了心中的一个牵挂，引用当年的一句豪言：赴汤蹈火亦所不惜，况区区小难乎？
-然后又从电子厂进入陶瓷厂做真正意义上的生产管理，从当初的生涩，到后来的独当一面。完成了质的蜕变。说实话，这个陶瓷厂，是我人生的第一大转折，是我真正的认识到所谓的工作，人生，能力等等。
-然而，现实种种，我不得不离开这个公司，却又从陶瓷生管，到了现在的软件系统设计，又是一个生涩的开始，这又是另一种工作状态，没有所谓的尔虞我诈，没有所谓的权力纠结，却很提倡团队协作，对我是一个不大不小的玩笑。因为，在陶瓷厂的所谓的三年，我学会的能力之一就是对各种尔虞我诈，人际关系的应付。当然，这也只是我刚来几天的初像。以后如何，不得而知。
-期待下一个四月。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/qiao-he/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/you-yi-ge-san-yue/">
-                        又一个三月
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2010-03-13</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_4">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-warning">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/you-yi-ge-san-yue/">
+                  <h2 class="post-title">又一个三月</h2>
+                </a>
+                <div class="post-date">
+                  2010-03-13
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            一晃，又熬了一周。
-打年前开始折腾，到年后折腾完毕，开始收心上班，这一晃又熬了一周。所谓度日如年，度年如日。一天一天的熬着日子过，却一晃就长大成年。堪叹时光冉冉，逝者如斯。在80后泛滥的年代，我不可避免的卷入其中。关键是我们之于社会，抑或社会之余我们，都在挣扎。我们在挣扎着立足于社会，社会在挣扎着套牢我们。
-都累。
-唯一的歇脚的时候是春节。一个忙忙碌碌的春节，是美其名曰歇脚的及季节，却是近年来无法避免的阵痛。拥挤的火车，喧嚣的人流，一场又一场的所谓应酬，彰显着我们无处不在的友谊，以及无处不在的关系——这是我们唯一可以炫耀的资本，也是生存的资本——我们都为关系而活着。火车，英文名为train，却翻译成了火车，我不得不佩服当年人们的眼光，预测到了后世的这种交通工具的火爆程度。火车真的是很火，每年的火车充当了“春节=回家”中的等号，在我们年复一年的季后性迁徙中，自觉的完成了一次又一次的回家的使命。无需动员，无需组织，我们很牛。
-当然，铁道部更牛。
-在看见河边的柳树第一次翻芽吐绿的时候。也就到了人们常说的，七九八九、沿河看柳的时候，同时也意味着我确确实实的又过了一年，又老了一岁，离而立越来越近。推掉一切所谓责任，忘掉一切所谓烦恼，我突然发现，我原来失去了很多很多，人越来越只为自己而活着，就像我很坦然的忘记了三月本来应该是学雷锋月一样。
-——当然，回到现实，我们仍然需要吃饭，睡觉，上班，下班。
-我们仍然不能做回自己。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/you-yi-ge-san-yue/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/ke-xiao-de-wen-hua/">
-                        可笑的文化
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2009-06-20</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-warning">
-            #杂录
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/ke-xiao-de-wen-hua/">
+                  <h2 class="post-title">可笑的文化</h2>
+                </a>
+                <div class="post-date">
+                  2009-06-20
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>前几天听说圆明园大水法因为游客攀爬过多，导致损坏。<br>
+                <div class="post-abstract">
+                  <p>前几天听说圆明园大水法因为游客攀爬过多，导致损坏。<br>
 突然想起一个比喻：一个人把胸口的伤疤展示给别人看，后来不知怎么发炎了，于是说是看的人太多了，真是可惜。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/ke-xiao-de-wen-hua/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/xian-cheng-zhi-yu-xian-da/">
-                        先诚之于先达
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2009-04-06</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_3">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-success">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/xian-cheng-zhi-yu-xian-da/">
+                  <h2 class="post-title">先诚之于先达</h2>
+                </a>
+                <div class="post-date">
+                  2009-04-06
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>我们都在喊忙，而且似乎一年四季都很忙。忙就像那狗日的日子，日子尽的那天，忙才会结束。但是我们都很懒，懒得以至于我们都不知道在忙些啥，忙了些啥。于是，忙便成了我们生活着的象征。</p>
+                <div class="post-abstract">
+                  <p>我们都在喊忙，而且似乎一年四季都很忙。忙就像那狗日的日子，日子尽的那天，忙才会结束。但是我们都很懒，懒得以至于我们都不知道在忙些啥，忙了些啥。于是，忙便成了我们生活着的象征。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/xian-cheng-zhi-yu-xian-da/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/hu-die-he-hai-xiao/">
-                        蝴蝶和海啸
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-11-11</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_4">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-banana">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/hu-die-he-hai-xiao/">
+                  <h2 class="post-title">蝴蝶和海啸</h2>
+                </a>
+                <div class="post-date">
+                  2008-11-11
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>忘记了是谁说过，日本这边的一个蝴蝶扇动一下翅膀，可能会引起南美洲的一场海啸（又或者蝴蝶是南美洲的？）。</p>
+                <div class="post-abstract">
+                  <p>忘记了是谁说过，日本这边的一个蝴蝶扇动一下翅膀，可能会引起南美洲的一场海啸（又或者蝴蝶是南美洲的？）。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/hu-die-he-hai-xiao/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/xie-zuo-qing-jie/">
-                        写作情结
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-10-22</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_3">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/xie-zuo-qing-jie/">
+                  <h2 class="post-title">写作情结</h2>
+                </a>
+                <div class="post-date">
+                  2008-10-22
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。</p>
+                <div class="post-abstract">
+                  <p>我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/xie-zuo-qing-jie/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
-                        我们都是老鼠
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-10-08</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-success">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-error">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
+                  <h2 class="post-title">我们都是老鼠</h2>
+                </a>
+                <div class="post-date">
+                  2008-10-08
                 </div>
-                <div class="post-article">
-                    
-                        <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/wo-men-du-shi-lao-shu.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            由于工厂暂时停机，准备迁厂。
-节后上班比不上班更无聊。
-无聊的浏览着那些无聊的新闻，无聊的喝着第N杯水，无聊的困意因势而来。
-突然发现自己最进起的很早，终于理解为什么会很困了。
-在结束了学校的三点一线生活后，同时也结束了自出生以来最长的一种生活模式，调头又一脚踏进了另一种三点一线的生活模式之中，而且这种模式可能会更长。不知道谁用这样一句话定义了我们的下半生:人,活者就要工作。因此，也决定了我们只能永远处于这个状态之中。只不过是在围城与围城之间游荡，生存与生活之间挣扎，可笑也可叹。
-突然想起了我那对老鼠。
-这几天嘴里说的最多的一句话就是：这什么世道啊，老鼠也会挑食和撒娇了。
-起因就是，前几天女友送我一对荷兰猪，其实也就是长的可爱一点的老鼠。因为高中的时候养过次物，深知它很容易把笼子弄脏，也很能吃。于是，就每天两次的喂食，是那种专门的饲料。比起高中拿烂白菜，青草喂，阔绰多了。可发现仍然无法满足老鼠们的需要，一看见人就没玩没了的叫嚷，要食，而后又不知疲倦的享用。
-这种看似简单的生活，其实也包含了生存与生活的原则。不吃就不能生存，不撒娇可能就要挨饿或者吃不饱，那么撒娇就成了它的一种求生手段。象极了现在社会的情况，要生存就要工作，要工作就得承认现实，努力一点，得到的食物就会多一点；否则就挨饿。
-如此看来，我们都是老鼠。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
+                <a class="right" href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
+                  <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/wo-men-du-shi-lao-shu.jpg')">
+                  </div>
+                </a>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/wo-men-hen-jian-wang/">
-                        我们很健忘
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-09-18</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_2">
-            #杂录
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/wo-men-hen-jian-wang/">
+                  <h2 class="post-title">我们很健忘</h2>
+                </a>
+                <div class="post-date">
+                  2008-09-18
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>我们都很健忘。</p>
+                <div class="post-abstract">
+                  <p>我们都很健忘。</p>
 <p>就象一个步入耄耋之年的老人，什么都能忘，也什么都敢忘。我们忘记了自己曾经的理想，现在只是彳亍而行，不知道方向，没有价值，如同一具行尸走肉；我们忘记了曾经的孝道，现在只知道为自己的将来打拼，长年累月奔波在外，问题是有多少人是在打拼，又有多少人是在奔波？每当想起该往家里打个电话的时候，距离上一次已经不知道是多少时日；我们忘记了我们是谁，在各种信息大肆充斥的时代，在地球日益成为一个村的时代，我们忘记了历史。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/wo-men-hen-jian-wang/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
-                        态度与自我
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-07-14</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-banana">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-other_2">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
+                  <h2 class="post-title">态度与自我</h2>
+                </a>
+                <div class="post-date">
+                  2008-07-14
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
+                <div class="post-abstract">
+                  <p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
 可巧的是，现如今，这个词却被泛滥于各色人等，各种年龄的人中间。居然成了很多人自我标榜的依据。<br>
 我想这应该是一种态度，消极的态度，很能为自己解脱。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
-                          新的开始
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-04-14</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-warning">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-primary">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
+                  <h2 class="post-title">  新的开始</h2>
+                </a>
+                <div class="post-date">
+                  2008-04-14
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>人的一生会有着很多的开始.<br>
+                <div class="post-abstract">
+                  <p>人的一生会有着很多的开始.<br>
 这个开始一结束,下一个就会自动到来.从一个开始到另一个开始,是个一过程.</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/xin-de-kai-shi/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-                <!-- 翻页 -->
-                
-    <div class="pagination-container">
-        
-            <a href="http://blog.huigg.xyz/tag/YfGQhvs1f" class="page-btn btn">上一页</a>
-            
-                
-                    <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/page/3/" class="page-btn btn">下一页</a>
-                    
-    </div>
-    
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
+          
 
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
-
-        </div>
-    </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-    <div class="notice-card i-card ">
-        <div class="notice-title i-card-title">公告</div>
-        <div class="notice-content">
-            陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
-        </div>
-    </div>
-    
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+          <div class="pagination-container">
+  
+    <a href="http://blog.huigg.xyz/tag/YfGQhvs1f" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+    <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/page/3/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+
+
+
+
+  </body>
 </html>

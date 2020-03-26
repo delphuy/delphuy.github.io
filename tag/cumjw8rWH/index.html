@@ -1,335 +1,188 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    无题 | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>无题 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-    <div class="i-card">
-        <b>标签：#
-        无题</b>
-    </div>
-    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/">
-                        无题-姓名对
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2017-02-02</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/2LbhkFrc8/" class="post-tag i-tag
-                            i-tag-primary">
-            #诗歌
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/cumjw8rWH/" class="post-tag i-tag
-                            i-tag-other_1">
-            #无题
-        </a>
-                        
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 无题</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/">
+                  <h2 class="post-title">无题-姓名对</h2>
+                </a>
+                <div class="post-date">
+                  2017-02-02
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>舒心似锦秀春意，<br>
+                <div class="post-abstract">
+                  <p>舒心似锦秀春意，<br>
 闻去如诗写清风。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">
-                        和诗《我有一壶酒》  
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2016-03-26</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/2LbhkFrc8/" class="post-tag i-tag
-                            i-tag-banana">
-            #诗歌
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/cumjw8rWH/" class="post-tag i-tag
-                            i-tag-banana">
-            #无题
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">
+                  <h2 class="post-title">和诗《我有一壶酒》  </h2>
+                </a>
+                <div class="post-date">
+                  2016-03-26
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            我也跟几句：
-我有一壶酒，足矣慰风尘。
-静卧桃花里，醉饮丝竹声。
-青柳随风舞，暗香扑面门。
-不问天下事，羡煞天下人。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/wu-ti-2/">
-                        无题2
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2010-09-25</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-banana">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/cumjw8rWH/" class="post-tag i-tag
-                            i-tag-other_2">
-            #无题
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/wu-ti-2/">
+                  <h2 class="post-title">无题2</h2>
+                </a>
+                <div class="post-date">
+                  2010-09-25
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            太监是这样：
-当你感觉不爽，
-当着很多人面狠狠的抽了他，
-而后象征性的表示似乎手重了些，
-他就会感觉很开心，
-并且趁机撒娇：
-不嘛不嘛，道个歉好不好？
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/wu-ti-2/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/wu-ti/">
-                        无题
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2006-02-11</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/cumjw8rWH/" class="post-tag i-tag
-                            i-tag-other_4">
-            #无题
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-other_2">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/wu-ti/">
+                  <h2 class="post-title">无题</h2>
+                </a>
+                <div class="post-date">
+                  2006-02-11
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            只在撕碎的心碎中
-寻求些须欢愉
-已经足够
-只愿为长空中的一星
-不为闪耀
-只为你
-只为有那么一点点的光
-能在你的夜晚
-伴你同行
-……
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/wu-ti/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
             </article>
-            
-                <!-- 翻页 -->
-                
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
+          
 
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
-
-        </div>
-    </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-    <div class="notice-card i-card ">
-        <div class="notice-title i-card-title">公告</div>
-        <div class="notice-content">
-            陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
-        </div>
-    </div>
-    
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+          <div class="pagination-container">
+  
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+
+
+
+
+  </body>
 </html>

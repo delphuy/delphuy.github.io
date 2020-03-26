@@ -1,119 +1,106 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    蓬莱印象 | 辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>蓬莱印象 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-        
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="传说中的蓬莱仙山，传说中的齐鲁风。
+头一次来山东，山东烟台，烟台蓬莱。
+
+第一个印象当然是远。胶东平原的东部，渤海湾东南。从昆山出发，要经过13个小时的长途大巴，才可以到烟台。烟台是个不错的城市，街道宽且干净，路上没有武汉上海那么多，显得很..." />
+    <meta name="keywords" content="岁月" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            蓬莱印象
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2007-12-09</time>
-                            
-                                <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-other_4">
-                            #岁月
-                        </a>
-                                
-                        </div>
-                        
-                                <div class="post-content">
-                                    <p>传说中的蓬莱仙山，传说中的齐鲁风。</p>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">蓬莱印象</h2>
+            <div class="post-date">2007-12-09</div>
+            
+            <div class="post-content" v-pre>
+              <p>传说中的蓬莱仙山，传说中的齐鲁风。</p>
 <p>头一次来山东，山东烟台，烟台蓬莱。</p>
 <!-- more -->
 <p>第一个印象当然是远。胶东平原的东部，渤海湾东南。从昆山出发，要经过13个小时的长途大巴，才可以到烟台。烟台是个不错的城市，街道宽且干净，路上没有武汉上海那么多，显得很清爽。出了烟台那个不知名的小站，望北走500米左右，就是另外一个跑山东境内短途的汽车站了。望南的话是一个码头，从外面看起来还比较大，比印象中的深圳蛇口码头要大多了。上了开往蓬莱的汽车，看着汽车七弯八绕的，似乎是往城西北方开去，那里应该就是蓬莱了。（……，中间省略2小时）到了蓬莱东站。已经是上午11点了。忒远了点。公司据说是在蓬莱边上，更远了。打个的，花了我25大洋，看着汽车在海边开，感觉还不错，远处烟波浩淼的小岛，据说就是传说中的蓬莱阁，八仙过海的地方。街道有些旧，比襄樊旧，人稀稀落落的，显得很空旷。突然有个问题冒了出来，烟台和蓬莱人都这么少，那山东那么多的人口数据是怎么得来的？</p>
@@ -123,21 +110,26 @@
 <p>第五个，也是最后一个，应该是对于吃的印象了。这里属于温带季风性气候，适宜小麦高粱等作物的生长。所以这里的主食是面食。最常见的就是馒头了，对于我来说，这无疑是一个考验，早上一个馒头够我奋斗半个小时才能把它干掉，不过很管饿，够撑一天的。也供应米饭，菜的味道比较清淡，不过有些菜倒是很油腻，主要是肉食类的。这里的男人很崇尚吃肉，吃起肥肉来，简直和我这个祖传的高手不相上下，这还是一个比较斯文点的人给我的印象。要是碰见了大汉，·#￥%……—*！！不敢想象。不大能吃辣，相比常吃的川菜湘菜的口味，这里简直就是在菜里加了点油盐，他们认为已经很辣的东西，我这个湖北佬吃起来都觉得简直不值一提。什么时候带几个武汉的鸭脖过来让他们见识一下，宜昌的泡椒就算了，估计会出人命的。</p>
 <p>综合一下，一个人出门在外，最直接的感官就是看，当然，这也是最具欺骗性的一个感觉。衣食住行，这是我来蓬莱的最基本印象，当然这里应该也是一个很局部的感觉。蓬莱是一个还不错的小城，比之昆山，没有了江南水乡的那中灵绣，却不失粗犷。说到这里，又让人想起了一个很郁闷的现象，有个宾馆旁边，硬生生的开出了一个小湖泊，几架小桥，回廊亭阁，还钟上了荷花，但那粗粗的暖气管道，以及旁边居民屋檐上晒着的高粱杆却使这幅图画显的那么不伦不类，还是保持自己的风格的好。</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="http://blog.huigg.xyz/post/hui-ge-hui-ge-hui-ge/">
-                                <h3 class="post-title">
-                                    辉哥-灰歌-灰鸽
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="tag">
+                    岁月
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://blog.huigg.xyz/post/hui-ge-hui-ge-hui-ge/">
+                  <h3 class="post-title">
+                    辉哥-灰歌-灰鸽
+                  </h3>
+                </a>
+              </div>
+            
 
 <!--载入js，在</body>之前插入即可-->
     <!--Leancloud 操作库:-->
@@ -159,77 +151,35 @@
     });
 </script>    
 
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                                <!-- id-card -->
-                                
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
             
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
+
+          </div>
 
         </div>
+      </div>
     </div>
-    
-                                    
 
-                </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
 
+AOS.init();
 
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-
-            </div>
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
 </script>
 
 
-    </div>
-
-
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
 
 
 
 
 
-</body>
+
+
+  </body>
 </html>

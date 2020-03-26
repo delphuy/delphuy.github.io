@@ -1,728 +1,757 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>文章归档 | 辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-</div>
-
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
-
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            
-
-    <div class="archives-container main-container">
-        <ul class="timeline">
-            
-                <li>
-                    <h3 class="year">
-                        2008
-                    </h3>
-                    <ul class="year-wrapper">
-                        
-                            
-                                <li>
-                                    <span class="date">2008-08-06</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/bu-suan-zi-qi-xi-yi/">
-                                        <span>卜算子-七夕(一)</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-07-29</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shui-chu-fei-lai-ni-chang-lu/">
-                                        <span>谁处飞来霓裳侣</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-07-20</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">
-                                        <span>给女友的诗</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-07-19</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/yi-jian-xia/">
-                                        <span>忆剑侠</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-07-14</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
-                                        <span>态度与自我</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-04-14</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
-                                        <span>  新的开始</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-04-10</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/xia-yi-zhan/">
-                                        <span>下一站</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-03-21</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/huang-huang-de-chun-tian/">
-                                        <span>惶惶的春天</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-02-19</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/hui-jia-ji-shi/">
-                                        <span>回家记事</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-02-02</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">
-                                        <span>  回不去了</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-01-29</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/">
-                                        <span>点绛唇-回不去了</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-01-19</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/liu-nian/">
-                                        <span>流年</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2008-01-06</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/sheng-huo-xiang-zuo-gong-zuo-xiang-you/">
-                                        <span>生活向左，工作向右</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                    </ul>
-
-                </li>
-                
-                <li>
-                    <h3 class="year">
-                        2007
-                    </h3>
-                    <ul class="year-wrapper">
-                        
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-30</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/tian-jing-sha-dong-si/">
-                                        <span>天净沙冬思</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-26</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/die-lian-hua-er-shou-sui-mo-gan-huai/">
-                                        <span>蝶恋花二首 岁末感怀</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-20</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/ba-xiang-si-xie-jin-shi-li/">
-                                        <span>把相思写进诗里</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-18</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/mu-zhi-jian-de-ai-qing/">
-                                        <span>拇指间的爱情</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-16</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/fang-feng/">
-                                        <span>放风</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-15</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/ji-mu-chu-tian-shu/">
-                                        <span>极目楚天舒</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-09</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/gong-zuo-de-di-fang/">
-                                        <span>工作的地方</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-12-09</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/peng-lai-yin-xiang/">
-                                        <span>蓬莱印象</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-11-15</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/hui-ge-hui-ge-hui-ge/">
-                                        <span>辉哥-灰歌-灰鸽</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-11-10</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/gong-zuo-xiao-jie/">
-                                        <span>工作小结</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-10-08</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/gui-xiang-gui-ying/">
-                                        <span>桂香,桂影</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-09-20</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/di-liu-ji/">
-                                        <span>第六记</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-09-06</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/wei-liao-wang-que-de-ji-nian/">
-                                        <span>为了忘却的纪念</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-09-02</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shi/">
-                                        <span>逝2</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-08-04</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/tai-jiu-liao/">
-                                        <span>  太久了</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-05-28</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shui-gei-wo-ge-ti-mu/">
-                                        <span>谁给我个题目。。。</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-05-27</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/ju-xiang/">
-                                        <span>具象</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-04-16</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/kai-shi/">
-                                        <span>  开始</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-03-30</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shang-hai/">
-                                        <span>  上海</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-03-26</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/nan-dao-wo-lao-liao/">
-                                        <span>难道我老了？</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2007-02-22</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/yi-qi-zou-guo-de-da-xue/">
-                                        <span>一起走过的大学</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                    </ul>
-
-                </li>
-                
-                <li>
-                    <h3 class="year">
-                        2006
-                    </h3>
-                    <ul class="year-wrapper">
-                        
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-11-15</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/ye-wei-yang/">
-                                        <span>夜未央</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-07-11</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/nai-luo-pu-tao-wu-ya/">
-                                        <span>奶酪·葡萄·乌鸦</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-05-02</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/xia-yi-ge-ni/">
-                                        <span>下一个呢</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-03-07</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/bian-zou-xing-fu-yin-zi/">
-                                        <span>变奏—幸福因子</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-27</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shi-1/">
-                                        <span>逝1</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-15</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/cong-qian/">
-                                        <span>从前</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-14</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/hong-ji-chen-jiu-he-bei-ai/">
-                                        <span>触及陈旧和悲哀</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-13</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/feng-guo-er-gan-shang-de-xing-zou/">
-                                        <span>风过尔-----感伤的行走</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-12</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/shou-wang-tian-kong/">
-                                        <span>守望天空</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                            
-                                <li>
-                                    <span class="date">2006-02-11</span>
-                                    <a class="title" href="http://blog.huigg.xyz/post/wu-ti/">
-                                        <span>无题</span>
-                                    </a>
-                                </li>
-                                
-                                    
-                    </ul>
-
-                </li>
-                
-        </ul>
-    </div>
-
-                
-    <div class="pagination-container">
+    <div>
+      
         
-            <a href="http://blog.huigg.xyz/archives/" class="page-btn btn">上一页</a>
-            
-                
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
     </div>
-    
-
-                    <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+
+          <h2 class="archives-title">文章归档</h2>
+          <div class="archives-container">
+            
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2008</h2>
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/bu-suan-zi-qi-xi-yi/">
+                      <h2 class="post-title">
+                        卜算子-七夕(一)
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shui-chu-fei-lai-ni-chang-lu/">
+                      <h2 class="post-title">
+                        谁处飞来霓裳侣
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">
+                      <h2 class="post-title">
+                        给女友的诗
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/yi-jian-xia/">
+                      <h2 class="post-title">
+                        忆剑侠
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
+                      <h2 class="post-title">
+                        态度与自我
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
+                      <h2 class="post-title">
+                          新的开始
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/xia-yi-zhan/">
+                      <h2 class="post-title">
+                        下一站
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/huang-huang-de-chun-tian/">
+                      <h2 class="post-title">
+                        惶惶的春天
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/hui-jia-ji-shi/">
+                      <h2 class="post-title">
+                        回家记事
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">
+                      <h2 class="post-title">
+                          回不去了
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/dian-jiang-chun-hui-bu-qu-liao/">
+                      <h2 class="post-title">
+                        点绛唇-回不去了
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/liu-nian/">
+                      <h2 class="post-title">
+                        流年
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/sheng-huo-xiang-zuo-gong-zuo-xiang-you/">
+                      <h2 class="post-title">
+                        生活向左，工作向右
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2007</h2>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/tian-jing-sha-dong-si/">
+                      <h2 class="post-title">
+                        天净沙冬思
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/die-lian-hua-er-shou-sui-mo-gan-huai/">
+                      <h2 class="post-title">
+                        蝶恋花二首 岁末感怀
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/ba-xiang-si-xie-jin-shi-li/">
+                      <h2 class="post-title">
+                        把相思写进诗里
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/mu-zhi-jian-de-ai-qing/">
+                      <h2 class="post-title">
+                        拇指间的爱情
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/fang-feng/">
+                      <h2 class="post-title">
+                        放风
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/ji-mu-chu-tian-shu/">
+                      <h2 class="post-title">
+                        极目楚天舒
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/gong-zuo-de-di-fang/">
+                      <h2 class="post-title">
+                        工作的地方
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/peng-lai-yin-xiang/">
+                      <h2 class="post-title">
+                        蓬莱印象
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/hui-ge-hui-ge-hui-ge/">
+                      <h2 class="post-title">
+                        辉哥-灰歌-灰鸽
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/gong-zuo-xiao-jie/">
+                      <h2 class="post-title">
+                        工作小结
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/gui-xiang-gui-ying/">
+                      <h2 class="post-title">
+                        桂香,桂影
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/di-liu-ji/">
+                      <h2 class="post-title">
+                        第六记
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/wei-liao-wang-que-de-ji-nian/">
+                      <h2 class="post-title">
+                        为了忘却的纪念
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shi/">
+                      <h2 class="post-title">
+                        逝2
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/tai-jiu-liao/">
+                      <h2 class="post-title">
+                          太久了
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shui-gei-wo-ge-ti-mu/">
+                      <h2 class="post-title">
+                        谁给我个题目。。。
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/ju-xiang/">
+                      <h2 class="post-title">
+                        具象
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/kai-shi/">
+                      <h2 class="post-title">
+                          开始
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shang-hai/">
+                      <h2 class="post-title">
+                          上海
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/nan-dao-wo-lao-liao/">
+                      <h2 class="post-title">
+                        难道我老了？
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/yi-qi-zou-guo-de-da-xue/">
+                      <h2 class="post-title">
+                        一起走过的大学
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            
+              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2006</h2>
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/ye-wei-yang/">
+                      <h2 class="post-title">
+                        夜未央
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/nai-luo-pu-tao-wu-ya/">
+                      <h2 class="post-title">
+                        奶酪·葡萄·乌鸦
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/xia-yi-ge-ni/">
+                      <h2 class="post-title">
+                        下一个呢
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/bian-zou-xing-fu-yin-zi/">
+                      <h2 class="post-title">
+                        变奏—幸福因子
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shi-1/">
+                      <h2 class="post-title">
+                        逝1
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/cong-qian/">
+                      <h2 class="post-title">
+                        从前
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/hong-ji-chen-jiu-he-bei-ai/">
+                      <h2 class="post-title">
+                        触及陈旧和悲哀
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/feng-guo-er-gan-shang-de-xing-zou/">
+                      <h2 class="post-title">
+                        风过尔-----感伤的行走
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/shou-wang-tian-kong/">
+                      <h2 class="post-title">
+                        守望天空
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+                
+                  <article class="post">
+                    <a href="http://blog.huigg.xyz/post/wu-ti/">
+                      <h2 class="post-title">
+                        无题
+                      </h2>
+                    </a>
+                  </article>
+                
+              
+            
+          </div>
+
+          <div class="pagination-container">
+  
+    <a href="http://blog.huigg.xyz/archives/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-</body>
 
+
+
+
+
+  </body>
 </html>

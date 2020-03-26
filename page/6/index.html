@@ -1,540 +1,324 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    辉哥哥
-</title>
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585203864674">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<title>辉哥哥</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
 <link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="http://blog.huigg.xyz/media/js/jquery.sticky-sidebar.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
 
 
-</head>
 
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="http://blog.huigg.xyz">
-                <img class="avatar" src="http://blog.huigg.xyz/images/avatar.png?v=1585203864674" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    辉哥哥
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/post/about" class="menu">
-                                    关于
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+
+    <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://blog.huigg.xyz">
+        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
+        <h1 class="site-title">辉哥哥</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
-
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-container main-container">
-                <div id="content" class="main-container-left">
-                    
-        
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/bu-suan-zi-qi-xi-yi/">
-                        卜算子-七夕(一)
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-08-06</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/2LbhkFrc8/" class="post-tag i-tag
-                            i-tag-primary">
-            #诗歌
-        </a>
-                        
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/bu-suan-zi-qi-xi-yi/">
+                  <h2 class="post-title">卜算子-七夕(一)</h2>
+                </a>
+                <div class="post-date">
+                  2008-08-06
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>哈,七夕到了,有所悟,得词如下,暂一首:</p>
+                <div class="post-abstract">
+                  <p>哈,七夕到了,有所悟,得词如下,暂一首:</p>
 <p>卜算子*七夕(一)</p>
 <p>星稀空独阔,<br>
 云舒月如梭.<br>
 又见牛郎织女会,</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/bu-suan-zi-qi-xi-yi/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/shui-chu-fei-lai-ni-chang-lu/">
-                        谁处飞来霓裳侣
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-07-29</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/2LbhkFrc8/" class="post-tag i-tag
-                            i-tag-">
-            #诗歌
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/shui-chu-fei-lai-ni-chang-lu/">
+                  <h2 class="post-title">谁处飞来霓裳侣</h2>
+                </a>
+                <div class="post-date">
+                  2008-07-29
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>&lt;仙洲曲&gt;</p>
+                <div class="post-abstract">
+                  <p>&lt;仙洲曲&gt;</p>
 <p>谁处飞来霓裳侣?<br>
 颜月微缺，</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/shui-chu-fei-lai-ni-chang-lu/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">
-                        给女友的诗
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-07-20</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/2LbhkFrc8/" class="post-tag i-tag
-                            i-tag-other_4">
-            #诗歌
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-other_2">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">
+                  <h2 class="post-title">给女友的诗</h2>
+                </a>
+                <div class="post-date">
+                  2008-07-20
                 </div>
-                <div class="post-article">
-                    
-                        <a href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/gei-nu-you-de-shi.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                        <div class="post-content-content">
-                                            月光穿过窗帘，
-飘下一地银色的爱恋，
-我的心，
-也被这一切洁白…默染…
-不知什么时候，
-心
-已经与这银色的妹儿缠绵
-只留下心动的痕迹
-越来越淡
-……
-突发的念头，作了个藏头诗：
-我自与卿并肩飞，
-苦爱经年泰复回。
-滔滔江河无永尽，
-吾心足尉亦无悔。
-回想初穷时且困，
-月月尽钱难敷出。
-如此毅无疏离意，
-生死不弃尽浮屠。
-
-                                        </div>
-                                        
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">Read More ~</a>
-                            </div>
+                <div class="post-abstract">
+                  
                 </div>
+              </div>
+              
+                <a class="right" href="http://blog.huigg.xyz/post/gei-nu-you-de-shi/">
+                  <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/gei-nu-you-de-shi.jpg')">
+                  </div>
+                </a>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/yi-jian-xia/">
-                        忆剑侠
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-07-19</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/yi-jian-xia/">
+                  <h2 class="post-title">忆剑侠</h2>
+                </a>
+                <div class="post-date">
+                  2008-07-19
                 </div>
-                <div class="post-article">
-                    
-                        <a href="http://blog.huigg.xyz/post/yi-jian-xia/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/yi-jian-xia.jpg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>还是剑侠。</p>
+                <div class="post-abstract">
+                  <p>还是剑侠。</p>
 <p>李白有句诗：“眼前好景道不得，崔颢题诗在上头！”道出了他的无奈。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/yi-jian-xia/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
+                <a class="right" href="http://blog.huigg.xyz/post/yi-jian-xia/">
+                  <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/yi-jian-xia.jpg')">
+                  </div>
+                </a>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
-                        态度与自我
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-07-14</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-primary">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-error">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
+                  <h2 class="post-title">态度与自我</h2>
+                </a>
+                <div class="post-date">
+                  2008-07-14
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
+                <div class="post-abstract">
+                  <p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
 可巧的是，现如今，这个词却被泛滥于各色人等，各种年龄的人中间。居然成了很多人自我标榜的依据。<br>
 我想这应该是一种态度，消极的态度，很能为自己解脱。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
-                          新的开始
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-04-14</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-success">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-error">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
+                  <h2 class="post-title">  新的开始</h2>
+                </a>
+                <div class="post-date">
+                  2008-04-14
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>人的一生会有着很多的开始.<br>
+                <div class="post-abstract">
+                  <p>人的一生会有着很多的开始.<br>
 这个开始一结束,下一个就会自动到来.从一个开始到另一个开始,是个一过程.</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/xin-de-kai-shi/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/xia-yi-zhan/">
-                        下一站
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-04-10</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/xia-yi-zhan/">
+                  <h2 class="post-title">下一站</h2>
+                </a>
+                <div class="post-date">
+                  2008-04-10
                 </div>
-                <div class="post-article">
-                    
-                        <a href="http://blog.huigg.xyz/post/xia-yi-zhan/" class="post-feature-image" style="background-image:url(http://blog.huigg.xyz/post-images/xia-yi-zhan.jpeg) ">
-                        </a>
-                        
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>2008-04-10 15:57:24</p>
+                <div class="post-abstract">
+                  <p>2008-04-10 15:57:24</p>
 <p>马上要走了，离开这个生活了小半年的地方，传说中的蓬莱仙境。<br>
 蓬莱，又称“蓬壶”。神话中渤海里仙人居住的三座神山之一(另两座为“方丈”、“赢洲”)，西汉元光二年(公元前133年)，汉武帝东巡至蓬莱，望神山不遇，筑一座小城命名为“蓬莱”，遂为名。<br>
 公司位于蓬莱东北方向，离渤海约2km路左右，来蓬莱之前听说过这里是八仙过海的地方，有个蓬莱阁，关于蓬莱的典故历史，也仅仅局限于这里是明朝抗倭名将戚继光的故里，仅此而已。要离开了，国际惯例，弄点东西纪念纪念。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/xia-yi-zhan/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
+                <a class="right" href="http://blog.huigg.xyz/post/xia-yi-zhan/">
+                  <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/xia-yi-zhan.jpeg')">
+                  </div>
+                </a>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/huang-huang-de-chun-tian/">
-                        惶惶的春天
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-03-21</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-error">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/huang-huang-de-chun-tian/">
+                  <h2 class="post-title">惶惶的春天</h2>
+                </a>
+                <div class="post-date">
+                  2008-03-21
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>犹如一根鞭子<br>
+                <div class="post-abstract">
+                  <p>犹如一根鞭子<br>
 抽打着春天，同时也抽打着<br>
 我凌乱的脚步<br>
 忽忽的     却不象春天的风</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/huang-huang-de-chun-tian/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/hui-jia-ji-shi/">
-                        回家记事
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-02-19</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/hui-jia-ji-shi/">
+                  <h2 class="post-title">回家记事</h2>
+                </a>
+                <div class="post-date">
+                  2008-02-19
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>终于还是回家了,老天终究还是没能挡住我的脚步.<br>
+                <div class="post-abstract">
+                  <p>终于还是回家了,老天终究还是没能挡住我的脚步.<br>
 躺在我钟爱的木版床上,无论怎么翻身都不会有掉下去的危险; 听着妈妈每天早上喊我起床的声音,比任何音乐都更催眠;吃着老家特有的肉糕,从没有觉得腻味;还有那令人口水大动的红菜薹炒肉、红莲藕汤、黄陂豆丝、糍粑，以及在武汉吃的那碗不是很地道的热干面。还是有不少遗憾，面窝、油条、豆皮、水饺皮、臭干子等等等等，都叫不全名字了。<br>
 坐在门前，端碗锅巴稀饭，晒着太阳，听着隔壁左右的老乡们聊天，独特的大嗓门，独特的黄陂话，久违了的亲切。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/hui-jia-ji-shi/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-            <article class="post i-card">
-                <h2 class="post-title">
-                    <a href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">
-                          回不去了
-                    </a>
-                </h2>
-                <div class="post-info">
-                    <time class="post-time">2008-02-02</time>
-                    
-                        <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/" class="post-tag i-tag
-                            i-tag-other_3">
-            #杂录
-        </a>
-                        
-                        <a href="http://blog.huigg.xyz/tag/3u7FqzRhj/" class="post-tag i-tag
-                            i-tag-info">
-            #岁月
-        </a>
-                        
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">
+                  <h2 class="post-title">  回不去了</h2>
+                </a>
+                <div class="post-date">
+                  2008-02-02
                 </div>
-                <div class="post-article">
-                    
-                            <div class="post-content">
-                                
-                                    <div class="post-content-abstract">
-                                        <p>早就做好了今年春节回家的打算，谋划了好几年了。</p>
+                <div class="post-abstract">
+                  <p>早就做好了今年春节回家的打算，谋划了好几年了。</p>
 <p>来山东之前就已经计划好一切可能会出现的情况，甚至做好了如果领导不让回，就把他炒了的打算。</p>
 <p>可惜造化弄人。</p>
 
-                                    </div>
-                                    
-                                            <a class="btn btn-text" href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">Read More ~</a>
-                            </div>
                 </div>
+              </div>
+              
             </article>
-            
-                <!-- 翻页 -->
-                
-    <div class="pagination-container">
-        
-            <a href="http://blog.huigg.xyz/page/5/" class="page-btn btn">上一页</a>
-            
-                
-                    <a href="http://blog.huigg.xyz/page/7/" class="page-btn btn">下一页</a>
-                    
-    </div>
-    
-                </div>
-                <!--  -->
-                <div class="main-container-middle"></div>
-                <!--  -->
-                <div id="sidebar" class="main-container-right">
+          
 
-                    <!-- 个人信息 -->
-                    
-    <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(http://blog.huigg.xyz/images/avatar.png?v=1585203864674)">
-        </div>
-        <h1 class="id_card-title">
-            辉哥哥
-        </h1>
-        <h2 class="id_card-description">
-            无限意蕴枯欲尽，悠悠闲处作奇峰
-        </h2>
-        <!--  -->
-        <div class="id_card-sns">
-            <!-- github -->
-            
-                <a href="https://delphuy.github.io" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-github"></i></a>
-                
-                    <!-- twitter -->
-                    
-                            <!-- weibo -->
-                            
-                                <a href="dehui_you@163.com" target="_blank" rel="noopener noreferrer"><i
-                class="fa fa-weibo"></i></a>
-                                
-                                    <!-- facebook -->
-                                    
-
-        </div>
-    </div>
-    
-
-                        <!-- 公告栏 -->
-                        
-    <div class="notice-card i-card ">
-        <div class="notice-title i-card-title">公告</div>
-        <div class="notice-content">
-            陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
-        </div>
-    </div>
-    
-
-                </div>
-            </div>
-
-
-
-            <div class="site-footer">
-  Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | 
-  <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+          <div class="pagination-container">
+  
+    <a href="http://blog.huigg.xyz/page/5/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
+  
+    <a href="http://blog.huigg.xyz/page/7/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
 
-    </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-</body>
 
+
+
+
+
+  </body>
 </html>
