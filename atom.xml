@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-26T08:38:08.646Z</updated>
+    <updated>2020-03-27T06:53:53.707Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -11,14 +11,26 @@
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
     <entry>
-        <title type="html"><![CDATA[如何查询局域网 IP 对应的用户是谁？]]></title>
+        <title type="html"><![CDATA[0093.如何查询局域网 IP 对应的用户是谁？]]></title>
         <id>http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/</id>
         <link href="http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/">
         </link>
         <updated>2020-03-20T09:24:12.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>今天碰到一个同事在问，192.168.5.10 这个IP 是谁的？连问3次，确没有人回答</p>
+</blockquote>
+<p>其实，如果有路由后台的情况下，很容易找到。但可惜的是，我们是分公司，网络是由总公司帮忙建设维护，联系起来相当麻烦。所以这条路暂时不通。</p>
+<p>凭我少的可怜的网络知识，突然想到一个命令可能会有帮助，分2步应该就能查到这个人是谁：</p>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>今天碰到一个同事在问，192.168.5.10 这个IP 是谁的？连问3次，确没有人回答</p>
+</blockquote>
+<p>其实，如果有路由后台的情况下，很容易找到。但可惜的是，我们是分公司，网络是由总公司帮忙建设维护，联系起来相当麻烦。所以这条路暂时不通。</p>
+<p>凭我少的可怜的网络知识，突然想到一个命令可能会有帮助，分2步应该就能查到这个人是谁：</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[史上最简单的个人博客搭建方式(0技术)]]></title>
+        <title type="html"><![CDATA[0092.史上最简单的个人博客搭建方式(0技术)]]></title>
         <id>http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/</id>
         <link href="http://blog.huigg.xyz/post/shi-shang-zui-jian-dan-de-ge-ren-bo-ke-da-jian-fang-shi-0-ji-zhu/">
         </link>
@@ -35,7 +47,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[2020年春 随笔_02]]></title>
+        <title type="html"><![CDATA[0091.2020年春 随笔_02]]></title>
         <id>http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/</id>
         <link href="http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
         </link>
@@ -64,7 +76,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[ 2020年春  随笔_01]]></title>
+        <title type="html"><![CDATA[0090.2020年春  随笔_01]]></title>
         <id>http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_01/</id>
         <link href="http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_01/">
         </link>
@@ -81,21 +93,47 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[和《过零丁洋》]]></title>
+        <title type="html"><![CDATA[0089.和《过零丁洋》]]></title>
         <id>http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/</id>
         <link href="http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/">
         </link>
         <updated>2018-04-18T06:19:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>辛苦遭逢岭南行，寥落干戈满天星。<br>
+花城微云风飘絮，粤地初暑雨打萍。</p>
+<p>惶恐滩头无惶恐，伶仃岛上看伶仃。<br>
+英雄自古谁无死，汗青尽照英雄名。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>辛苦遭逢岭南行，寥落干戈满天星。<br>
+花城微云风飘絮，粤地初暑雨打萍。</p>
+<p>惶恐滩头无惶恐，伶仃岛上看伶仃。<br>
+英雄自古谁无死，汗青尽照英雄名。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[破阵子·春景]]></title>
+        <title type="html"><![CDATA[0088.破阵子·春景]]></title>
         <id>http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/</id>
         <link href="http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/">
         </link>
         <updated>2017-03-26T06:17:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>破阵子·春景</p>
+<p>暮春夜短昼长，微风满地青黄。</p>
+<p>路上梨花三两点，桃李一时无两。</p>
+<p>其时竞芬芳。</p>
+<p>嬉笑孩提伙伴，绿茵奔跑满场。</p>
+<p>犹意昔日纸鸢破，别提今晨草泥香。</p>
+<p>各自挽线忙。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>破阵子·春景</p>
+<p>暮春夜短昼长，微风满地青黄。</p>
+<p>路上梨花三两点，桃李一时无两。</p>
+<p>其时竞芬芳。</p>
+<p>嬉笑孩提伙伴，绿茵奔跑满场。</p>
+<p>犹意昔日纸鸢破，别提今晨草泥香。</p>
+<p>各自挽线忙。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[无题-姓名对]]></title>
+        <title type="html"><![CDATA[0087.无题-姓名对]]></title>
         <id>http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/</id>
         <link href="http://blog.huigg.xyz/post/wu-ti-xing-ming-dui/">
         </link>
@@ -108,24 +146,50 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[立冬]]></title>
+        <title type="html"><![CDATA[0086.立冬]]></title>
         <id>http://blog.huigg.xyz/post/li-dong/</id>
         <link href="http://blog.huigg.xyz/post/li-dong/">
         </link>
         <updated>2016-11-01T06:21:04.000Z</updated>
+        <summary type="html"><![CDATA[<p>今日立冬，江南雾霾如期而至</p>
+<p>奇峰浩荡散茶烟，小雨霏微湿座毡。<br>
+肯信今年寒信早，老夫布褐未装棉。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今日立冬，江南雾霾如期而至</p>
+<p>奇峰浩荡散茶烟，小雨霏微湿座毡。<br>
+肯信今年寒信早，老夫布褐未装棉。</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[  十年祭]]></title>
+        <title type="html"><![CDATA[0085.十年祭]]></title>
         <id>http://blog.huigg.xyz/post/shi-nian-ji/</id>
         <link href="http://blog.huigg.xyz/post/shi-nian-ji/">
         </link>
         <updated>2016-06-30T07:43:52.000Z</updated>
+        <summary type="html"><![CDATA[<p>十年前，我们用匆忙丢弃新区所有的包袱，同时也丢掉了多年的大襄阳；站在开往江苏的列车上，6个小时的站票，依然未能战胜对未来的迷茫，思绪并没有一丝那四年的过往；如今想来，彼时年轻，不懂忧伤；</p>
+<p>十四年前，我们用陌生敲开斑驳的木门，奇妙的遇见，是一段8个音符的起手式；来自湖北的4个地方，并且两两互为高中同学，缘分这个东西很是神奇；不经意间，造就许多了4年或者2年的室友、多年的兄弟；</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>十年前，我们用匆忙丢弃新区所有的包袱，同时也丢掉了多年的大襄阳；站在开往江苏的列车上，6个小时的站票，依然未能战胜对未来的迷茫，思绪并没有一丝那四年的过往；如今想来，彼时年轻，不懂忧伤；</p>
+<p>十四年前，我们用陌生敲开斑驳的木门，奇妙的遇见，是一段8个音符的起手式；来自湖北的4个地方，并且两两互为高中同学，缘分这个东西很是神奇；不经意间，造就许多了4年或者2年的室友、多年的兄弟；</p>
+]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[和诗《我有一壶酒》  ]]></title>
+        <title type="html"><![CDATA[0084.和诗《我有一壶酒》  ]]></title>
         <id>http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/</id>
         <link href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">
         </link>
         <updated>2016-03-26T06:21:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>我也跟几句：</p>
+<p>我有一壶酒，足矣慰风尘。<br>
+静卧桃花里，醉饮丝竹声。<br>
+青柳随风舞，暗香扑面门。<br>
+不问天下事，羡煞天下人。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>我也跟几句：</p>
+<p>我有一壶酒，足矣慰风尘。<br>
+静卧桃花里，醉饮丝竹声。<br>
+青柳随风舞，暗香扑面门。<br>
+不问天下事，羡煞天下人。</p>
+]]></content>
     </entry>
 </feed>

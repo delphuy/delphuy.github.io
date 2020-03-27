@@ -1,297 +1,1193 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+      <meta charset="UTF-8"/>
 
-<title>杂录 | 辉哥哥</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="keywords" content="辉哥哥博客">
+<meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+<meta name="theme-color" content="#000">
+<title>辉哥哥</title>
+<link rel="shortcut icon" href="/favicon.ico?v=1585292025467">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/media/css/pisces.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="/media/fonts/font-awesome.css">
+<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="http://blog.huigg.xyz/favicon.ico?v=1585211811040">
-<link rel="stylesheet" href="http://blog.huigg.xyz/styles/main.css">
+<link href="/media/hljs/styles/vs2015.css" rel="stylesheet">  
 
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-
+<script src="/media/hljs/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
 
 
-    <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
+
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="http://blog.huigg.xyz">
-        <img src="http://blog.huigg.xyz/images/avatar.png?v=1585211811040" class="site-logo">
-        <h1 class="site-title">辉哥哥</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="head-top-line"></div>
+    <div class="header-box">
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
-      
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
-      
-    </div>
-  </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a> | <a class="rss" href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
-    </div>
-  </div>
-</div>
-
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <h2 class="current-tag">标签: 杂录</h2>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/qiao-he/">
-                  <h2 class="post-title">  巧合</h2>
-                </a>
-                <div class="post-date">
-                  2010-04-09
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/you-yi-ge-san-yue/">
-                  <h2 class="post-title">又一个三月</h2>
-                </a>
-                <div class="post-date">
-                  2010-03-13
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/ke-xiao-de-wen-hua/">
-                  <h2 class="post-title">可笑的文化</h2>
-                </a>
-                <div class="post-date">
-                  2009-06-20
-                </div>
-                <div class="post-abstract">
-                  <p>前几天听说圆明园大水法因为游客攀爬过多，导致损坏。<br>
-突然想起一个比喻：一个人把胸口的伤疤展示给别人看，后来不知怎么发炎了，于是说是看的人太多了，真是可惜。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/xian-cheng-zhi-yu-xian-da/">
-                  <h2 class="post-title">先诚之于先达</h2>
-                </a>
-                <div class="post-date">
-                  2009-04-06
-                </div>
-                <div class="post-abstract">
-                  <p>我们都在喊忙，而且似乎一年四季都很忙。忙就像那狗日的日子，日子尽的那天，忙才会结束。但是我们都很懒，懒得以至于我们都不知道在忙些啥，忙了些啥。于是，忙便成了我们生活着的象征。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/hu-die-he-hai-xiao/">
-                  <h2 class="post-title">蝴蝶和海啸</h2>
-                </a>
-                <div class="post-date">
-                  2008-11-11
-                </div>
-                <div class="post-abstract">
-                  <p>忘记了是谁说过，日本这边的一个蝴蝶扇动一下翅膀，可能会引起南美洲的一场海啸（又或者蝴蝶是南美洲的？）。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/xie-zuo-qing-jie/">
-                  <h2 class="post-title">写作情结</h2>
-                </a>
-                <div class="post-date">
-                  2008-10-22
-                </div>
-                <div class="post-abstract">
-                  <p>我从小就有一个未了的情结，写点什么东西，具体是什么，却一直没弄明白。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
-                  <h2 class="post-title">我们都是老鼠</h2>
-                </a>
-                <div class="post-date">
-                  2008-10-08
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-                <a class="right" href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
-                  <div class="feature-container" style="background-image: url('http://blog.huigg.xyz/post-images/wo-men-du-shi-lao-shu.jpg')">
-                  </div>
-                </a>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/wo-men-hen-jian-wang/">
-                  <h2 class="post-title">我们很健忘</h2>
-                </a>
-                <div class="post-date">
-                  2008-09-18
-                </div>
-                <div class="post-abstract">
-                  <p>我们都很健忘。</p>
-<p>就象一个步入耄耋之年的老人，什么都能忘，也什么都敢忘。我们忘记了自己曾经的理想，现在只是彳亍而行，不知道方向，没有价值，如同一具行尸走肉；我们忘记了曾经的孝道，现在只知道为自己的将来打拼，长年累月奔波在外，问题是有多少人是在打拼，又有多少人是在奔波？每当想起该往家里打个电话的时候，距离上一次已经不知道是多少时日；我们忘记了我们是谁，在各种信息大肆充斥的时代，在地球日益成为一个村的时代，我们忘记了历史。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
-                  <h2 class="post-title">态度与自我</h2>
-                </a>
-                <div class="post-date">
-                  2008-07-14
-                </div>
-                <div class="post-abstract">
-                  <p>所谓的自我，我以为，只不过是一些人所创造出来自慰的东西，很有一些酸葡萄的味道。<br>
-可巧的是，现如今，这个词却被泛滥于各色人等，各种年龄的人中间。居然成了很多人自我标榜的依据。<br>
-我想这应该是一种态度，消极的态度，很能为自己解脱。</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
-                  <h2 class="post-title">  新的开始</h2>
-                </a>
-                <div class="post-date">
-                  2008-04-14
-                </div>
-                <div class="post-abstract">
-                  <p>人的一生会有着很多的开始.<br>
-这个开始一结束,下一个就会自动到来.从一个开始到另一个开始,是个一过程.</p>
-
-                </div>
-              </div>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-    <a href="http://blog.huigg.xyz/tag/YfGQhvs1f" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
-  
-  
-    <a href="http://blog.huigg.xyz/tag/YfGQhvs1f/page/3/" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
-  
-</div>
-
+<div class=" pisces">
+  <header class="header  ">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
+      <div class="nav-toggle" id="nav_toggle">
+        <div class="toggle-box">
+          <div class="line line-top"></div>
+          <div class="line line-center"></div>
+          <div class="line line-bottom"></div>
         </div>
       </div>
+      <div class="site-meta">       
+        <div class="site-title">
+          
+            <a href="/" class="brand">
+              <span>辉哥哥</span>
+            </a>  
+          
+        </div>
+        
+          <p class="subtitle">无限意蕴枯欲尽，悠悠闲处作奇峰</p>
+        
+      </div>
+      <nav class="site-nav" id="site_nav">
+        <ul id="nav_ul">
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/" target="_self">
+                  <i class="fa fa-home"></i> 首页
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/archives" target="_self">
+                  <i class="fa fa-archive"></i> 归档
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/tags" target="_self">
+                  <i class="fa fa-tags"></i> 标签
+                </a>
+              
+            </li>
+          
+            
+            
+            <li class="nav-item ">
+              
+              
+                <a href="/post/about" target="_self">
+                  <i class="fa fa-user"></i> 关于
+                </a>
+              
+            </li>
+          
+          
+        </ul>
+      </nav>
     </div>
+  </header>
+</div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+<script type="text/javascript"> 
+ 
+  let showNav = true;
 
-AOS.init();
+  let navToggle = document.querySelector('#nav_toggle'),
+  siteNav = document.querySelector('#site_nav');
+  
+  function navClick() {
+    let sideBar = document.querySelector('.sidebar');
+    let navUl = document.querySelector('#nav_ul');
+    navToggle.classList.toggle('nav-toggle-active');
+    siteNav.classList.toggle('nav-menu-active');
+    if (siteNav.classList.contains('nav-menu-active')) {
+      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
+    } else {
+      siteNav.style = "";
+    }
+  }
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+  navToggle.addEventListener('click',navClick);  
+</script>
+    </div>
+    <div class="main-continer">
+      
+      <div class="section-layout  pisces">
+        <div class="section-layout-wrapper">
+          <div id="sidebarMeta" class="sidebar">
+    
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">辉哥哥</p>
+    <p class="site-description right-motion">陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">94</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item">
+        <span class="site-item-rss">
+            <i class="fa fa-rss"></i>
+            <a href="http://blog.huigg.xyz/atom.xml" target="_blank">RSS</a>
+        </span>
+      </div>
+    
+  
+  
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+          
+            <a href="mailto:youdehui@qq.com">
+              <i class="fa fa-envelope" title="邮件"></i>
+            </a>
+          
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1585289439832-socialImg.jpg" />
+              <i class="fa fa-qq" title="QQ" ></i>
+            </a>
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1585289439841-socialImg.png" />
+              <i class="fa fa-wechat" title="微信" ></i>
+            </a>
+          
+        
+      </div>
+    </div>
+  
+
+  
+
+
+</div>
+</div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'pisces';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
+            <div class="section-box tag-line">
+              <div class="box-shadow-wrapper">
+                <div class="bg-color">
+                  <section class="section posts-expand">
+                    <div class="padding-wrapper">
+  <div class="tag-timeline-box">
+    <div class="tag-timeline-wrapper">
+      <div class="tag-timeline-title">
+        <h2>
+          杂录
+          <small>标签</small>
+        </h2>
+      </div>
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/shi-nian-ji/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    06-30
+                    <small>0085.十年祭</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/mrsix/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    12-28
+                    <small>0083.Mr.Six</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/xi-wo-wang-yi-hou-hui-wu-qi/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    07-14
+                    <small>0082.昔我往矣，后会无期</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/you-shi-yi-nian-gao-kao-shi/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    06-12
+                    <small>0075.又是一年高考时</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/hao-dui/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    02-03
+                    <small>0073.号对</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/wu-ti-2/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    09-25
+                    <small>0070.无题2</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/918/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    09-18
+                    <small>0069.九一八</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/yu-ji/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    06-04
+                    <small>0066. 雨季</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/lun-hui/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    05-24
+                    <small>0065.轮回</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/lao-liao/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    04-25
+                    <small>0063.老了</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/qiao-he/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    04-09
+                    <small>0060.巧合</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/you-yi-ge-san-yue/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    03-13
+                    <small>0059.又一个三月</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/ke-xiao-de-wen-hua/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    06-20
+                    <small>0055.可笑的文化</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/xian-cheng-zhi-yu-xian-da/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    04-06
+                    <small>0051.先诚之于先达</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/hu-die-he-hai-xiao/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    11-11
+                    <small>0049.蝴蝶和海啸</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/xie-zuo-qing-jie/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    10-22
+                    <small>0048.写作情结</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/wo-men-du-shi-lao-shu/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    10-08
+                    <small>0047.我们都是老鼠</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/wo-men-hen-jian-wang/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    09-18
+                    <small>0046.我们很健忘</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/tai-du-yu-zi-wo/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    07-14
+                    <small>0040.态度与自我</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/xin-de-kai-shi/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    04-14
+                    <small>0039.新的开始</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/hui-bu-qu-liao/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    02-02
+                    <small>0035.回不去了</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/gong-zuo-xiao-jie/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    11-10
+                    <small>0022.工作小结</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/di-liu-ji/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    09-20
+                    <small>0020.第六记</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/tai-jiu-liao/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    08-04
+                    <small>0017.太久了</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/kai-shi/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    04-16
+                    <small>0014. 开始</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+            <a href="http://blog.huigg.xyz/post/shang-hai/">
+              <div class="motion-warpper">
+                <div class="tag-post-node">
+                  <h1>
+                    03-30
+                    <small>  0013.上海</small>
+                  </h1>
+                </div>  
+              </div>
+            </a>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+        
+          
+        
+          
+        
+      
+    </div>
+  </div>
+</div>
+                  </section>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-box">
+  <footer class="footer">
+    <div class="copyright">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By HsxyHao
+    </div>
+    <div class="poweredby">
+      Powered by <a href="https://delphuy.github.io" target="_blank">dephuy</a>
+    </div>
+  </footer>
+  
+  
+  <div class="pisces back-to-top" id="back_to_top">
+    <i class="fa fa-arrow-up"></i>
+    
+    <span class="scrollpercent">
+      <span id="back_to_top_text">0</span>%
+    </span>
+    
+  </div>
+  
+  
+    
+
+<link rel="stylesheet" href="/media/live2d/histoire/css/live2d.css" />
+<div class="box-scale">
+  <div id="landlord" style="left: 0px;bottom: 0px;" data-key="f36501d7aef547b4ac9fcd235afbd816">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+      <div class="live_talk_input_name_body">
+        <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+      </div>
+      <div class="live_talk_input_text_body">
+        <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+        <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+      </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+      <div class="live_ico_item type_info" id="showInfoBtn"></div>
+      <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+      
+      <div class="live_ico_item type_music" id="musicButton"></div>
+      
+      <div class="live_ico_item type_youdu" id="youduButton"></div>
+      <div class="live_ico_item type_quit" id="hideButton"></div>
+      <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+      <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+      <input id="duType" value="douqilai" type="hidden">
+      
+        <input name="live2dBGM" value="http://www.kuwo.cn/yinyue/849867" type="hidden">
+      
+    </div>
+  </div>
+</div>
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+var message_Path = '/media/live2d/histoire/';
+let landlord = document.querySelector('#landlord');
+var apiKey = landlord.dataset.key;
+</script>
+<script type="text/javascript" src="/media/live2d/histoire/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/histoire/js/message.js"></script>
+  
+  
+</div>
+<script>
+
+  let sideBarOpen = 'sidebar-open';
+  let body = document.body;
+  let back2Top = document.querySelector('#back_to_top'),
+  back2TopText = document.querySelector('#back_to_top_text'),
+  drawerBox = document.querySelector('#drawer_box'),
+  rightSideBar = document.querySelector('.sidebar'),
+  viewport = document.querySelector('body');
+
+  function scrollAnimation(currentY, targetY) {
+   
+    let needScrollTop = targetY - currentY
+    let _currentY = currentY
+    setTimeout(() => {
+      const dist = Math.ceil(needScrollTop / 10)
+      _currentY += dist
+      window.scrollTo(_currentY, currentY)
+      if (needScrollTop > 10 || needScrollTop < -10) {
+        scrollAnimation(_currentY, targetY)
+      } else {
+        window.scrollTo(_currentY, targetY)
+      }
+    }, 1)
+  }
+
+  back2Top.addEventListener("click", function(e) {
+    scrollAnimation(document.scrollingElement.scrollTop, 0);
+    e.stopPropagation();
+    return false;
+  });
+  
+  window.addEventListener('scroll', function(e) {
+    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
+    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
+      back2Top.classList.add('back-top-active');
+    }
+    if (percent == 0) {
+      back2Top.classList.remove('back-top-active');
+    }
+    if (back2TopText) {
+      back2TopText.textContent = Math.floor(percent);
+    }
+  });
+
+  
+  let hasCacu = false;
+  window.onresize = function() {
+    if (window.width > 991) {
+      calcuHeight();
+    } else {
+      hasCacu = false;
+    }
+  }
+
+  function calcuHeight() {
+    // 动态调整站点概览高度
+    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
+      let sideBar = document.querySelector('.sidebar');
+      let navUl = document.querySelector('#site_nav');
+      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
+      hasCacu = true;
+    }
+  }
+  calcuHeight();
+  
+  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
+
+  if (drawerBox) {
+    let rightMotions = document.querySelectorAll('.right-motion');
+    let right = drawerBox.classList.contains('right');
+
+    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
+
+    let openProp, closeProp;
+    if (right) {
+      openProp = {
+        paddingRight: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingRight: '0px'
+      };
+    } else {
+      openProp = {
+        paddingLeft: RIGHT_MOVE_DIS 
+      };
+      closeProp = {
+        paddingLeft: '0px'
+      };
+    }
+
+    drawerBox.onclick = function() {
+      open = !open;
+      window.Velocity(rightSideBar, 'stop');
+      window.Velocity(viewport, 'stop');
+      window.Velocity(rightMotions, 'stop');
+      if (open) {
+        window.Velocity(rightSideBar, {
+          width: RIGHT_MOVE_DIS
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, transitionDir,{ });
+          }
+        })
+        window.Velocity(viewport, openProp,{
+          duration: MOTION_TIME
+        });
+      } else {
+        window.Velocity(rightSideBar, {
+          width: '0px'
+        }, {
+          duration: MOTION_TIME,
+          begin: function() {
+            window.Velocity(rightMotions, {
+              opacity: 0
+            });
+          }
+        })
+        window.Velocity(viewport, closeProp ,{
+          duration: MOTION_TIME
+        });
+      }
+      for (let i = 0; i < drawerBox.children.length; i++) {
+        drawerBox.children[i].classList.toggle('muse-line');
+      }
+      drawerBox.classList.toggle(sideBarOpen);
+    }
+  }
+
+  // 代码高亮
+  hljs.initHighlightingOnLoad();
 
 </script>
-
-
-
-
-
-
+    </div>
   </body>
+  <script src="/media/js/motion.js"></script>
 </html>
