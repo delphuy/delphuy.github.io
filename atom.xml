@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-31T09:48:24.870Z</updated>
+    <updated>2020-03-31T11:53:52.625Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -16,18 +16,14 @@
         <link href="http://blog.huigg.xyz/post/0094-liu-mang-ruan-jian-wps-xie-zai-ji/">
         </link>
         <updated>2020-03-31T08:23:56.000Z</updated>
-        <summary type="html"><![CDATA[<ul>
-<li>起因<br>
-公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</li>
-</ul>
+        <summary type="html"><![CDATA[<h1 id="起因">起因</h1>
+<p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
 <p>今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。</p>
 <p>重装大法好啊！于是开始了这一顿崩溃的卸载之旅。</p>
 <p>我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！</p>
 ]]></summary>
-        <content type="html"><![CDATA[<ul>
-<li>起因<br>
-公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</li>
-</ul>
+        <content type="html"><![CDATA[<h1 id="起因">起因</h1>
+<p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
 <p>今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。</p>
 <p>重装大法好啊！于是开始了这一顿崩溃的卸载之旅。</p>
 <p>我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！</p>
