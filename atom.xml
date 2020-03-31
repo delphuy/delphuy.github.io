@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-03-31T04:19:37.010Z</updated>
+    <updated>2020-03-31T09:32:46.504Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0094 流氓软件wps 卸载记]]></title>
+        <id>http://blog.huigg.xyz/post/0094-liu-mang-ruan-jian-wps-xie-zai-ji/</id>
+        <link href="http://blog.huigg.xyz/post/0094-liu-mang-ruan-jian-wps-xie-zai-ji/">
+        </link>
+        <updated>2020-03-31T08:23:56.000Z</updated>
+        <summary type="html"><![CDATA[<h5 id="起因">起因</h5>
+<p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
+<p>今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。</p>
+<p>重装大法好啊！于是开始了这一顿崩溃的卸载之旅。</p>
+<p>我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！</p>
+]]></summary>
+        <content type="html"><![CDATA[<h5 id="起因">起因</h5>
+<p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
+<p>今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。</p>
+<p>重装大法好啊！于是开始了这一顿崩溃的卸载之旅。</p>
+<p>我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0093.如何查询局域网 IP 对应的用户是谁？]]></title>
         <id>http://blog.huigg.xyz/post/ru-he-cha-xun-ju-yu-wang-ip-dui-ying-de-yong-hu-shi-shui/</id>
@@ -169,25 +188,6 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>十年前，我们用匆忙丢弃新区所有的包袱，同时也丢掉了多年的大襄阳；站在开往江苏的列车上，6个小时的站票，依然未能战胜对未来的迷茫，思绪并没有一丝那四年的过往；如今想来，彼时年轻，不懂忧伤；</p>
 <p>十四年前，我们用陌生敲开斑驳的木门，奇妙的遇见，是一段8个音符的起手式；来自湖北的4个地方，并且两两互为高中同学，缘分这个东西很是神奇；不经意间，造就许多了4年或者2年的室友、多年的兄弟；</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0084.和诗《我有一壶酒》  ]]></title>
-        <id>http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/</id>
-        <link href="http://blog.huigg.xyz/post/he-shi-lesslesswo-you-yi-hu-jiu-greatergreater/">
-        </link>
-        <updated>2016-03-26T06:21:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>我也跟几句：</p>
-<p>我有一壶酒，足矣慰风尘。<br>
-静卧桃花里，醉饮丝竹声。<br>
-青柳随风舞，暗香扑面门。<br>
-不问天下事，羡煞天下人。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>我也跟几句：</p>
-<p>我有一壶酒，足矣慰风尘。<br>
-静卧桃花里，醉饮丝竹声。<br>
-青柳随风舞，暗香扑面门。<br>
-不问天下事，羡煞天下人。</p>
 ]]></content>
     </entry>
 </feed>

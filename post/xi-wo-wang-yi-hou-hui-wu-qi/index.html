@@ -4,11 +4,11 @@
     <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="辉哥哥&#39;s 个人博客">
+<meta name="keywords" content="辉哥哥&#39;s Blog">
 <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
 <meta name="theme-color" content="#000">
 <title>0082.昔我往矣，后会无期 | 辉哥哥</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585628327770">
+<link rel="shortcut icon" href="/favicon.ico?v=1585647121621">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -163,19 +163,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">94</span>
+        <span class="site-item-stat-count">95</span>
         <span class="site-item-stat-name">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-count">10</span>
         <span class="site-item-stat-name">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">8</span>
+        <span class="site-item-stat-count">10</span>
         <span class="site-item-stat-name">标签</span>
       </a>
     </div>
@@ -195,23 +195,19 @@
       <div class="social-item">
         
           
+            <a href="187351972">
+              <i class="fa fa-qq" title="QQ"></i>
+            </a>
+          
+            <a href="youdehui">
+              <i class="fa fa-wechat" title="wx"></i>
+            </a>
+          
             <a href="mailto:youdehui@qq.com">
               <i class="fa fa-envelope" title="mail"></i>
             </a>
           
         
-        
-          
-            <a class="social-img" href="#">
-              <img src="" />
-              <i class="fa fa-qq" title="qq" ></i>
-            </a>
-          
-            <a class="social-img" href="#">
-              <img src="" />
-              <i class="fa fa-wechat" title="wx" ></i>
-            </a>
-          
         
       </div>
     </div>
@@ -440,7 +436,7 @@ new Valine({
     notify: 'true' === 'true', 
     avatar:'wavatar', 
     placeholder: '老司机们不要开车➳♡゛',
-    pageSize: '10',
+    pageSize: '5',
     lang: 'zh-cn',
     visitor: 'true' === 'true',
     highlight: 'true' === 'true',
@@ -612,6 +608,36 @@ new Valine({
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
+</script>
+      <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick= () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function(e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function() {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
 </script>
     </div>
   </body>
