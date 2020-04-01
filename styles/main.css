@@ -2075,8 +2075,8 @@ blockquote:before {
       }.pisces .sidebar, .gemini .sidebar {
         right: 0;
       }.markdownIt-TOC a {
-      color: #eee;
-      border-bottom-color: #eee;
+      color: #228be6;
+      border-bottom-color: #228be6;
     }.markdownIt-TOC a:hover {
       color: #868e96;
       border-bottom-color: #868e96;
