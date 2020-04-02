@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-02T03:14:07.420Z</updated>
+    <updated>2020-04-02T03:23:11.632Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -23,7 +23,7 @@
 <li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
 <li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
 <li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
-<li>不过推荐使用微软新出的 ** Windows terminal  **，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
+<li>不过推荐使用微软新出的 <a href="https://aka.ms/windowsterminal">Windows terminal</a>，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
 </ol>
 ]]></summary>
         <content type="html"><![CDATA[<p>这几天命令用的稍微多了点，记录一下学习到的几个常用命令</p>
@@ -33,7 +33,7 @@
 <li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
 <li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
 <li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
-<li>不过推荐使用微软新出的 ** Windows terminal  **，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
+<li>不过推荐使用微软新出的 <a href="https://aka.ms/windowsterminal">Windows terminal</a>，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
 </ol>
 ]]></content>
     </entry>
