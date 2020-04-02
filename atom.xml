@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-02T00:53:30.976Z</updated>
+    <updated>2020-04-02T03:14:07.420Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0095 基本cmd命令]]></title>
+        <id>http://blog.huigg.xyz/post/0095-ji-ben-cmd-ming-ling/</id>
+        <link href="http://blog.huigg.xyz/post/0095-ji-ben-cmd-ming-ling/">
+        </link>
+        <updated>2020-04-02T02:56:16.000Z</updated>
+        <summary type="html"><![CDATA[<p>这几天命令用的稍微多了点，记录一下学习到的几个常用命令</p>
+<h1 id="打开cmd方式">打开CMD方式</h1>
+<ol>
+<li>点击开始，找到windows系统展开，选择命令提示符</li>
+<li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
+<li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
+<li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
+<li>不过推荐使用微软新出的 ** Windows terminal  **，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
+</ol>
+]]></summary>
+        <content type="html"><![CDATA[<p>这几天命令用的稍微多了点，记录一下学习到的几个常用命令</p>
+<h1 id="打开cmd方式">打开CMD方式</h1>
+<ol>
+<li>点击开始，找到windows系统展开，选择命令提示符</li>
+<li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
+<li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
+<li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
+<li>不过推荐使用微软新出的 ** Windows terminal  **，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0094 流氓软件wps 卸载记]]></title>
         <id>http://blog.huigg.xyz/post/0094-liu-mang-ruan-jian-wps-xie-zai-ji/</id>
@@ -175,19 +202,6 @@
         <content type="html"><![CDATA[<p>今日立冬，江南雾霾如期而至</p>
 <p>奇峰浩荡散茶烟，小雨霏微湿座毡。<br>
 肯信今年寒信早，老夫布褐未装棉。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0085.十年祭]]></title>
-        <id>http://blog.huigg.xyz/post/shi-nian-ji/</id>
-        <link href="http://blog.huigg.xyz/post/shi-nian-ji/">
-        </link>
-        <updated>2016-06-30T07:43:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>十年前，我们用匆忙丢弃新区所有的包袱，同时也丢掉了多年的大襄阳；站在开往江苏的列车上，6个小时的站票，依然未能战胜对未来的迷茫，思绪并没有一丝那四年的过往；如今想来，彼时年轻，不懂忧伤；</p>
-<p>十四年前，我们用陌生敲开斑驳的木门，奇妙的遇见，是一段8个音符的起手式；来自湖北的4个地方，并且两两互为高中同学，缘分这个东西很是神奇；不经意间，造就许多了4年或者2年的室友、多年的兄弟；</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>十年前，我们用匆忙丢弃新区所有的包袱，同时也丢掉了多年的大襄阳；站在开往江苏的列车上，6个小时的站票，依然未能战胜对未来的迷茫，思绪并没有一丝那四年的过往；如今想来，彼时年轻，不懂忧伤；</p>
-<p>十四年前，我们用陌生敲开斑驳的木门，奇妙的遇见，是一段8个音符的起手式；来自湖北的4个地方，并且两两互为高中同学，缘分这个东西很是神奇；不经意间，造就许多了4年或者2年的室友、多年的兄弟；</p>
 ]]></content>
     </entry>
 </feed>
