@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-03T07:54:17.020Z</updated>
+    <updated>2020-04-03T13:07:57.046Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)]]></title>
+        <id>http://blog.huigg.xyz/post/0-098/</id>
+        <link href="http://blog.huigg.xyz/post/0-098/">
+        </link>
+        <updated>2020-04-03T12:11:07.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>显示信息：echo</li>
+<li>注释语句：rem</li>
+<li>目录切换：cd</li>
+<li>列文件名：dir</li>
+</ol>
+<h1 id="dir-命令">dir 命令</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>显示信息：echo</li>
+<li>注释语句：rem</li>
+<li>目录切换：cd</li>
+<li>列文件名：dir</li>
+</ol>
+<h1 id="dir-命令">dir 命令</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)]]></title>
         <id>http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/</id>
@@ -201,29 +226,6 @@
 花城微云风飘絮，粤地初暑雨打萍。</p>
 <p>惶恐滩头无惶恐，伶仃岛上看伶仃。<br>
 英雄自古谁无死，汗青尽照英雄名。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0088.破阵子·春景]]></title>
-        <id>http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/</id>
-        <link href="http://blog.huigg.xyz/post/po-zhen-zi-chun-jing/">
-        </link>
-        <updated>2017-03-26T06:17:52.000Z</updated>
-        <summary type="html"><![CDATA[<p>破阵子·春景</p>
-<p>暮春夜短昼长，微风满地青黄。</p>
-<p>路上梨花三两点，桃李一时无两。</p>
-<p>其时竞芬芳。</p>
-<p>嬉笑孩提伙伴，绿茵奔跑满场。</p>
-<p>犹意昔日纸鸢破，别提今晨草泥香。</p>
-<p>各自挽线忙。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>破阵子·春景</p>
-<p>暮春夜短昼长，微风满地青黄。</p>
-<p>路上梨花三两点，桃李一时无两。</p>
-<p>其时竞芬芳。</p>
-<p>嬉笑孩提伙伴，绿茵奔跑满场。</p>
-<p>犹意昔日纸鸢破，别提今晨草泥香。</p>
-<p>各自挽线忙。</p>
 ]]></content>
     </entry>
 </feed>
