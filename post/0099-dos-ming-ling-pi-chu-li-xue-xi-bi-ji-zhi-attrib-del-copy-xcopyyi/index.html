@@ -8,7 +8,7 @@
 <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
 <meta name="theme-color" content="#000">
 <title>0099  dos命令(批处理)学习笔记之 attrib del copy xcopy(一) | 辉哥哥</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586230258055">
+<link rel="shortcut icon" href="/favicon.ico?v=1586230681321">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -230,6 +230,7 @@
 <li><a href="#%E4%BE%8B%E4%BA%8C-%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%A4%B9%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E4%B8%BA%E9%9A%90%E8%97%8F">例二 设置文件夹所有文件为隐藏</a>
 <ul>
 <li><a href="#%E8%AE%BE%E7%BD%AE%E9%9A%90%E8%97%8F">设置隐藏</a></li>
+<li><a href="#%E5%8F%96%E6%B6%88%E9%9A%90%E8%97%8F">取消隐藏</a></li>
 </ul>
 </li>
 </ul>
@@ -540,7 +541,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>379<span class="pc-show">字数</span></span>
+      <span>422<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -595,6 +596,14 @@ pause
 <figure data-type="image" tabindex="2"><img src="http://blog.huigg.xyz/post-images/1586229830749.jpg" alt="" loading="lazy"></figure>
 <p>第2种，执行查看文件属性命令，可见文件的属性为 A、H、I，A和I貌似是一直都有，H属性是我们刚刚赋予的：<br>
 <img src="http://blog.huigg.xyz/post-images/1586229834358.jpg" alt="" loading="lazy"></p>
+<h3 id="取消隐藏">取消隐藏</h3>
+<pre><code class="language-BAT">@ echo off
+echo 将 C:\BAT\第一节 的文件夹和下面的文件都隐藏
+attrib -h C:\BAT\第一节\*.* /s /d
+pause
+</code></pre>
+<p>执行后，查看结果：<br>
+<img src="http://blog.huigg.xyz/post-images/1586230675988.jpg" alt="" loading="lazy"></p>
 <blockquote>
 <p>未完待续.....</p>
 </blockquote>
