@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-06T12:34:17.492Z</updated>
+    <updated>2020-04-07T03:31:12.318Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,31 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0099  dos命令(批处理)学习笔记之 attrib del copy xcopy(一)]]></title>
+        <id>http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/</id>
+        <link href="http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/">
+        </link>
+        <updated>2020-04-07T02:32:55.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>设置文件属性：attrib</li>
+<li>删除命令：del</li>
+<li>复制文件：copy</li>
+<li>复制文件(夹)：xcopy</li>
+</ol>
+<h1 id="attrib命令">attrib命令</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>设置文件属性：attrib</li>
+<li>删除命令：del</li>
+<li>复制文件：copy</li>
+<li>复制文件(夹)：xcopy</li>
+</ol>
+<h1 id="attrib命令">attrib命令</h1>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)]]></title>
         <id>http://blog.huigg.xyz/post/0-098/</id>
@@ -209,23 +234,6 @@
 <p>我就这样突如其来的被困在了老家，要说不抱怨是假话，但抱怨多了，负能量满满，也感觉不好。</p>
 <p>于是乎，自我安慰一番，抓紧适应下来。</p>
 <p>这一晃已经45天，武汉像被人按下了静止键，一切都停顿了下来。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0089.和《过零丁洋》]]></title>
-        <id>http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/</id>
-        <link href="http://blog.huigg.xyz/post/he-lesslessguo-ling-ding-yang-greatergreater/">
-        </link>
-        <updated>2018-04-18T06:19:04.000Z</updated>
-        <summary type="html"><![CDATA[<p>辛苦遭逢岭南行，寥落干戈满天星。<br>
-花城微云风飘絮，粤地初暑雨打萍。</p>
-<p>惶恐滩头无惶恐，伶仃岛上看伶仃。<br>
-英雄自古谁无死，汗青尽照英雄名。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>辛苦遭逢岭南行，寥落干戈满天星。<br>
-花城微云风飘絮，粤地初暑雨打萍。</p>
-<p>惶恐滩头无惶恐，伶仃岛上看伶仃。<br>
-英雄自古谁无死，汗青尽照英雄名。</p>
 ]]></content>
     </entry>
 </feed>
