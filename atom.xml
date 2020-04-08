@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-08T09:12:21.821Z</updated>
+    <updated>2020-04-08T09:33:43.591Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -181,12 +181,12 @@
         <updated>2020-03-10T00:56:09.000Z</updated>
         <summary type="html"><![CDATA[<p>本次春节号称史上最烂的春节。</p>
 <p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
-<p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
+<p>每天看到那些不断上涨的数字，以及一条条鲜活的生命离世，非常的压抑。</p>
 <p>------ 扯远了。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>本次春节号称史上最烂的春节。</p>
 <p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
-<p>每天看到那些不断上涨的数字，自己一条条鲜活的生命离世，非常的压抑。</p>
+<p>每天看到那些不断上涨的数字，以及一条条鲜活的生命离世，非常的压抑。</p>
 <p>------ 扯远了。</p>
 ]]></content>
     </entry>
