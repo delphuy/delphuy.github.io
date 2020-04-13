@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-13T11:31:20.443Z</updated>
+    <updated>2020-04-13T11:32:50.127Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -16,6 +16,24 @@
         <link href="http://blog.huigg.xyz/post/0100-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyer/">
         </link>
         <updated>2020-04-13T09:40:05.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>设置文件属性：attrib</li>
+<li>删除命令：del</li>
+<li>复制文件：copy</li>
+<li>复制文件(夹)：xcopy</li>
+</ol>
+<h1 id="del-命令">del 命令</h1>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
+<ol>
+<li>设置文件属性：attrib</li>
+<li>删除命令：del</li>
+<li>复制文件：copy</li>
+<li>复制文件(夹)：xcopy</li>
+</ol>
+<h1 id="del-命令">del 命令</h1>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[0099  dos命令(批处理)学习笔记之 attrib del copy xcopy(一)]]></title>
