@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-04-28T06:15:47.176Z</updated>
+    <updated>2020-04-28T10:11:53.715Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,37 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0101 C# 中的 e.KeyChar 和 button_click(sender,e)]]></title>
+        <id>http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/</id>
+        <link href="http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/">
+        </link>
+        <updated>2020-04-28T10:05:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天在看大佬的代码时，学到2个点，mark一下：</p>
+<h1 id="ekeychar">e.KeyChar</h1>
+<p>当需要判断输入的是否是非字符按键时，可以使用该写法：</p>
+<pre><code class="language-C#">   e.KeyChar = '\r'  // 输入的是否是enter键
+   e.KeyChar = '\b'  //输入的是否是 退格键 
+   e.KeyChar = 27  // 输入的是否是Esc
+</code></pre>
+<h1 id="button_clicksendere">button_click(sender,e)</h1>
+<pre><code>    sender是事件源，表示触发事件的那个组件，比如说你按下按钮，那么sender就是按钮
+    e 是事件参数，比如说你用鼠标点击窗体，那么EventArgs是会包含点击的位置等等，它用来辅
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天在看大佬的代码时，学到2个点，mark一下：</p>
+<h1 id="ekeychar">e.KeyChar</h1>
+<p>当需要判断输入的是否是非字符按键时，可以使用该写法：</p>
+<pre><code class="language-C#">   e.KeyChar = '\r'  // 输入的是否是enter键
+   e.KeyChar = '\b'  //输入的是否是 退格键 
+   e.KeyChar = 27  // 输入的是否是Esc
+</code></pre>
+<h1 id="button_clicksendere">button_click(sender,e)</h1>
+<pre><code>    sender是事件源，表示触发事件的那个组件，比如说你按下按钮，那么sender就是按钮
+    e 是事件参数，比如说你用鼠标点击窗体，那么EventArgs是会包含点击的位置等等，它用来辅
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0100 dos命令(批处理)学习笔记之 attrib del copy xcopy(二)]]></title>
         <id>http://blog.huigg.xyz/post/0100-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyer/</id>
@@ -213,35 +244,6 @@
 <p>在老家农村宅了近50天，老家是武汉的，风暴的中心。</p>
 <p>每天看到那些不断上涨的数字，以及一条条鲜活的生命离世，非常的压抑。</p>
 <p>------ 扯远了。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0091.2020年春 随笔_02]]></title>
-        <id>http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/</id>
-        <link href="http://blog.huigg.xyz/post/2020-nian-chun-sui-bi-_02/">
-        </link>
-        <updated>2020-03-08T03:08:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>天气  晴<br>
-微风</p>
-<h4 id="疫情"><strong>疫情</strong></h4>
-<p>好消息接二连三：</p>
-<ul>
-<li>武汉今天的新增终于下降到了两位数</li>
-<li>黄陂区连续三天0新增</li>
-<li>武汉连续关闭三家方仓</li>
-<li>清空了一家医院，该医院可以恢复正常门诊</li>
-</ul>
-]]></summary>
-        <content type="html"><![CDATA[<p>天气  晴<br>
-微风</p>
-<h4 id="疫情"><strong>疫情</strong></h4>
-<p>好消息接二连三：</p>
-<ul>
-<li>武汉今天的新增终于下降到了两位数</li>
-<li>黄陂区连续三天0新增</li>
-<li>武汉连续关闭三家方仓</li>
-<li>清空了一家医院，该医院可以恢复正常门诊</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
