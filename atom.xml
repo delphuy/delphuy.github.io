@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-09-20T03:20:14.225Z</updated>
+    <updated>2020-11-06T05:34:57.836Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0105  python 的第一个坑]]></title>
+        <id>http://blog.huigg.xyz/post/0105-python-de-di-yi-ge-keng/</id>
+        <link href="http://blog.huigg.xyz/post/0105-python-de-di-yi-ge-keng/">
+        </link>
+        <updated>2020-11-06T05:26:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天在用python 操作excel，才敲2句就报error，头秃啊~<br>
+代码是这样：<br>
+<img src="http://blog.huigg.xyz/post-images/1604640475153.jpg" alt="" loading="lazy"></p>
+<p>运行之后：<br>
+<img src="http://blog.huigg.xyz/post-images/1604640487884.jpg" alt="" loading="lazy"></p>
+<p>我第一反应是变量类型不对，然后检查发现 我加了 str做转换；然后又尝试改成这样：</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天在用python 操作excel，才敲2句就报error，头秃啊~<br>
+代码是这样：<br>
+<img src="http://blog.huigg.xyz/post-images/1604640475153.jpg" alt="" loading="lazy"></p>
+<p>运行之后：<br>
+<img src="http://blog.huigg.xyz/post-images/1604640487884.jpg" alt="" loading="lazy"></p>
+<p>我第一反应是变量类型不对，然后检查发现 我加了 str做转换；然后又尝试改成这样：</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0104 和游同学诗]]></title>
         <id>http://blog.huigg.xyz/post/he-you-tong-xue/</id>
@@ -213,33 +234,6 @@
 <li>列文件名：dir</li>
 </ol>
 <h1 id="echo-命令">echo 命令</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0095 基本dos命令]]></title>
-        <id>http://blog.huigg.xyz/post/0095-ji-ben-cmd-ming-ling/</id>
-        <link href="http://blog.huigg.xyz/post/0095-ji-ben-cmd-ming-ling/">
-        </link>
-        <updated>2020-04-02T02:56:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>这几天命令用的稍微多了点，记录一下学习到的几个常用命令</p>
-<h1 id="打开cmd方式">打开CMD方式</h1>
-<ol>
-<li>点击开始，找到windows系统展开，选择命令提示符</li>
-<li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
-<li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
-<li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
-<li>不过推荐使用微软新出的 <a href="https://aka.ms/windowsterminal">Windows terminal</a>，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
-</ol>
-]]></summary>
-        <content type="html"><![CDATA[<p>这几天命令用的稍微多了点，记录一下学习到的几个常用命令</p>
-<h1 id="打开cmd方式">打开CMD方式</h1>
-<ol>
-<li>点击开始，找到windows系统展开，选择命令提示符</li>
-<li>win键+R键，在打开的弹框中输入cmd，点击确认</li>
-<li>选中文件夹，按住shift键，点击鼠标右键，选择在此处打开Powershell窗口</li>
-<li>在资源管理器的地址栏上输入cmd或者在地址前面加上cmd，按回车键</li>
-<li>不过推荐使用微软新出的 <a href="https://aka.ms/windowsterminal">Windows terminal</a>，兼容cmd、 powershell、Azure、bash，非常好用，具体如何安装可以自行百度。</li>
-</ol>
 ]]></content>
     </entry>
 </feed>
