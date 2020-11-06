@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-11-06T05:34:57.836Z</updated>
+    <updated>2020-11-06T05:39:10.045Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -19,16 +19,10 @@
         <summary type="html"><![CDATA[<p>今天在用python 操作excel，才敲2句就报error，头秃啊~<br>
 代码是这样：<br>
 <img src="http://blog.huigg.xyz/post-images/1604640475153.jpg" alt="" loading="lazy"></p>
-<p>运行之后：<br>
-<img src="http://blog.huigg.xyz/post-images/1604640487884.jpg" alt="" loading="lazy"></p>
-<p>我第一反应是变量类型不对，然后检查发现 我加了 str做转换；然后又尝试改成这样：</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>今天在用python 操作excel，才敲2句就报error，头秃啊~<br>
 代码是这样：<br>
 <img src="http://blog.huigg.xyz/post-images/1604640475153.jpg" alt="" loading="lazy"></p>
-<p>运行之后：<br>
-<img src="http://blog.huigg.xyz/post-images/1604640487884.jpg" alt="" loading="lazy"></p>
-<p>我第一反应是变量类型不对，然后检查发现 我加了 str做转换；然后又尝试改成这样：</p>
 ]]></content>
     </entry>
     <entry>
