@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-11-06T05:45:42.261Z</updated>
+    <updated>2020-11-16T03:36:41.024Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0106 学习python 的第2个坑--第三方包与pycharm]]></title>
+        <id>http://blog.huigg.xyz/post/0106-xue-xi-python-de-di-2-ge-keng-di-san-fang-bao-yu-pycharm/</id>
+        <link href="http://blog.huigg.xyz/post/0106-xue-xi-python-de-di-2-ge-keng-di-san-fang-bao-yu-pycharm/">
+        </link>
+        <updated>2020-11-16T02:39:55.000Z</updated>
+        <summary type="html"><![CDATA[<p>ide 我用的是pycharm，使用cmd 安装xlrd模块，提示安装成功</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>ide 我用的是pycharm，使用cmd 安装xlrd模块，提示安装成功</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0105  python 的第一个坑]]></title>
         <id>http://blog.huigg.xyz/post/0105-python-de-di-yi-ge-keng/</id>
@@ -201,31 +212,6 @@
 <li>列文件名：dir</li>
 </ol>
 <h1 id="rem-命令">rem 命令</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0096  dos命令(批处理)学习笔记之 echo rem cd dir(一)]]></title>
-        <id>http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-diryi/</id>
-        <link href="http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-diryi/">
-        </link>
-        <updated>2020-04-03T01:30:56.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="echo-命令">echo 命令</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="echo-命令">echo 命令</h1>
 ]]></content>
     </entry>
 </feed>

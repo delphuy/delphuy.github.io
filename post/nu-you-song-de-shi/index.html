@@ -9,7 +9,7 @@
 <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
 <meta name="theme-color" content="#000">
 <title>0068.女友送的诗 | 辉哥哥</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1604641521194">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1605497768248">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -189,7 +189,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">106</span>
+        <span class="site-item-stat-count">107</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -947,6 +947,37 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0106-xue-xi-python-de-di-2-ge-keng-di-san-fang-bao-yu-pycharm/"" data-c="
+          &lt;p&gt;ide 我用的是pycharm，使用cmd 安装xlrd模块，提示安装成功&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605496052868.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;然而在pycharm 里 import 的时候，却是红线提示&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605496220670.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;有点懵逼，明明是已经安装成功了啊；&lt;br&gt;
+于是我使用pycharm的解释器再安装一遍&lt;br&gt;
+显示成功，我寻思了一下，应该是解释器 的问题，我在创建项目时没有指定python的解释器路径。&lt;br&gt;
+于是重新进入 setting--&amp;gt; project --&amp;gt; interpreter，选择我安装目录的python解释器：&lt;br&gt;
+&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605496866151.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;果然不出我所料，这里是 空白的，显示 ：No interpreter，于是我选择 show all，然后选择看起来是正确的那个解释器，然后点 OK：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605496961034.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;然后，新的问题出现了，显示   ** Python packaging tools not found. Install packaging tools  **，坑爹啊！&lt;br&gt;
+然后，点击 install XXX，安装这个 packing tools，又报错了：&lt;br&gt;
+&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605497132013.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;看提示，说是找不到这个SDK，头秃啊！！&lt;/p&gt;
+&lt;p&gt;我突然看到这个提示里的 版本， 3.7 ！以及路径，貌似我和安装的不一样，可能是之前的残留；&lt;br&gt;
+于是，我感觉我找到问题的根源了，再次进入 setting--&amp;gt; project --&amp;gt; interpreter --&amp;gt; show all   将这个3.7 的 解释器 点击右边的  - 号 移除，然后点击 +  添加 我安装的 3.9版本的解释器，一顿操作猛如虎：&lt;br&gt;
+&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605497323840.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击OK，返回解释器的界面，perfect！！！一切正常，我之前安装的第三方包 都正确显示：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;4&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605497366772.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;再会到 pycharm 的编辑界面， import 一下试试：&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;5&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605497447047.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;已经有智能提示了；&lt;/p&gt;
+&lt;p&gt;我突然想到，其实在创建项目的时候，就可以直接选择正确的解释器，这样用pip 命令安装的包，在pycharm就能直接使用了&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;6&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1605497745280.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">0106 学习python 的第2个坑--第三方包与pycharm</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0105-python-de-di-yi-ge-keng/"" data-c="
