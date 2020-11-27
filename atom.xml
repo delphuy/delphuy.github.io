@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-11-27T04:15:07.804Z</updated>
+    <updated>2020-11-27T08:14:00.695Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0108 学习python的第3个坑，忘记保存]]></title>
+        <id>http://blog.huigg.xyz/post/0108/</id>
+        <link href="http://blog.huigg.xyz/post/0108/">
+        </link>
+        <updated>2020-11-27T08:02:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天练习写入excel的时候，发生一个非常郁闷的问题<br>
+代码是这样：</p>
+<pre><code class="language-python">#Author:delphuy
+#CreateDate:2020/11/16
+</code></pre>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天练习写入excel的时候，发生一个非常郁闷的问题<br>
+代码是这样：</p>
+<pre><code class="language-python">#Author:delphuy
+#CreateDate:2020/11/16
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0107  zabbix 安装 最简单的做法]]></title>
         <id>http://blog.huigg.xyz/post/0107-zabbix-an-zhuang-zui-jian-dan-de-zuo-fa/</id>
@@ -183,31 +202,6 @@
 <li>复制文件(夹)：xcopy</li>
 </ol>
 <h1 id="attrib命令">attrib命令</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)]]></title>
-        <id>http://blog.huigg.xyz/post/0-098/</id>
-        <link href="http://blog.huigg.xyz/post/0-098/">
-        </link>
-        <updated>2020-04-03T12:11:07.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="dir-命令">dir 命令</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="dir-命令">dir 命令</h1>
 ]]></content>
     </entry>
 </feed>
