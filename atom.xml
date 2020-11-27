@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-11-16T03:47:38.835Z</updated>
+    <updated>2020-11-27T04:08:47.544Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2020, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0107  zabbix 安装 最简单的做法]]></title>
+        <id>http://blog.huigg.xyz/post/0107-zabbix-an-zhuang-zui-jian-dan-de-zuo-fa/</id>
+        <link href="http://blog.huigg.xyz/post/0107-zabbix-an-zhuang-zui-jian-dan-de-zuo-fa/">
+        </link>
+        <updated>2020-11-27T03:32:48.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近在部署一批主机，需要增加zabbix 来监控这些主机的运行情况。<br>
+可是这个东西我只是听说过，根本没用过，所以网上找一些教程准备开干。<br>
+先是Ubuntu 的方式，发现各种坑，安装mysql就卡住了，无论如何也进不去mysql，各种方法试遍了，可怜一下我这个的lunix小白。<br>
+然后用centos，没有GUI的那种，这次还是卡在mysql，这个东西跟我有仇。</p>
+<p>快要放弃的时候，大神降临。</p>
+<p>突然发现有一种叫做一键安装的东西，正好搭配centos的ssh的操作。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近在部署一批主机，需要增加zabbix 来监控这些主机的运行情况。<br>
+可是这个东西我只是听说过，根本没用过，所以网上找一些教程准备开干。<br>
+先是Ubuntu 的方式，发现各种坑，安装mysql就卡住了，无论如何也进不去mysql，各种方法试遍了，可怜一下我这个的lunix小白。<br>
+然后用centos，没有GUI的那种，这次还是卡在mysql，这个东西跟我有仇。</p>
+<p>快要放弃的时候，大神降临。</p>
+<p>突然发现有一种叫做一键安装的东西，正好搭配centos的ssh的操作。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0106 学习python 的第2个坑--第三方包与pycharm]]></title>
         <id>http://blog.huigg.xyz/post/0106-xue-xi-python-de-di-2-ge-keng-di-san-fang-bao-yu-pycharm/</id>
@@ -187,31 +208,6 @@
 <li>列文件名：dir</li>
 </ol>
 <h1 id="dir-命令">dir 命令</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)]]></title>
-        <id>http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/</id>
-        <link href="http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/">
-        </link>
-        <updated>2020-04-03T07:11:58.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="rem-命令">rem 命令</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="rem-命令">rem 命令</h1>
 ]]></content>
     </entry>
 </feed>

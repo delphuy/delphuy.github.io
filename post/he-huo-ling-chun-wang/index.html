@@ -9,7 +9,7 @@
 <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
 <meta name="theme-color" content="#000">
 <title>0080.喝火令·春望 | 辉哥哥</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1605498333902">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1606450101132">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -189,7 +189,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">107</span>
+        <span class="site-item-stat-count">108</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
@@ -940,6 +940,174 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0107-zabbix-an-zhuang-zui-jian-dan-de-zuo-fa/"" data-c="
+          &lt;p&gt;最近在部署一批主机，需要增加zabbix 来监控这些主机的运行情况。&lt;br&gt;
+可是这个东西我只是听说过，根本没用过，所以网上找一些教程准备开干。&lt;br&gt;
+先是Ubuntu 的方式，发现各种坑，安装mysql就卡住了，无论如何也进不去mysql，各种方法试遍了，可怜一下我这个的lunix小白。&lt;br&gt;
+然后用centos，没有GUI的那种，这次还是卡在mysql，这个东西跟我有仇。&lt;/p&gt;
+&lt;p&gt;快要放弃的时候，大神降临。&lt;/p&gt;
+&lt;p&gt;突然发现有一种叫做一键安装的东西，正好搭配centos的ssh的操作。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;做法如下，权当备份：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用ssh远程连上centos主机&lt;/li&gt;
+&lt;li&gt;编辑默认的install.sh脚本文件 ，没有的话他会自动创建：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; vi install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;然后，按 i  之后，进入 编辑状态&lt;/li&gt;
+&lt;li&gt;在本机复制如下脚本，粘贴到centos目前显示的编辑器里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
+#By Kasar
+ip=`ip addr |grep inet |egrep -v &amp;quot;inet6|127.0.0.1&amp;quot; |awk &#39;{print $2}&#39; |awk -F &amp;quot;/&amp;quot; &#39;{print $1}&#39;`
+release=`cat /etc/redhat-release | awk &#39;{print $4}&#39; | awk -F &#39;.&#39; &#39;{print $1}&#39;`
+printf &amp;quot;
+#######################################################################
+#                 欢迎使用Zabbix离线一键部署脚本                      #
+#             脚本适配环境CentOS7/8、Zabbix5.0/5.2                    #
+#             避免软件包产生冲突建议使用纯净的操作系统进行安装！      #
+#######################################################################
+&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#                  正在关闭SElinux策略及防火墙 请稍等~                #&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+sed -i &#39;s/SELINUX=enforcing/SELINUX=disabled/g&#39; /etc/selinux/config
+setenforce 0
+systemctl stop firewalld  &amp;amp;&amp;amp; systemctl disable firewalld
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#           正在判断系统环境并安装相对应的yum源和软件 请稍等~         #&amp;quot;
+echo &amp;quot;#           (如果是CentOS 8 就安装5.2，如果是7则安装5.0)              #&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+if [ $release = &#39;7&#39; ];then
+cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/zabbix.repo
+[zabbix]
+name=Zabbix Official Repository - \$basearch
+baseurl=https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/\$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+
+[zabbix-frontend]
+name=Zabbix Official Repository frontend - $basearch
+baseurl=https://mirrors.aliyun.com/zabbix/zabbix/5.0/rhel/7/\$basearch/frontend
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+
+[zabbix-non-supported]
+name=Zabbix Official Repository non-supported - \$basearch
+baseurl=https://mirrors.aliyun.com/zabbix/non-supported/rhel/7/\$basearch/
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+gpgcheck=1
+EOF
+echo &amp;quot;添加源gpgkey&amp;quot;
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX-A14FE591 \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX-A14FE591 \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+yum -y install mariadb-server centos-release-scl epel-release
+yum -y install zabbix-server-mysql zabbix-web-mysql zabbix-web-mysql-scl zabbix-apache-conf-scl zabbix-agent vim 
+elif [ $release = &#39;8&#39; ];then
+cat &amp;lt;&amp;lt;EOF &amp;gt; /etc/yum.repos.d/zabbix.repo
+[zabbix]
+name=Zabbix Official Repository - \$basearch
+baseurl=https://mirrors.aliyun.com/zabbix/zabbix/5.2/rhel/8/\$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+[zabbix-non-supported]
+name=Zabbix Official Repository non-supported - \$basearch
+baseurl=https://mirrors.aliyun.com/zabbix/non-supported/rhel/8/\$basearch/
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+gpgcheck=1
+EOF
+echo &amp;quot;添加源gpgkey&amp;quot;
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX-A14FE591 \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX-A14FE591 \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX-A14FE591
+curl https://mirrors.aliyun.com/zabbix/RPM-GPG-KEY-ZABBIX \
+-o /etc/pki/rpm-gpg/RPM-GPG-KEY-ZABBIX
+dnf -y install mariadb-server zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf zabbix-agent vim
+fi
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#                 正在启动及配置Mariadb数据库 请稍等~                 #&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+service mariadb start &amp;amp;&amp;amp; service mariadb enable
+while :; do echo
+    read -p &amp;quot;设置Mysql数据库root密码（建议使用字母+数字）: &amp;quot; Database_Password 
+    [ -n &amp;quot;$Database_Password&amp;quot; ] &amp;amp;&amp;amp; break
+done
+
+mysqladmin -u root password &amp;quot;$Database_Password&amp;quot;
+echo &amp;quot;create database  zabbix default charset utf8 COLLATE utf8_bin;&amp;quot; | mysql -uroot -p$Database_Password
+echo &amp;quot;grant all privileges on zabbix.* to zabbix@&#39;localhost&#39; identified by &#39;$Database_Password&#39;;&amp;quot; | mysql -uroot -p$Database_Password
+echo &amp;quot;flush privileges;&amp;quot; | mysql -uroot -p$Database_Password
+
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#                 正在导入zabbix数据库架构文件，请稍等~               #&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -uzabbix -p$Database_Password zabbix
+
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#                 正在修改Zabbix配置文件，请稍等~                     #&amp;quot;
+echo &amp;quot;#                                                                     #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+sed -i &#39;s/# DBPassword=/DBPassword=root/&#39; /etc/zabbix/zabbix_server.conf
+if [ $release = &#39;7&#39; ];then
+echo &amp;quot;php_value[date.timezone] = Asia/Shanghai&amp;quot; &amp;gt;&amp;gt; /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
+systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+elif [ $release = &#39;8&#39; ];then
+systemctl restart zabbix-server zabbix-agent httpd php-fpm
+systemctl enable zabbix-server zabbix-agent httpd php-fpm
+fi
+
+echo &amp;quot;#######################################################################&amp;quot;
+echo &amp;quot;#                 安装已经完成 请移步浏览器，进行下一步操作           #&amp;quot;
+echo &amp;quot;#                 登录地址为http://$ip/zabbix                         #&amp;quot;
+echo &amp;quot;#                 数据库密码为$Database_Password，尽情享用吧！        #&amp;quot;
+echo &amp;quot;#######################################################################&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;然后 嗯esc 退出编辑状态，输入  :wq   保存。&lt;/li&gt;
+&lt;li&gt;再赋予权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code class=&#34;language-BASH&#34;&gt;chmod +x install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;大功告成，执行 install.sh即可，执行过程中会有一部需要输入 mysql 密码，记得输入后 点Y继续就行；&lt;br&gt;
+注意：这些命令最好都带上 sudo。&lt;/p&gt;
+&lt;p&gt;我第一次启动的时候会需要设定zabbix的连接时有报错，看提示应该是 数据库账密的问题，感觉是脚本在设定mysql 的密码并没有保存到zabbix_server.conf ，里面存储的还是默认的那个root的密码，如果不介意就输入默认的root密码；&lt;br&gt;
+如果需要改，就进入 zabbix_server.conf 文件，将密码改成 你自己的密码即可；&lt;/p&gt;
+&lt;p&gt;完成后，输入 运行效果如下：&lt;br&gt;
+&lt;img src=&#34;http://blog.huigg.xyz/post-images/1606450001613.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/p&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1606450007774.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;这里还有一个问题，zabbix 默认显示中文时有乱码，应该是缺少中文字库；&lt;br&gt;
+将windows上的你喜欢的中文字体复制一份到zabbix 的font目录即可。&lt;/p&gt;
+">0107  zabbix 安装 最简单的做法</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0106-xue-xi-python-de-di-2-ge-keng-di-san-fang-bao-yu-pycharm/"" data-c="
