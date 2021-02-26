@@ -2,14 +2,60 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2020-11-27T08:14:00.695Z</updated>
+    <updated>2021-02-26T10:54:36.907Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
     <subtitle>陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……</subtitle>
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
-    <rights>All rights reserved 2020, 辉哥哥</rights>
+    <rights>All rights reserved 2021, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[0112  和游同学诗《春涧》]]></title>
+        <id>http://blog.huigg.xyz/post/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/</id>
+        <link href="http://blog.huigg.xyz/post/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/">
+        </link>
+        <updated>2021-02-26T10:48:19.000Z</updated>
+        <summary type="html"><![CDATA[<p>游同学又又新作，有乃父之风🤙🤙🤙；<br>
+和一首，以资鼓励。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>游同学又又新作，有乃父之风🤙🤙🤙；<br>
+和一首，以资鼓励。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[0111  赢得长停车马路，如烟江南天青色]]></title>
+        <id>http://blog.huigg.xyz/post/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/</id>
+        <link href="http://blog.huigg.xyz/post/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/">
+        </link>
+        <updated>2021-01-31T10:46:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>赢得长停车马路，如烟江南天青色</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>赢得长停车马路，如烟江南天青色</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[0110  一轮顷刻上天衢，逐退畅星与残月]]></title>
+        <id>http://blog.huigg.xyz/post/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/</id>
+        <link href="http://blog.huigg.xyz/post/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/">
+        </link>
+        <updated>2021-01-17T10:44:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>一轮顷刻上天衢，逐退畅星与残月</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一轮顷刻上天衢，逐退畅星与残月</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[0109   碧间流红叶，青林点白云]]></title>
+        <id>http://blog.huigg.xyz/post/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/</id>
+        <link href="http://blog.huigg.xyz/post/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/">
+        </link>
+        <updated>2020-12-06T10:33:57.000Z</updated>
+        <summary type="html"><![CDATA[<p>碧间流红叶，青林点白云</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>碧间流红叶，青林点白云</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0108 学习python的第3个坑，忘记保存]]></title>
         <id>http://blog.huigg.xyz/post/0108/</id>
@@ -108,100 +154,6 @@
 </code></pre>
 <p>但是作为一个假装很厉害的人，必须安排。<br>
 马上改掉！</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0102 C# 中 select   @@identity  和 select SCOPE_IDENTITY()  的用法]]></title>
-        <id>http://blog.huigg.xyz/post/0102-c-zhong-select-identity-he-select-scope_identity-de-yong-fa/</id>
-        <link href="http://blog.huigg.xyz/post/0102-c-zhong-select-identity-he-select-scope_identity-de-yong-fa/">
-        </link>
-        <updated>2020-04-30T03:02:21.000Z</updated>
-        <summary type="html"><![CDATA[<p>mark 一下：</p>
-<pre><code>@@IDENTITY 返回为当前会话的所有作用域中的任何表最后生成的标识值。
-</code></pre>
-<blockquote>
-<p>有个表A，它的自增列是id，当向A表插入一行数据后，如果插入数据后自增列的值自动增加至2，通过select @@identity得到的值就是2。所以，使用@@identity的前提是在进行insert操作后，执行select @@identity 的时候连接没有关闭，否则得到的将是NULL值。 简而言之就是得到最新的“identity”值；</p>
-</blockquote>
-]]></summary>
-        <content type="html"><![CDATA[<p>mark 一下：</p>
-<pre><code>@@IDENTITY 返回为当前会话的所有作用域中的任何表最后生成的标识值。
-</code></pre>
-<blockquote>
-<p>有个表A，它的自增列是id，当向A表插入一行数据后，如果插入数据后自增列的值自动增加至2，通过select @@identity得到的值就是2。所以，使用@@identity的前提是在进行insert操作后，执行select @@identity 的时候连接没有关闭，否则得到的将是NULL值。 简而言之就是得到最新的“identity”值；</p>
-</blockquote>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0101 C# 中的 e.KeyChar 和 button_click(sender,e)]]></title>
-        <id>http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/</id>
-        <link href="http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/">
-        </link>
-        <updated>2020-04-28T10:05:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>今天在看大佬的代码时，学到2个点，mark一下：</p>
-<h1 id="ekeychar">e.KeyChar</h1>
-<p>当需要判断输入的是否是非字符按键时，可以使用该写法：</p>
-<pre><code class="language-C#">   e.KeyChar = '\r'  // 输入的是否是enter键
-   e.KeyChar = '\b'  //输入的是否是 退格键 
-   e.KeyChar = 27  // 输入的是否是Esc
-</code></pre>
-]]></summary>
-        <content type="html"><![CDATA[<p>今天在看大佬的代码时，学到2个点，mark一下：</p>
-<h1 id="ekeychar">e.KeyChar</h1>
-<p>当需要判断输入的是否是非字符按键时，可以使用该写法：</p>
-<pre><code class="language-C#">   e.KeyChar = '\r'  // 输入的是否是enter键
-   e.KeyChar = '\b'  //输入的是否是 退格键 
-   e.KeyChar = 27  // 输入的是否是Esc
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0100 dos命令(批处理)学习笔记之 attrib del copy xcopy(二)]]></title>
-        <id>http://blog.huigg.xyz/post/0100-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyer/</id>
-        <link href="http://blog.huigg.xyz/post/0100-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyer/">
-        </link>
-        <updated>2020-04-13T09:40:05.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>设置文件属性：attrib</li>
-<li>删除命令：del</li>
-<li>复制文件：copy</li>
-<li>复制文件(夹)：xcopy</li>
-</ol>
-<h1 id="del-命令">del 命令</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>设置文件属性：attrib</li>
-<li>删除命令：del</li>
-<li>复制文件：copy</li>
-<li>复制文件(夹)：xcopy</li>
-</ol>
-<h1 id="del-命令">del 命令</h1>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0099  dos命令(批处理)学习笔记之 attrib del copy xcopy(一)]]></title>
-        <id>http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/</id>
-        <link href="http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/">
-        </link>
-        <updated>2020-04-07T02:32:55.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>设置文件属性：attrib</li>
-<li>删除命令：del</li>
-<li>复制文件：copy</li>
-<li>复制文件(夹)：xcopy</li>
-</ol>
-<h1 id="attrib命令">attrib命令</h1>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>设置文件属性：attrib</li>
-<li>删除命令：del</li>
-<li>复制文件：copy</li>
-<li>复制文件(夹)：xcopy</li>
-</ol>
-<h1 id="attrib命令">attrib命令</h1>
 ]]></content>
     </entry>
 </feed>

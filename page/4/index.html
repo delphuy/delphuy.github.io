@@ -9,7 +9,7 @@
 <meta name="description" content="陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  / 墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己  / ……">
 <meta name="theme-color" content="#000">
 <title>辉哥哥</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1606464822797">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/favicon.ico?v=1614336869866">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -172,19 +172,19 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">109</span>
+        <span class="site-item-stat-count">114</span>
         <span class="site-item-stat-name language" data-lan="article">文章</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="">
-        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-count">16</span>
         <span class="site-item-stat-name language" data-lan="category">分类</span>
       </a>
     </div>
     <div class="sidebar-item-box">
       <a href="/tags/">
-        <span class="site-item-stat-count">15</span>
+        <span class="site-item-stat-count">16</span>
         <span class="site-item-stat-name language" data-lan="tag">标签</span>
       </a>
     </div>
@@ -250,8 +250,8 @@
     <div class="article-wrapper bg-color">
       <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/">
-      0099  dos命令(批处理)学习笔记之 attrib del copy xcopy(一)
+    <a class="post-title-link" href="http://blog.huigg.xyz/post/sql-server-xiu-gai-pai-xu-gui-ze/">
+      0103 SQL Server 修改排序规则
     </a>
   </h1>
   <div class="post-meta">
@@ -259,34 +259,9 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-04-07 10:32:55">2020-04-07</span>
+      <span class="publish-time" data-t="2020-06-04 14:21:59">2020-06-04</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
-    
-    <span class="meta-item">
-      <i class="fa fa-folder-o"></i>
-      <span class="pc-show language" data-lan="category-in">分类于</span>
-      
-      
-      <a href="http://blog.huigg.xyz/tag/WuKBx2lxU/">
-        <span>DOS</span>
-      </a>、
-      
-      
-      
-      <a href="http://blog.huigg.xyz/tag/um3mDvQmR/">
-        <span>学习</span>
-      </a>、
-      
-      
-      
-      <a href="http://blog.huigg.xyz/tag/xGOtJf2MtM/">
-        <span>IT</span>
-      </a>
-      
-      
-    </span>
-    <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
@@ -295,7 +270,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>422<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>461<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
@@ -303,22 +278,20 @@
       <div class="post-body">
         
         
-          <h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>设置文件属性：attrib</li>
-<li>删除命令：del</li>
-<li>复制文件：copy</li>
-<li>复制文件(夹)：xcopy</li>
-</ol>
-<h1 id="attrib命令">attrib命令</h1>
+          <p>昨天遇到一个问题，我在安装sqlserver时，排序规则是默认的：Chinese_PRC_ CI_AS。<br>
+但是给一位台湾同事安装erp系统时发现，他的要求是 Chinese_Taiwan_Stroke_BIN，有点懵。<br>
+我印象中，排序规则是在安装时设定的，貌似不是很容易改。</p>
+<pre><code>标准做法是，删除原有的数据库实例，修改好规则后再重新创建实例
+问题就在于，这个数据库已经有大量数据量，不可能删除。灰常矛盾。
+</code></pre>
+<p>但是作为一个假装很厉害的人，必须安排。<br>
+马上改掉！</p>
 
-          
-            <img src="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/post-images/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png" />
           
         
         
         <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi/" rel="contents">
+          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/sql-server-xiu-gai-pai-xu-gui-ze/" rel="contents">
             阅读全文 »
           </a>
         </div>
@@ -332,8 +305,8 @@
     <div class="article-wrapper bg-color">
       <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="http://blog.huigg.xyz/post/0-098/">
-      0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)
+    <a class="post-title-link" href="http://blog.huigg.xyz/post/0102-c-zhong-select-identity-he-select-scope_identity-de-yong-fa/">
+      0102 C# 中 select   @@identity  和 select SCOPE_IDENTITY()  的用法
     </a>
   </h1>
   <div class="post-meta">
@@ -341,7 +314,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-04-03 20:11:07">2020-04-03</span>
+      <span class="publish-time" data-t="2020-04-30 11:02:21">2020-04-30</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -350,8 +323,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="http://blog.huigg.xyz/tag/WuKBx2lxU/">
-        <span>DOS</span>
+      <a href="http://blog.huigg.xyz/tag/ttFnc8pky/">
+        <span>C#</span>
       </a>、
       
       
@@ -372,12 +345,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1019<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>234<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
@@ -385,22 +358,20 @@
       <div class="post-body">
         
         
-          <h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="dir-命令">dir 命令</h1>
+          <p>mark 一下：</p>
+<pre><code>@@IDENTITY 返回为当前会话的所有作用域中的任何表最后生成的标识值。
+</code></pre>
+<blockquote>
+<p>有个表A，它的自增列是id，当向A表插入一行数据后，如果插入数据后自增列的值自动增加至2，通过select @@identity得到的值就是2。所以，使用@@identity的前提是在进行insert操作后，执行select @@identity 的时候连接没有关闭，否则得到的将是NULL值。 简而言之就是得到最新的“identity”值；</p>
+</blockquote>
 
           
-            <img src="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/post-images/0-098.png" />
+            <img src="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/post-images/0102-c-zhong-select-identity-he-select-scope_identity-de-yong-fa.jpg" />
           
         
         
         <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/0-098/" rel="contents">
+          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/0102-c-zhong-select-identity-he-select-scope_identity-de-yong-fa/" rel="contents">
             阅读全文 »
           </a>
         </div>
@@ -414,8 +385,8 @@
     <div class="article-wrapper bg-color">
       <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/">
-      0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)
+    <a class="post-title-link" href="http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/">
+      0101 C# 中的 e.KeyChar 和 button_click(sender,e)
     </a>
   </h1>
   <div class="post-meta">
@@ -423,7 +394,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-04-03 15:11:58">2020-04-03</span>
+      <span class="publish-time" data-t="2020-04-28 18:05:00">2020-04-28</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -432,8 +403,8 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
-      <a href="http://blog.huigg.xyz/tag/WuKBx2lxU/">
-        <span>DOS</span>
+      <a href="http://blog.huigg.xyz/tag/ttFnc8pky/">
+        <span>C#</span>
       </a>、
       
       
@@ -454,12 +425,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2<span class="language" data-lan="minute">分钟</span></span>
+      <span>1<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>498<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>152<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
@@ -467,22 +438,19 @@
       <div class="post-body">
         
         
-          <h1 id="学习要点">学习要点：</h1>
-<ol>
-<li>显示信息：echo</li>
-<li>注释语句：rem</li>
-<li>目录切换：cd</li>
-<li>列文件名：dir</li>
-</ol>
-<h1 id="rem-命令">rem 命令</h1>
+          <p>今天在看大佬的代码时，学到2个点，mark一下：</p>
+<h1 id="ekeychar">e.KeyChar</h1>
+<p>当需要判断输入的是否是非字符按键时，可以使用该写法：</p>
+<pre><code class="language-C#">   e.KeyChar = '\r'  // 输入的是否是enter键
+   e.KeyChar = '\b'  //输入的是否是 退格键 
+   e.KeyChar = 27  // 输入的是否是Esc
+</code></pre>
 
-          
-            <img src="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@master/post-images/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr.png" />
           
         
         
         <div class="post-button text-center">
-          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/" rel="contents">
+          <a class="btn language" data-lan="read-more" href="http://blog.huigg.xyz/post/0101-c-zhong-de-ekeychar-he-button_clicksendere/" rel="contents">
             阅读全文 »
           </a>
         </div>
@@ -525,7 +493,7 @@
           …
         </li>
         <li class="pagination-li">
-          <a href="/page/37">37</a>
+          <a href="/page/38">38</a>
         </li>
       
     
@@ -785,6 +753,45 @@
       <hr>
     </div>
     <div class="result" id="result">
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/"" data-c="
+          &lt;p&gt;游同学又又新作，有乃父之风🤙🤙🤙；&lt;br&gt;
+和一首，以资鼓励。&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336603968.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336608960.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;p&gt;碧柳摇曳春意到，雨润桃花红似娇。&lt;br&gt;
+髫童未察梅虹雨，却道今年春来早。&lt;/p&gt;
+">0112  和游同学诗《春涧》</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/"" data-c="
+          &lt;p&gt;赢得长停车马路，如烟江南天青色&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336456674.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336461067.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">0111  赢得长停车马路，如烟江南天青色</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/"" data-c="
+          &lt;p&gt;一轮顷刻上天衢，逐退畅星与残月&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336363426.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">0110  一轮顷刻上天衢，逐退畅星与残月</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/"" data-c="
+          &lt;p&gt;碧间流红叶，青林点白云&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;1&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336167466.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;2&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336172068.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+&lt;figure data-type=&#34;image&#34; tabindex=&#34;3&#34;&gt;&lt;img src=&#34;http://blog.huigg.xyz/post-images/1614336175848.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34;&gt;&lt;/figure&gt;
+">0109   碧间流红叶，青林点白云</a>
+      </div>
       
       <div class="item">
         <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/0108/"" data-c="
@@ -1834,6 +1841,32 @@ rd    ::文件夹名 删除文件夹（remove directory）
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;希望美好。&lt;/p&gt;
 ">0090.2020年春  随笔_01</a>
+      </div>
+      
+      <div class="item">
+        <a class="result-title" style="opacity: 0;" href="http://blog.huigg.xyz/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://gridea.dev/&#34;&gt;Gridea 主页&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;http://fehey.com/&#34;&gt;示例网站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;特性&#34;&gt;特性👇&lt;/h2&gt;
+&lt;p&gt;📝  你可以使用最酷的 &lt;strong&gt;Markdown&lt;/strong&gt; 语法，进行快速创作&lt;/p&gt;
+&lt;p&gt;🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片&lt;/p&gt;
+&lt;p&gt;🏷️  你可以对文章进行标签分组&lt;/p&gt;
+&lt;p&gt;📋  你可以自定义菜单，甚至可以创建外部链接菜单&lt;/p&gt;
+&lt;p&gt;💻  你可以在 &lt;strong&gt;Windows&lt;/strong&gt;，&lt;strong&gt;MacOS&lt;/strong&gt; 或 &lt;strong&gt;Linux&lt;/strong&gt; 设备上使用此客户端&lt;/p&gt;
+&lt;p&gt;🌎  你可以使用 &lt;strong&gt;𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌&lt;/strong&gt; 或 &lt;strong&gt;Coding Pages&lt;/strong&gt; 向世界展示，未来将支持更多平台&lt;/p&gt;
+&lt;p&gt;💬  你可以进行简单的配置，接入 &lt;a href=&#34;https://github.com/gitalk/gitalk&#34;&gt;Gitalk&lt;/a&gt; 或 &lt;a href=&#34;https://github.com/SukkaW/DisqusJS&#34;&gt;DisqusJS&lt;/a&gt; 评论系统&lt;/p&gt;
+&lt;p&gt;🇬🇧  你可以使用&lt;strong&gt;中文简体&lt;/strong&gt;或&lt;strong&gt;英语&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力&lt;/p&gt;
+&lt;p&gt;🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步&lt;/p&gt;
+&lt;p&gt;🌱 当然 &lt;strong&gt;Gridea&lt;/strong&gt; 还很年轻，有很多不足，但请相信，它会不停向前 🏃&lt;/p&gt;
+&lt;p&gt;未来，它一定会成为你离不开的伙伴&lt;/p&gt;
+&lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
+&lt;p&gt;😘 Enjoy~&lt;/p&gt;
+">Hello Gridea</a>
       </div>
       
       <div class="item">
