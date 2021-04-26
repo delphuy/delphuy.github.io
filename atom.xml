@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.huigg.xyz</id>
     <title>辉哥哥</title>
-    <updated>2021-02-26T10:54:36.907Z</updated>
+    <updated>2021-04-26T10:02:48.853Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.huigg.xyz"/>
     <link rel="self" href="http://blog.huigg.xyz/atom.xml"/>
@@ -10,6 +10,25 @@
     <logo>http://blog.huigg.xyz/images/avatar.png</logo>
     <icon>http://blog.huigg.xyz/favicon.ico</icon>
     <rights>All rights reserved 2021, 辉哥哥</rights>
+    <entry>
+        <title type="html"><![CDATA[鲁莽往往以勇敢的名义出现]]></title>
+        <id>http://blog.huigg.xyz/post/lu-mang-wang-wang-yi-yong-gan-de-ming-yi-chu-xian/</id>
+        <link href="http://blog.huigg.xyz/post/lu-mang-wang-wang-yi-yong-gan-de-ming-yi-chu-xian/">
+        </link>
+        <updated>2021-04-26T10:00:39.000Z</updated>
+        <summary type="html"><![CDATA[<p>鲁莽往往以勇敢的名义出现，但那实际上是另一回事。</p>
+<p>做不到进退自如，就不要以身涉险。</p>
+<p>1521年，考虑到菲律宾土著装备尚处石器时代。</p>
+<p>麦哲伦率60人登岛围城，结果刚下船就被标枪戳死。</p>
+<p>很多时候使我们陷入困境的最大原因是我们自己。清醒的认识强过骁勇但却无知。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>鲁莽往往以勇敢的名义出现，但那实际上是另一回事。</p>
+<p>做不到进退自如，就不要以身涉险。</p>
+<p>1521年，考虑到菲律宾土著装备尚处石器时代。</p>
+<p>麦哲伦率60人登岛围城，结果刚下船就被标枪戳死。</p>
+<p>很多时候使我们陷入困境的最大原因是我们自己。清醒的认识强过骁勇但却无知。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[0112  和游同学诗《春涧》]]></title>
         <id>http://blog.huigg.xyz/post/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/</id>
@@ -129,31 +148,6 @@
         <summary type="html"><![CDATA[<p>爷俩各写各 的诗</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>爷俩各写各 的诗</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[0103 SQL Server 修改排序规则]]></title>
-        <id>http://blog.huigg.xyz/post/sql-server-xiu-gai-pai-xu-gui-ze/</id>
-        <link href="http://blog.huigg.xyz/post/sql-server-xiu-gai-pai-xu-gui-ze/">
-        </link>
-        <updated>2020-06-04T06:21:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>昨天遇到一个问题，我在安装sqlserver时，排序规则是默认的：Chinese_PRC_ CI_AS。<br>
-但是给一位台湾同事安装erp系统时发现，他的要求是 Chinese_Taiwan_Stroke_BIN，有点懵。<br>
-我印象中，排序规则是在安装时设定的，貌似不是很容易改。</p>
-<pre><code>标准做法是，删除原有的数据库实例，修改好规则后再重新创建实例
-问题就在于，这个数据库已经有大量数据量，不可能删除。灰常矛盾。
-</code></pre>
-<p>但是作为一个假装很厉害的人，必须安排。<br>
-马上改掉！</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>昨天遇到一个问题，我在安装sqlserver时，排序规则是默认的：Chinese_PRC_ CI_AS。<br>
-但是给一位台湾同事安装erp系统时发现，他的要求是 Chinese_Taiwan_Stroke_BIN，有点懵。<br>
-我印象中，排序规则是在安装时设定的，貌似不是很容易改。</p>
-<pre><code>标准做法是，删除原有的数据库实例，修改好规则后再重新创建实例
-问题就在于，这个数据库已经有大量数据量，不可能删除。灰常矛盾。
-</code></pre>
-<p>但是作为一个假装很厉害的人，必须安排。<br>
-马上改掉！</p>
 ]]></content>
     </entry>
 </feed>
