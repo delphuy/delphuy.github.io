@@ -16,28 +16,28 @@
   <meta name="author" content="辉哥哥">
   <meta name="keywords" content="">
   
-    <meta name="description" content="学习要点： 显示信息：echo 注释语句：rem 目录切换：cd 列文件名：dir  dir 命令">
+    <meta name="description" content="学习要点： 显示信息：echo 注释语句：rem 目录切换：cd 列文件名：dir  rem 命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)">
-<meta property="og:url" content="http://example.com/2020/04/03/0-098/index.html">
+<meta property="og:title" content="0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)">
+<meta property="og:url" content="http://example.com/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/index.html">
 <meta property="og:site_name" content="辉哥哥">
-<meta property="og:description" content="学习要点： 显示信息：echo 注释语句：rem 目录切换：cd 列文件名：dir  dir 命令">
+<meta property="og:description" content="学习要点： 显示信息：echo 注释语句：rem 目录切换：cd 列文件名：dir  rem 命令">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/0-098.png">
-<meta property="article:published_time" content="2020-04-03T12:11:07.000Z">
-<meta property="article:modified_time" content="2023-08-24T07:08:29.150Z">
+<meta property="og:image" content="http://example.com/img/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr.png">
+<meta property="article:published_time" content="2020-04-03T07:11:58.000Z">
+<meta property="article:modified_time" content="2023-08-24T07:34:07.630Z">
 <meta property="article:author" content="辉哥哥">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="DOS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/0-098.png">
+<meta name="twitter:image" content="http://example.com/img/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>0098  dos命令(批处理)学习笔记之 echo rem cd dir(三) - 辉哥哥</title>
+  <title>0097  dos命令(批处理)学习笔记之 echo rem cd dir(二) - 辉哥哥</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -179,7 +179,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)"></span>
+            <span id="subtitle" data-typed-text="0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)"></span>
           
         </div>
 
@@ -190,8 +190,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-04-03 20:11" pubdate>
-          2020年4月3日 晚上
+        <time datetime="2020-04-03 15:11" pubdate>
+          2020年4月3日 下午
         </time>
       </span>
     
@@ -202,7 +202,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          1.6k 字
         
       </span>
     
@@ -213,7 +213,7 @@
         
         
         
-          15 分钟
+          14 分钟
         
       </span>
     
@@ -250,7 +250,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)</h1>
+            <h1 id="seo-header">0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)</h1>
             
             
               <div class="markdown-body">
@@ -261,71 +261,24 @@
 <li>目录切换：cd</li>
 <li>列文件名：dir</li>
 </ol>
-<h1 id="dir-命令"><a href="#dir-命令" class="headerlink" title="dir 命令"></a>dir 命令</h1><span id="more"></span>
+<h1 id="rem-命令"><a href="#rem-命令" class="headerlink" title="rem 命令"></a>rem 命令</h1><span id="more"></span>
+<p>rem 为注释命令，一般用来给程序加上注解，该命令后的内容不被执行，有点类似咱们C# 里的 &#x2F;&#x2F; 符号；但差别是这里的rem后面的字符串，在bat执行的时候能显示出来；而C# 则不显示注释。</p>
+<h2 id="例一"><a href="#例一" class="headerlink" title="例一"></a>例一</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 这是例一<br><span class="hljs-comment">rem 上面的echo 语句用于显示提示。</span><br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
 
-<p>显示目录中的文件和子目录列表，格式：</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs BAT"><span class="hljs-built_in">DIR</span> [drive:][<span class="hljs-built_in">path</span>][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N][/O][[:]sortorder]] [/P] [/Q] [/S] [/T[[:]timefield]] [/W] [/X] [/<span class="hljs-number">4</span>]<br></code></pre></td></tr></table></figure>
+<p>这个例子中，执行步骤被off了；因此rem 后面的注释不显示，执行结果如下：</p>
+<p><img src="/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/1585898350309-1692862292378-49.jpg" srcset="/img/loading.gif" lazyload alt="1585898350309"></p>
+<h2 id="例二"><a href="#例二" class="headerlink" title="例二"></a>例二</h2><p>但是如果将 回显 打开 ，例如这样：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> on<br><span class="hljs-built_in">echo</span> 这是例一<br><span class="hljs-comment">rem 上面的echo 语句用于显示提示。</span><br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
 
-<ol>
-<li>[drive:][path][filename]   指定要列出的驱动器、目录和&#x2F;或文件。</li>
-<li>&#x2F;A          显示具有指定属性的文件，其文件属性 attributes：  D  目录 | R  只读文件 | H  隐藏文件  | A  准备存档的文件  | S  系统文件  | -  表示“否”的前缀</li>
-<li>&#x2F;B          使用空格式(没有标题信息或摘要)。</li>
-<li>&#x2F;C          在文件大小中显示千位数分隔符。这是默认值。用 &#x2F;-C 来停用分隔符显示</li>
-<li>&#x2F;D          跟宽式相同，但文件是按栏分类列出的    </li>
-<li>&#x2F;L           用小写</li>
-<li>&#x2F;N          新的长列表格式，其中文件名在最右边</li>
-<li>&#x2F;O          用分类顺序列出文件，其分类属性 sortorder： N  按名称(字母顺序)  |  S  按大小(从小到大)  |   E  按扩展名(字母顺序) |  D  按日期&#x2F;时间(从先到后) |<br>G  组目录优先 |  -  颠倒顺序的前缀</li>
-<li>&#x2F;P         在每个信息屏幕后暂停</li>
-<li>&#x2F;Q        显示文件所有者</li>
-<li>&#x2F;S         显示指定目录和所有子目录中的文件</li>
-<li>&#x2F;T         控制显示或用来分类的时间字符域，其字符域属性 timefield ：C  创建时间 | A  上次访问时间 |  W  上次写入的时间</li>
-<li>&#x2F;W        用宽列表格式</li>
-<li>&#x2F;X         显示为非 8dot3 文件名产生的短名称。格式是 &#x2F;N 的格式，短名称插在长名称前面。如果没有短名称，在其位置则显示空白</li>
-<li>&#x2F;4         用四位数字显示年</li>
-</ol>
-<h2 id="范例一：列出c-windows下的目录及文件"><a href="#范例一：列出c-windows下的目录及文件" class="headerlink" title="范例一：列出c:\windows下的目录及文件"></a>范例一：列出c:\windows下的目录及文件</h2><blockquote>
-<p>格式 dir  [drive:][path][filename] </p>
-<h3 id="p-参数的作用"><a href="#p-参数的作用" class="headerlink" title="&#x2F;p  参数的作用"></a>&#x2F;p  参数的作用</h3></blockquote>
-<p> 满屏之后等待一下(&#x2F;P 在每个信息屏幕后暂停)，不自动翻屏</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\WINDOWS目录和文件<br><span class="hljs-built_in">dir</span> C:\windows /p<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
+<p>则执行过程中注释也会显示出来，执行结果如下：</p>
+<p><img src="/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/1585898412033-1692862313373-51.jpg" srcset="/img/loading.gif" lazyload alt="1585898412033"></p>
+<p>某些时候，两个英文冒号 :: 也能用来作为注释标记，例如：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> on<br><span class="hljs-built_in">echo</span> 这是例一<br>:: 上面的<span class="hljs-built_in">echo</span> 语句用于显示提示。<br><span class="hljs-built_in">pause</span><br>````<br><br>执行结果，同上一步。<br><br># <span class="hljs-built_in">cd</span> 命令<br><br>这个命令主要用于目录切换。<br><br>## 同一个分区的切换<br><br>目录切换格式：格式:<span class="hljs-built_in">CD</span> [盘符][路径]，直接在<span class="hljs-built_in">cmd</span>上演示：<br><br>![<span class="hljs-number">1585899190841</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899190841</span>-<span class="hljs-number">1692862334015</span>-<span class="hljs-number">53</span>.jpg)<br><br>## 返回上层目录<br><br><span class="hljs-built_in">cd</span> 后面<span class="hljs-number">2</span>个点 .. 即可：<br><br>![<span class="hljs-number">1585899262264</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899262264</span>-<span class="hljs-number">1692862355235</span>-<span class="hljs-number">55</span>.jpg)<br><br>## 返回根目录<br><br><span class="hljs-built_in">cd</span> 后面根斜杠 \ 即可：<br><br>![<span class="hljs-number">1585899377605</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899377605</span>-<span class="hljs-number">1692862372051</span>-<span class="hljs-number">57</span>.jpg)<br><br>## 进入文件夹<br><br><span class="hljs-built_in">cd</span> 后面接文件夹名即可：<br><br>![<span class="hljs-number">1585899600688</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899600688</span>-<span class="hljs-number">1692862394576</span>-<span class="hljs-number">59</span>.jpg)<br><br>&gt; **总结：这里 <span class="hljs-built_in">cd</span> 后接一个点 .  表示当前目录；两个点 .. 标识上层目录；反斜杠标识根目录；直接接文件夹名，标识进入文件夹(下层目录)。**<br><br>## 切换到其他分区根目录<br><br>直接 盘符 加冒号即可：<br><br>![<span class="hljs-number">1585899751740</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899751740</span>-<span class="hljs-number">1692862411129</span>-<span class="hljs-number">61</span>.jpg)<br><br>## 切换到其他分区具体目录<br><br><span class="hljs-built_in">cd</span>  /d  [盘符][路径]，例如：<br><br>![<span class="hljs-number">1585899876025</span>](./<span class="hljs-number">0096</span>-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-<span class="hljs-built_in">echo</span>-<span class="hljs-built_in">rem</span>-<span class="hljs-built_in">cd</span>-direr/<span class="hljs-number">1585899876025</span>-<span class="hljs-number">1692862424980</span>-<span class="hljs-number">63</span>.jpg)<br><br>## 显示当前的完整路径 <br><br>通过 <span class="hljs-variable">%cd%</span> 加以引用，例如有这样一个脚本：<br><br>```BAT<br>@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 当前目录是 <span class="hljs-variable">%cd%</span><br><span class="hljs-built_in">echo</span> 切换目录<br><span class="hljs-built_in">echo</span>.<br><span class="hljs-built_in">cd</span> C:\Windows\system32<br><span class="hljs-built_in">echo</span> 切换后的目录是 <span class="hljs-variable">%cd%</span><br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
 
-<p>执行结果如下：</p>
-<p><img src="/2020/04/03/0-098/1585916887974.jpg" srcset="/img/loading.gif" lazyload alt="1585916887974"></p>
-<h3 id="B-参数的作用"><a href="#B-参数的作用" class="headerlink" title="&#x2F;B 参数的作用"></a>&#x2F;B 参数的作用</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\WINDOWS目录和文件<br><span class="hljs-built_in">dir</span> C:\windows /p /b<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>这次执行之后，就只列出了文件名，没有其他信息：</p>
-<p><img src="/2020/04/03/0-098/1585917119726.jpg" srcset="/img/loading.gif" lazyload alt="1585917119726"></p>
-<h2 id="范例二：列出c-下指定属性的文件"><a href="#范例二：列出c-下指定属性的文件" class="headerlink" title="范例二：列出c:\下指定属性的文件"></a>范例二：列出c:\下指定属性的文件</h2><blockquote>
-<p>格式：DIR &#x2F;a: attributes (这里的：号可以省略)</p>
-</blockquote>
-<h3 id="列出C-下所有的文件，不做任何属性过滤"><a href="#列出C-下所有的文件，不做任何属性过滤" class="headerlink" title="列出C:\下所有的文件，不做任何属性过滤"></a>列出C:\下所有的文件，不做任何属性过滤</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下所有的文件<br><span class="hljs-built_in">dir</span> C:\ /a<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>执行结果如下：</p>
-<p><img src="/2020/04/03/0-098/1585917504978.jpg" srcset="/img/loading.gif" lazyload alt="1585917504978"></p>
-<p>如果加上 &#x2F;h ，则会列出 列出C:\包含隐藏文件的所有文件，其实是和上一个 &#x2F;a 的结果一样</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下所有的文件<br><span class="hljs-built_in">dir</span> C:\ /ah<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="列出C-下所有的文件夹，不包含文件"><a href="#列出C-下所有的文件夹，不包含文件" class="headerlink" title="列出C:\下所有的文件夹，不包含文件"></a>列出C:\下所有的文件夹，不包含文件</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下所有的文件<br><span class="hljs-built_in">dir</span> C:\ /ad<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>执行结果如下，相比 上一步，少了3个文件，只显示了文件夹：</p>
-<p><img src="/2020/04/03/0-098/1585917786450.jpg" srcset="/img/loading.gif" lazyload alt="1585917786450"></p>
-<h3 id="列出C-下所有的文件夹，不包含隐藏"><a href="#列出C-下所有的文件夹，不包含隐藏" class="headerlink" title="列出C:\下所有的文件夹，不包含隐藏"></a>列出C:\下所有的文件夹，不包含隐藏</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下所有的文件<br><span class="hljs-built_in">dir</span> C:\ /ad-h<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>其中 - 代表 否，-h 代表 不要包含隐藏属性，执行结果如下，少了10个隐藏文件夹：</p>
-<p><img src="/2020/04/03/0-098/1585917897256.jpg" srcset="/img/loading.gif" lazyload alt="1585917897256"></p>
-<h2 id="范例三：按分类列出c-下的文件"><a href="#范例三：按分类列出c-下的文件" class="headerlink" title="范例三：按分类列出c:\下的文件"></a>范例三：按分类列出c:\下的文件</h2><blockquote>
-<p>格式：DIR &#x2F;o: sortorder (这里的：号可以省略)</p>
-</blockquote>
-<h3 id="列出-C-下的文件，按名称排倒序"><a href="#列出-C-下的文件，按名称排倒序" class="headerlink" title="列出 C:\下的文件，按名称排倒序"></a>列出 C:\下的文件，按名称排倒序</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下的文件，并倒序排列<br><span class="hljs-built_in">dir</span> C:\ /o-n<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>这里没有使用 &#x2F;a参数，因此只会列出可见目录和文件，执行结果如下：</p>
-<p><img src="/2020/04/03/0-098/1585918333076.jpg" srcset="/img/loading.gif" lazyload alt="1585918333076"></p>
-<h3 id="列出C-下的文件，优先列出文件夹，并且文件夹和文件都按字母顺序排列"><a href="#列出C-下的文件，优先列出文件夹，并且文件夹和文件都按字母顺序排列" class="headerlink" title="列出C:\下的文件，优先列出文件夹，并且文件夹和文件都按字母顺序排列"></a>列出C:\下的文件，优先列出文件夹，并且文件夹和文件都按字母顺序排列</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@<span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 列出C:\下的文件，优先列出文件夹，并且文件夹和文件都倒序排列<br><span class="hljs-built_in">dir</span> C:\ /og-n<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
-
-<p>执行结果如下，先列出了文件夹并倒序，再列出文件并倒序：</p>
-<p><img src="/2020/04/03/0-098/1585918641672.jpg" srcset="/img/loading.gif" lazyload alt="1585918641672"></p>
-<h2 id="总结：-A、-B、-P、-O-四个参数用法"><a href="#总结：-A、-B、-P、-O-四个参数用法" class="headerlink" title="总结：&#x2F;A、&#x2F;B、&#x2F;P、&#x2F;O 四个参数用法"></a>总结：&#x2F;A、&#x2F;B、&#x2F;P、&#x2F;O 四个参数用法</h2><blockquote>
-<p>&#x2F;A 不带参数时列出目录下所有可见\不可见的文件、文件夹。<br>&#x2F;B 只列出文件名，不带属性格式<br>&#x2F;P 满屏后暂停<br>&#x2F;O 按序列出可见的文件\文件夹</p>
+<p>执行bat之后，结果为：</p>
+<p><img src="/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/1585900093092-1692862442861-65.jpg" srcset="/img/loading.gif" lazyload alt="1585900093092"></p>
+<blockquote>
+<p> <strong>未完待续….</strong></p>
 </blockquote>
 
                 
@@ -355,8 +308,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)</div>
-      <div>http://example.com/2020/04/03/0-098/</div>
+      <div>0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)</div>
+      <div>http://example.com/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/</div>
     </div>
     <div class="license-meta">
       
@@ -384,12 +337,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2020/04/03/0-098/" title="0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">0098  dos命令(批处理)学习笔记之 echo rem cd dir(三)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/04/03/0096-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-echo-rem-cd-direr/" title="0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)">
-                        <span class="hidden-mobile">0097  dos命令(批处理)学习笔记之 echo rem cd dir(二)</span>
+                      <a href="/2020/04/02/0095-ji-ben-cmd-ming-ling/" title="0095 基本dos命令">
+                        <span class="hidden-mobile">0095 基本dos命令</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
