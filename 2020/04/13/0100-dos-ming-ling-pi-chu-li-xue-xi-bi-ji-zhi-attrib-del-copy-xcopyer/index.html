@@ -268,7 +268,7 @@
               <p class="note note-info">
                 
                   
-                    本文最后更新于：1 小时前
+                    本文最后更新于：2 小时前
                   
                 
               </p>
@@ -410,6 +410,37 @@ attributes   R  只读文件  S  系统文件   H  隐藏文件   A  存档文�
             </div>
 
             
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"L3PMegMe7RwLCNXYZOWhgSVb-MdYXbMMI","appKey":"Ijbqd3AExsPNSJVhXXnEfVCK","path":"window.location.pathname","placeholder":"吐槽吐槽","avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
           </article>
         </div>
       </div>
