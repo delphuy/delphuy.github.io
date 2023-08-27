@@ -4,6 +4,191 @@
   
   
   <entry>
+    <title>0118   第一次给陌生人捐款</title>
+    <link href="/2023/08/23/0118-di-yi-ci-gei-mo-sheng-ren-juan-kuan/"/>
+    <url>/2023/08/23/0118-di-yi-ci-gei-mo-sheng-ren-juan-kuan/</url>
+    
+    <content type="html"><![CDATA[<p>在抖音上看到一个小男孩，脑瘫。<br>小男孩很懂事，10来岁已经完成了10多次手术<br>每次看到小男孩那乐观，积极，努力生存的微笑</p><span id="more"></span><p>以及竭尽全力的锻炼行走，照顾父母的情绪，每次很大声的跟妈妈讲：妈妈，你看我会走路了！<br>尽管明眼人都看得出来，他其实跟之前并没有多大的改善<br>他很卑微，小小年纪就已经承受了巨大的痛苦，小小的心思被小心翼翼的藏起<br>他很高大，顽强的生存着，身体的残疾并没有让他放弃生存的希望<br>每次看到他的视频，心都会一纠<br>尽管说世间众生皆苦，本以为已经没有什么可以让我产生怜悯和同情<br>但，这个小男孩是个例外，我破防了<br>不是怜悯<br>而是共情，小伙子加油！</p><p><img src="/2023/08/23/0118-di-yi-ci-gei-mo-sheng-ren-juan-kuan/1692724866517-1693109783010-42.jpg" alt="1692724866517"></p><p><img src="/2023/08/23/0118-di-yi-ci-gei-mo-sheng-ren-juan-kuan/1692724856387-1693109795097-44.jpg" alt="1692724856387"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>杂录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0117  今天学会骑车了</title>
+    <link href="/2023/06/16/0117-jin-tian-xue-hui-qi-che-liao/"/>
+    <url>/2023/06/16/0117-jin-tian-xue-hui-qi-che-liao/</url>
+    
+    <content type="html"><![CDATA[<p>赶路40分钟，学车1分钟，打破40年不会骑车的尴尬</p><span id="more"></span><p><img src="/2023/06/16/0117-jin-tian-xue-hui-qi-che-liao/1686908420571.jpg"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>杂录</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0116 win10能上网但是显示无internet的解决方法</title>
+    <link href="/2021/10/11/0116-win10-neng-shang-wang-dan-shi-xian-shi-wu-internet-de-jie-jue-fang-fa/"/>
+    <url>/2021/10/11/0116-win10-neng-shang-wang-dan-shi-xian-shi-wu-internet-de-jie-jue-fang-fa/</url>
+    
+    <content type="html"><![CDATA[<p>近期更新了win10的一个补丁，就发现有bug；<br>系统能上网，速度也可以，但是托盘显示一个秋，点开后效果如下：</p><span id="more"></span><p><img src="/2021/10/11/0116-win10-neng-shang-wang-dan-shi-xian-shi-wu-internet-de-jie-jue-fang-fa/1633918725742-1693109592475-34.jpg" alt="1633918725742"></p><p>这不是坑爹呢吗，尽管不影响使用，但是强迫症患者不能忍。<br>查了各种资料，也试了无数种方法：重启网卡，重新安装驱动等等等，都无法彻底解决；<br>直到后来发现微软的这个规则：</p><h3 id="官方的依据"><a href="#官方的依据" class="headerlink" title="官方的依据"></a><strong>官方的依据</strong></h3><p> <strong>微软用某些特定网址检测网络连接状态，并以图标形式展示给用户。而这个图标称之为“网络连接状态图标”（Connection Status Icon，NCSI）。</strong><br> 自 Windows 8 开始，不同版本的 Windows 操作系统有不同的检测网络连接状态的 url，但都是通过 url 来检测的。</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1703</span>) 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">07134</span> (<span class="hljs-number">1803</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/redirect<br>- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">14393</span> (<span class="hljs-number">1607</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/connecttest.txt<br>- Windows <span class="hljs-number">8</span>/<span class="hljs-number">8.1</span> 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1511</span>)<br>http:<span class="hljs-regexp">//</span>www.msftncsi.com/ncsi.txt<br></code></pre></td></tr></table></figure><p>而 Windows XP&#x2F;Vista&#x2F;7 的检测方式有些不同，但都是通过 Network Location Awareness (NLA) 方式来检测的。</p><p>关于 Windows XP&#x2F;Vista&#x2F;7 的检测方式，可以阅读：<a href="https://blogs.technet.microsoft.com/networking/2010/09/08/network-location-awareness-nla-and-how-it-relates-to-windows-firewall-profiles/"><em>Network Location Awareness (NLA) and how it relates to Windows Firewall Profiles - Networking Blog</em></a>。</p><p>PING 了一下第一个网址，发现果然是不通，所以windows默认我的系统没有连接网络(简直智障！)。<br>这3个地址都ping了一次，发现 win 8的网址是通的(我估摸着应该是被运营商或者长城给误杀了)。<br>于是修改注册表，将检测网络改成这个通的就可以了，毕竟越老越稳。</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs DOS">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet<br></code></pre></td></tr></table></figure><p>将红框的那几个都改成win 8 的网址</p><p><img src="/2021/10/11/0116-win10-neng-shang-wang-dan-shi-xian-shi-wu-internet-de-jie-jue-fang-fa/1633919691759-1693109613015-36.jpg" alt="1633919691759"></p><p>另外，如最下面那个红框所示，建议也改成1，某些聪明的优化软件会将它改成0；这个改成0 的意思是默认离线状态，那么你的OneNote 无法同步，onedrive无法连接，电脑无法创建热点….. </p><p>修改完毕之后，重启电脑(当然，貌似重启网络就行，如果不知道如何重启网络的同学， 直接重启电脑万事大吉)。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>学习</tag>
+      
+      <tag>IT</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0115  和游同学词《减字木兰花》&amp; 《采桑子》</title>
+    <link href="/2021/08/30/0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater/"/>
+    <url>/2021/08/30/0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater/</url>
+    
+    <content type="html"><![CDATA[<pre><code class="hljs">《采桑子》-黄陂 蜂蝶出浸六民中，声音似琴，姿态似舞，琴舞幽幽松树林。此曲弥漫整片林，不似山林，胜过山林，似乎就是出水吟。</code></pre><span id="more"></span><pre><code class="hljs">《減字木兰花》・黄陂 和游同学一首蝉蝶出没，孩童梦回长轩岭。上下翻飞，如琴似瑟舞静林。碎蕊金芒，掩映小楼烟火色。匆匆来去，憾遗黄陂意难平。</code></pre><p><img src="/2021/08/30/0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater/1630289593058-1693109463839-28.jpg" alt="1630289593058"></p><p><img src="/2021/08/30/0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater/1630289598096-1693109478404-30.jpg" alt="1630289598096"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>诗歌</tag>
+      
+      <tag>岁月</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0114   一剪梅•青蛙</title>
+    <link href="/2021/08/16/0114-yi-jian-mei-qing-wa/"/>
+    <url>/2021/08/16/0114-yi-jian-mei-qing-wa/</url>
+    
+    <content type="html"><![CDATA[<p>逃却炎夏喜入秋，<br>慵倦来迟，不敌残宿。<br>雨稀云厚轻衫透，<br>蝉噪悠悠，蛙鸣悠悠。</p><p>孩童难记勤学好，<br>神思跳跃，书字潦草。<br>一窗风影落清宵，<br>月上柳梢，愁上眉梢。</p><span id="more"></span><p><img src="/2021/08/16/0114-yi-jian-mei-qing-wa/1629093227135-1693109316822-24.jpg" alt="1629093227135"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>诗歌</tag>
+      
+      <tag>岁月</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>112  和游同学诗《春涧》</title>
+    <link href="/2021/02/26/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/"/>
+    <url>/2021/02/26/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/</url>
+    
+    <content type="html"><![CDATA[<p>游同学又又新作，有乃父之风🤙🤙🤙；<br>和一首，以资鼓励。</p><span id="more"></span><p><img src="/2021/02/26/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/1614336603968-1693109189794-19.jpg" alt="1614336603968"></p><p><img src="/2021/02/26/0112-he-you-tong-xue-shi-lesslesschun-jian-greatergreater/1614336608960-1693109200047-21.jpg" alt="1614336608960"></p><p>碧柳摇曳春意到，雨润桃花红似娇。<br>髫童未察梅虹雨，却道今年春来早。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>诗歌</tag>
+      
+      <tag>岁月</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0111  赢得长停车马路，如烟江南天青色</title>
+    <link href="/2021/01/31/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/"/>
+    <url>/2021/01/31/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/</url>
+    
+    <content type="html"><![CDATA[<p>赢得长停车马路，如烟江南天青色</p><span id="more"></span><p><img src="/2021/01/31/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/1614336456674-1693109004403-13.jpg" alt="1614336456674"></p><p><img src="/2021/01/31/0111-ying-de-chang-ting-che-ma-lu-ru-yan-jiang-nan-tian-qing-se/1614336461067-1693109018672-15.jpg" alt="1614336461067"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>岁月</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0110  一轮顷刻上天衢，逐退畅星与残月</title>
+    <link href="/2021/01/17/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/"/>
+    <url>/2021/01/17/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/</url>
+    
+    <content type="html"><![CDATA[<p>一轮顷刻上天衢，逐退畅星与残月</p><span id="more"></span><p><img src="/2021/01/17/0110-yi-lun-qing-ke-shang-tian-qu-zhu-tui-chang-xing-yu-can-yue/1614336363426.jpg" alt="1614336363426"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>诗歌</tag>
+      
+      <tag>岁月</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>0109   碧间流红叶，青林点白云</title>
+    <link href="/2020/12/06/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/"/>
+    <url>/2020/12/06/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/</url>
+    
+    <content type="html"><![CDATA[<p>碧间流红叶，青林点白云</p><span id="more"></span><p><img src="/2020/12/06/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/1614336167466-1693105193306-4.jpg" alt="1614336167466"></p><p><img src="/2020/12/06/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/1614336172068-1693105212115-6.jpg" alt="1614336172068"></p><p><img src="/2020/12/06/0109-bi-jian-liu-hong-xie-qing-lin-dian-bai-yun/1614336175848-1693105228949-8.jpg" alt="1614336175848"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>诗歌</tag>
+      
+      <tag>岁月</tag>
+      
+      <tag>无题</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>0108 学习python的第3个坑，忘记保存</title>
     <link href="/2020/11/27/0108-python-de-di-san-ge-keng/"/>
     <url>/2020/11/27/0108-python-de-di-san-ge-keng/</url>
