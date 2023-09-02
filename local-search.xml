@@ -46,7 +46,7 @@
     <link href="/2021/167d2500.html"/>
     <url>/2021/167d2500.html</url>
     
-    <content type="html"><![CDATA[<p>近期更新了win10的一个补丁，就发现有bug；<br>系统能上网，速度也可以，但是托盘显示一个秋，点开后效果如下：</p><span id="more"></span><p><img src="/2021/167d2500.htm/1633918725742-1693109592475-34.jpg" alt="1633918725742"></p><p>这不是坑爹呢吗，尽管不影响使用，但是强迫症患者不能忍。<br>查了各种资料，也试了无数种方法：重启网卡，重新安装驱动等等等，都无法彻底解决；<br>直到后来发现微软的这个规则：</p><h3 id="官方的依据"><a href="#官方的依据" class="headerlink" title="官方的依据"></a><strong>官方的依据</strong></h3><p> <strong>微软用某些特定网址检测网络连接状态，并以图标形式展示给用户。而这个图标称之为“网络连接状态图标”（Connection Status Icon，NCSI）。</strong><br> 自 Windows 8 开始，不同版本的 Windows 操作系统有不同的检测网络连接状态的 url，但都是通过 url 来检测的。</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1703</span>) 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">07134</span> (<span class="hljs-number">1803</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/redirect<br>- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">14393</span> (<span class="hljs-number">1607</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/connecttest.txt<br>- Windows <span class="hljs-number">8</span>/<span class="hljs-number">8.1</span> 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1511</span>)<br>http:<span class="hljs-regexp">//</span>www.msftncsi.com/ncsi.txt<br></code></pre></td></tr></table></figure><p>而 Windows XP&#x2F;Vista&#x2F;7 的检测方式有些不同，但都是通过 Network Location Awareness (NLA) 方式来检测的。</p><p>关于 Windows XP&#x2F;Vista&#x2F;7 的检测方式，可以阅读：<a href="https://blogs.technet.microsoft.com/networking/2010/09/08/network-location-awareness-nla-and-how-it-relates-to-windows-firewall-profiles/"><em>Network Location Awareness (NLA) and how it relates to Windows Firewall Profiles - Networking Blog</em></a>。</p><p>PING 了一下第一个网址，发现果然是不通，所以windows默认我的系统没有连接网络(简直智障！)。<br>这3个地址都ping了一次，发现 win 8的网址是通的(我估摸着应该是被运营商或者长城给误杀了)。<br>于是修改注册表，将检测网络改成这个通的就可以了，毕竟越老越稳。</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs DOS">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet<br></code></pre></td></tr></table></figure><p>将红框的那几个都改成win 8 的网址</p><p><img src="/2021/167d2500.htm/1633919691759-1693109613015-36.jpg" alt="1633919691759"></p><p>另外，如最下面那个红框所示，建议也改成1，某些聪明的优化软件会将它改成0；这个改成0 的意思是默认离线状态，那么你的OneNote 无法同步，onedrive无法连接，电脑无法创建热点….. </p><p>修改完毕之后，重启电脑(当然，貌似重启网络就行，如果不知道如何重启网络的同学， 直接重启电脑万事大吉)。</p>]]></content>
+    <content type="html"><![CDATA[<p>近期更新了win10的一个补丁，就发现有bug；<br>系统能上网，速度也可以，但是托盘显示一个秋，点开后效果如下：</p><span id="more"></span><p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1633918725742-1693109592475-34.jpg" alt="1633918725742-1693109592475-34"></p><p>这不是坑爹呢吗，尽管不影响使用，但是强迫症患者不能忍。<br>查了各种资料，也试了无数种方法：重启网卡，重新安装驱动等等等，都无法彻底解决；<br>直到后来发现微软的这个规则：</p><h3 id="官方的依据"><a href="#官方的依据" class="headerlink" title="官方的依据"></a><strong>官方的依据</strong></h3><p> <strong>微软用某些特定网址检测网络连接状态，并以图标形式展示给用户。而这个图标称之为“网络连接状态图标”（Connection Status Icon，NCSI）。</strong><br> 自 Windows 8 开始，不同版本的 Windows 操作系统有不同的检测网络连接状态的 url，但都是通过 url 来检测的。</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs awk">- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1703</span>) 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">07134</span> (<span class="hljs-number">1803</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/redirect<br>- Windows <span class="hljs-number">10.0</span>.<span class="hljs-number">14393</span> (<span class="hljs-number">1607</span>)<br>http:<span class="hljs-regexp">//</span>www.msftconnecttest.com/connecttest.txt<br>- Windows <span class="hljs-number">8</span>/<span class="hljs-number">8.1</span> 至 <span class="hljs-number">10.0</span>.<span class="hljs-number">15063</span> (<span class="hljs-number">1511</span>)<br>http:<span class="hljs-regexp">//</span>www.msftncsi.com/ncsi.txt<br></code></pre></td></tr></table></figure><p>而 Windows XP&#x2F;Vista&#x2F;7 的检测方式有些不同，但都是通过 Network Location Awareness (NLA) 方式来检测的。</p><p>关于 Windows XP&#x2F;Vista&#x2F;7 的检测方式，可以阅读：<a href="https://blogs.technet.microsoft.com/networking/2010/09/08/network-location-awareness-nla-and-how-it-relates-to-windows-firewall-profiles/"><em>Network Location Awareness (NLA) and how it relates to Windows Firewall Profiles - Networking Blog</em></a>。</p><p>PING 了一下第一个网址，发现果然是不通，所以windows默认我的系统没有连接网络(简直智障！)。<br>这3个地址都ping了一次，发现 win 8的网址是通的(我估摸着应该是被运营商或者长城给误杀了)。<br>于是修改注册表，将检测网络改成这个通的就可以了，毕竟越老越稳。</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs DOS">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet<br></code></pre></td></tr></table></figure><p>将红框的那几个都改成win 8 的网址<img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1633919691759-1693109613015-36.jpg" alt="1633919691759-1693109613015-36"></p><p>另外，如最下面那个红框所示，建议也改成1，某些聪明的优化软件会将它改成0；这个改成0 的意思是默认离线状态，那么你的OneNote 无法同步，onedrive无法连接，电脑无法创建热点….. </p><p>修改完毕之后，重启电脑(当然，貌似重启网络就行，如果不知道如何重启网络的同学， 直接重启电脑万事大吉)。</p>]]></content>
     
     
     
@@ -67,15 +67,15 @@
     <link href="/2021/2e2e73a1.html"/>
     <url>/2021/2e2e73a1.html</url>
     
-    <content type="html"><![CDATA[<pre><code class="hljs">《采桑子》-黄陂 蜂蝶出浸六民中，声音似琴，姿态似舞，琴舞幽幽松树林。此曲弥漫整片林，不似山林，胜过山林，似乎就是出水吟。</code></pre><span id="more"></span><pre><code class="hljs">《減字木兰花》・黄陂 和游同学一首蝉蝶出没，孩童梦回长轩岭。上下翻飞，如琴似瑟舞静林。碎蕊金芒，掩映小楼烟火色。匆匆来去，憾遗黄陂意难平。</code></pre><p><img src="/2021/2e2e73a1.htm/1630289593058-1693109463839-28.jpg" alt="1630289593058"></p><p><img src="/2021/2e2e73a1.htm/1630289598096-1693109478404-30.jpg" alt="1630289598096"></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater.jpg" alt="0115-he-you-tong-xue-ci-lesslessjian-zi-mu-lan-hua-greatergreater-and-lesslesscai-sang-zi-greatergreater"></p><pre><code class="hljs">《采桑子》-黄陂 蜂蝶出浸六民中，声音似琴，姿态似舞，琴舞幽幽松树林。此曲弥漫整片林，不似山林，胜过山林，似乎就是出水吟。</code></pre><span id="more"></span><pre><code class="hljs">《減字木兰花》・黄陂 和游同学一首蝉蝶出没，孩童梦回长轩岭。上下翻飞，如琴似瑟舞静林。碎蕊金芒，掩映小楼烟火色。匆匆来去，憾遗黄陂意难平。</code></pre><p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1630289593058-1693109463839-28.jpg" alt="1630289593058-1693109463839-28"></p><p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1630289598096-1693109478404-30.jpg" alt="1630289598096-1693109478404-30"></p>]]></content>
     
     
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>岁月</tag>
+      
+      <tag>诗歌</tag>
       
     </tags>
     
@@ -94,9 +94,9 @@
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>岁月</tag>
+      
+      <tag>诗歌</tag>
       
     </tags>
     
@@ -115,9 +115,9 @@
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>岁月</tag>
+      
+      <tag>诗歌</tag>
       
     </tags>
     
@@ -155,9 +155,9 @@
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>岁月</tag>
+      
+      <tag>诗歌</tag>
       
     </tags>
     
@@ -176,9 +176,9 @@
     
     <tags>
       
-      <tag>诗歌</tag>
-      
       <tag>岁月</tag>
+      
+      <tag>诗歌</tag>
       
       <tag>无题</tag>
       
