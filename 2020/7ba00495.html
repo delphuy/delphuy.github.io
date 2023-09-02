@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="辉哥哥">
 <meta property="og:description" content="ide 我用的是pycharm，使用cmd 安装xlrd模块，提示安装成功">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://huigg.xyz/img/0105-python-de-di-yi-ge-keng.jpeg">
+<meta property="og:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0108.jpg">
 <meta property="article:published_time" content="2020-11-16T02:39:55.000Z">
-<meta property="article:modified_time" content="2023-08-27T05:35:42.269Z">
+<meta property="article:modified_time" content="2023-09-02T08:40:11.786Z">
 <meta property="article:author" content="辉哥哥">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://huigg.xyz/img/0105-python-de-di-yi-ge-keng.jpeg">
+<meta name="twitter:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0108.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -275,25 +275,25 @@
                 <p>ide 我用的是pycharm，使用cmd 安装xlrd模块，提示安装成功</p>
 <span id="more"></span>
 
-<p><img src="/2020/7ba00495.htm/1605498046453-1692878713513-56.jpg" srcset="/img/loading.gif" lazyload alt="1605498046453"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498046453-1692878713513-56.jpg" srcset="/img/loading.gif" lazyload alt="1605498046453-1692878713513-56"></p>
 <p> 然而在pycharm 里 import 的时候，却是红线提示</p>
-<p><img src="/2020/7ba00495.htm/1605498053230-1692878730555-58.jpg" srcset="/img/loading.gif" lazyload alt="1605498053230"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498053230-1692878730555-58.jpg" srcset="/img/loading.gif" lazyload alt="1605498053230-1692878730555-58"></p>
 <p> 有点懵逼，明明是已经安装成功了啊；<br> 于是我使用pycharm的解释器再安装一遍<br> 显示成功，我寻思了一下，应该是解释器 的问题，我在创建项目时没有指定python的解释器路径。<br> 于是重新进入 setting–&gt; project –&gt; interpreter，选择我安装目录的python解释器：</p>
-<p><img src="/2020/7ba00495.htm/1605498061904-1692878748978-60.jpg" srcset="/img/loading.gif" lazyload alt="1605498061904"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498061904-1692878748978-60.jpg" srcset="/img/loading.gif" lazyload alt="1605498061904-1692878748978-60"></p>
 <p>果然不出我所料，这里是 空白的，显示 ：No interpreter，于是我选择 show all，然后选择看起来是正确的那个解释器，然后点 OK：</p>
-<p><img src="/2020/7ba00495.htm/1605498069054-1692878768915-62.jpg" srcset="/img/loading.gif" lazyload alt="1605498069054"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498069054-1692878768915-62.jpg" srcset="/img/loading.gif" lazyload alt="1605498069054-1692878768915-62"></p>
 <p>然后，新的问题出现了，显示   ** Python packaging tools not found. Install packaging tools  **，坑爹啊！<br>然后，点击 install XXX，安装这个 packing tools，又报错了：</p>
-<p><img src="/2020/7ba00495.htm/1605498074318-1692878784927-64.jpg" srcset="/img/loading.gif" lazyload alt="1605498074318"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498074318-1692878784927-64.jpg" srcset="/img/loading.gif" lazyload alt="1605498074318-1692878784927-64"></p>
 <p>看提示，说是找不到这个SDK，头秃啊！！</p>
 <p>我突然看到这个提示里的 版本， 3.7 ！以及路径，貌似我和安装的不一样，可能是之前的残留；<br>于是，我感觉我找到问题的根源了，再次进入 setting–&gt; project –&gt; interpreter –&gt; show all   将这个3.7 的 解释器 点击右边的  - 号 移除，然后点击 +  添加 我安装的 3.9版本的解释器，一顿操作猛如虎：</p>
-<p><img src="/2020/7ba00495.htm/1605498080050-1692878804444-66.jpg" srcset="/img/loading.gif" lazyload alt="1605498080050"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498080050-1692878804444-66.jpg" srcset="/img/loading.gif" lazyload alt="1605498080050-1692878804444-66"></p>
 <p>点击OK，返回解释器的界面，perfect！！！一切正常，我之前安装的第三方包 都正确显示：</p>
-<p><img src="/2020/7ba00495.htm/1605498084697-1692878825850-68.jpg" srcset="/img/loading.gif" lazyload alt="1605498084697"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498084697-1692878825850-68.jpg" srcset="/img/loading.gif" lazyload alt="1605498084697-1692878825850-68"></p>
 <p>再会到 pycharm 的编辑界面， import 一下试试：</p>
-<p><img src="/2020/7ba00495.htm/1605498090657-1692878844779-70.jpg" srcset="/img/loading.gif" lazyload alt="1605498090657"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605498090657-1692878844779-70.jpg" srcset="/img/loading.gif" lazyload alt="1605498090657-1692878844779-70"></p>
 <p>已经有智能提示了；</p>
 <p>我突然想到，其实在创建项目的时候，就可以直接选择正确的解释器，这样用pip 命令安装的包，在pycharm就能直接使用了</p>
-<p><img src="/2020/7ba00495.htm/1605497745280-1692878862668-72.jpg" srcset="/img/loading.gif" lazyload alt="1605497745280"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1605497745280-1692878862668-72.jpg" srcset="/img/loading.gif" lazyload alt="1605497745280-1692878862668-72"></p>
 
                 
               </div>

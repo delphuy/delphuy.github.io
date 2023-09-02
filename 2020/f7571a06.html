@@ -23,15 +23,15 @@
 <meta property="og:site_name" content="辉哥哥">
 <meta property="og:description" content="学习要点： 设置文件属性：attrib 删除命令：del 复制文件：copy 复制文件(夹)：xcopy  attrib命令">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://huigg.xyz/img/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png">
+<meta property="og:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png">
 <meta property="article:published_time" content="2020-04-07T02:32:55.000Z">
-<meta property="article:modified_time" content="2023-08-27T05:35:42.261Z">
+<meta property="article:modified_time" content="2023-09-02T09:04:19.800Z">
 <meta property="article:author" content="辉哥哥">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="DOS">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://huigg.xyz/img/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png">
+<meta name="twitter:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -272,7 +272,8 @@
             
               <div class="markdown-body">
                 
-                <h1 id="学习要点："><a href="#学习要点：" class="headerlink" title="学习要点："></a>学习要点：</h1><ol>
+                <p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi.png" srcset="/img/loading.gif" lazyload alt="0099-dos-ming-ling-pi-chu-li-xue-xi-bi-ji-zhi-attrib-del-copy-xcopyyi"></p>
+<h1 id="学习要点："><a href="#学习要点：" class="headerlink" title="学习要点："></a>学习要点：</h1><ol>
 <li>设置文件属性：attrib</li>
 <li>删除命令：del</li>
 <li>复制文件：copy</li>
@@ -293,17 +294,17 @@
 <p>执行结果如下，可见 文件属性为 A、I，即 存档文件、无索引：</p>
 <p><img src="http://blog.huigg.xyz/post-images/1586228375030.jpg" srcset="/img/loading.gif" lazyload></p>
 <h2 id="例二-设置文件夹所有文件为隐藏"><a href="#例二-设置文件夹所有文件为隐藏" class="headerlink" title="例二 设置文件夹所有文件为隐藏"></a>例二 设置文件夹所有文件为隐藏</h2><p>该文件夹当前内容如下：</p>
-<p><img src="/2020/f7571a06.htm/1586228860445-1692875547946-6.jpg" srcset="/img/loading.gif" lazyload alt="1586228860445"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1586228860445-1692875547946-6.jpg" srcset="/img/loading.gif" lazyload alt="1586228860445-1692875547946-6"></p>
 <h3 id="设置隐藏"><a href="#设置隐藏" class="headerlink" title="设置隐藏"></a>设置隐藏</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bat">@ <span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 将 C:\BAT\第一节 的文件夹和下面的文件都隐藏<br><span class="hljs-built_in">attrib</span> +h C:\BAT\第一节\*.* /s /d<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
 
 <p>执行后，用2种方式查看结果，第1种，直接截图，文件都看不见了：</p>
-<p><img src="/2020/f7571a06.htm/1586229830749-1692875575643-8.jpg" srcset="/img/loading.gif" lazyload alt="1586229830749"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1586229830749-1692875575643-8.jpg" srcset="/img/loading.gif" lazyload alt="1586229830749-1692875575643-8"></p>
 <p>第2种，执行查看文件属性命令，可见文件的属性为 A、H、I，A和I貌似是一直都有，H属性是我们刚刚赋予的：</p>
-<p><img src="/2020/f7571a06.htm/1586229834358-1692875607634-13.jpg" srcset="/img/loading.gif" lazyload alt="1586229834358"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1586229834358-1692875607634-13.jpg" srcset="/img/loading.gif" lazyload alt="1586229834358-1692875607634-13"></p>
 <h3 id="取消隐藏"><a href="#取消隐藏" class="headerlink" title="取消隐藏"></a>取消隐藏</h3><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs BAT">@ <span class="hljs-built_in">echo</span> off<br><span class="hljs-built_in">echo</span> 将 C:\BAT\第一节 的文件夹和下面的文件都隐藏<br><span class="hljs-built_in">attrib</span> -h C:\BAT\第一节\*.* /s /d<br><span class="hljs-built_in">pause</span><br></code></pre></td></tr></table></figure>
 
 <p>执行后，查看结果：</p>
-<p><img src="/2020/f7571a06.htm/1586230675988-1692875622917-15.jpg" srcset="/img/loading.gif" lazyload alt="1586230675988"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1586230675988-1692875622917-15.jpg" srcset="/img/loading.gif" lazyload alt="1586230675988-1692875622917-15"></p>
 <blockquote>
 <p>未完待续…..</p>
 </blockquote>

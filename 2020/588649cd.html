@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="辉哥哥">
 <meta property="og:description" content="起因公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office. 今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。 重装大法好啊！于是开始了这一顿崩溃的卸载之旅。 我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://huigg.xyz/img/0094-liu-mang-ruan-jian-wps-xie-zai-ji.jpg">
+<meta property="og:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0094-liu-mang-ruan-jian-wps-xie-zai-ji.jpg">
 <meta property="article:published_time" content="2020-03-31T08:23:56.000Z">
-<meta property="article:modified_time" content="2023-08-27T05:35:42.257Z">
+<meta property="article:modified_time" content="2023-09-02T09:09:23.181Z">
 <meta property="article:author" content="辉哥哥">
 <meta property="article:tag" content="IT">
 <meta property="article:tag" content="清理">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://huigg.xyz/img/0094-liu-mang-ruan-jian-wps-xie-zai-ji.jpg">
+<meta name="twitter:image" content="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0094-liu-mang-ruan-jian-wps-xie-zai-ji.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -271,33 +271,34 @@
             
               <div class="markdown-body">
                 
-                <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
+                <p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/0094-liu-mang-ruan-jian-wps-xie-zai-ji.jpg" srcset="/img/loading.gif" lazyload alt="0094-liu-mang-ruan-jian-wps-xie-zai-ji"></p>
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>公司是上市公司，因此办公软件方面选择了便宜很多的wps office，而我们就只能放弃很好用的ms office.</p>
 <p>今天早上突然某个excel表格打不开，各种报错。修复、重启之类的都不行，经咨询公司资管和wps官方，都指示：卸载重装吧。</p>
 <p>重装大法好啊！于是开始了这一顿崩溃的卸载之旅。</p>
 <p>我天真的以为只需要找到安装目录，点击uninstall.exe 就万事大吉了，图样图森破啊！</p>
 <span id="more"></span>
 
 <p>无论我卸载多少遍，安装目录的文件一个不少，桌面的office文档还是wps的快捷方式图标，word还能正常打开。</p>
-<p><img src="/2020/588649cd.htm/1585644335850-1692861609169-16.jpg" srcset="/img/loading.gif" lazyload alt="1585644335850"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644335850-1692861609169-16.jpg" srcset="/img/loading.gif" lazyload alt="1585644335850-1692861609169-16"></p>
 <p>我顿悟：遇到流氓了！</p>
 <h1 id="操作一"><a href="#操作一" class="headerlink" title="操作一"></a>操作一</h1><p>直接卸载不行，我想到了注册表。</p>
 <p>于是一顿折腾，在所有注册表目录下面找到kingsoft目录全部删除。满怀希望返回桌面后，发现一切照旧。<br>失败！</p>
 <h1 id="操作二"><a href="#操作二" class="headerlink" title="操作二"></a>操作二</h1><p>注册表删除了，安装目录文件还没删除，于是在文件夹上点右键，shift+del，提示有文件被占用……重启电脑再来一次，还是提示被占用，一定是有文件开机启动了。找了一大圈，找出来2个，从进程杀掉。再次点删除，仍然提示被占用。<br>再次失败！</p>
 <h1 id="操作三"><a href="#操作三" class="headerlink" title="操作三"></a>操作三</h1><p>小样，跟他杠上了！于是找来Geek Uninstaller ，发现别人根本就没有安装记录，无法卸载。<br>失败！</p>
 <h1 id="操作四"><a href="#操作四" class="headerlink" title="操作四"></a>操作四</h1><p>继续用法宝！找来unlock，终于检测出来了被占用的具体的进程名称，直接选择解除后删除，然后执行，满怀希望！</p>
-<p><img src="/2020/588649cd.htm/1585644307524-1692861631646-18.jpg" srcset="/img/loading.gif" lazyload alt="1585644307524"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644307524-1692861631646-18.jpg" srcset="/img/loading.gif" lazyload alt="1585644307524-1692861631646-18"></p>
 <p>可是，等执行完成后，发现文件还在，再次手动删除，终于删除成功了！胜利似乎就再眼前！<br>回到桌面，沮丧的发现，office文档仍然能够正常打开，而且是熟悉的wps风格！</p>
 <p>又失败！！</p>
 <h1 id="操作五"><a href="#操作五" class="headerlink" title="操作五"></a>操作五</h1><p>找来everything，全盘搜索！幸好这个是我常用工具，秒搜出来了结果，果然发现在C盘还有一个kingsoft文件夹！！狡兔三窟啊！！</p>
-<p><img src="/2020/588649cd.htm/1585644528606-1692861680603-23.jpg" srcset="/img/loading.gif" lazyload alt="1585644528606"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644528606-1692861680603-23.jpg" srcset="/img/loading.gif" lazyload alt="1585644528606-1692861680603-23"></p>
 <p>再次删除！<br>结果你猜？——仍然失败，文档还是能打开！</p>
 <h1 id="操作六"><a href="#操作六" class="headerlink" title="操作六"></a>操作六</h1><p>莫非是默认程序设定的问题？<br>找到windows默认程序，将所有的office扩展名格式的文件，默认程序清理掉。</p>
-<p><img src="/2020/588649cd.htm/1585644740326.jpg" srcset="/img/loading.gif" lazyload alt="1585644740326"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644740326.jpg" srcset="/img/loading.gif" lazyload alt="1585644740326"></p>
 <p>不出意外，office文档照常打开无误，还是熟悉的味道。<br>再次失败！</p>
 <h1 id="操作七"><a href="#操作七" class="headerlink" title="操作七"></a>操作七</h1><p>必须上绝招了！<br>找来360，俗话说以毒攻毒，流氓最知道流氓的心里，这回8成能成功。<br>安装完之后，果然各种的弹出窗口，和全家桶。强忍不适，点击扫描，果然发现一大批 wps的残留，统统选中清理。</p>
-<p><img src="/2020/588649cd.htm/1585644678135-1692861829849-31.jpg" srcset="/img/loading.gif" lazyload alt="1585644678135"></p>
-<p><img src="/2020/588649cd.htm/1585644684125-1692861844640-33.jpg" srcset="/img/loading.gif" lazyload alt="1585644684125"></p>
-<p><img src="/2020/588649cd.htm/1585644687819-1692861857767-35.jpg" srcset="/img/loading.gif" lazyload alt="1585644687819"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644678135-1692861829849-31.jpg" srcset="/img/loading.gif" lazyload alt="1585644678135-1692861829849-31"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644684125-1692861844640-33.jpg" srcset="/img/loading.gif" lazyload alt="1585644684125-1692861844640-33"></p>
+<p><img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/1585644687819-1692861857767-35.jpg" srcset="/img/loading.gif" lazyload alt="1585644687819-1692861857767-35"></p>
 <p>清理完毕，该死的wps 快捷方式图标终于消失了！</p>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>俗话说，敌人的敌人是朋友。<br>俗话又说，最了解你的人可能是敌人。<br>360 不亏为始祖血脉，宝刀一出，诸邪避易。<br>不过360目前比较厚道的是，等我过河拆桥，处理完wps后卸载它时，并未有何残留，干净利索的卸载完成。<br>可以点个赞。</p>
 
