@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+
+  <meta name="generator" content="Gridea Pro 1.3.0-beta.2.huigg.6">
+  <title>博客 · 辉哥哥&#39;s Blog</title>
+  <meta name="description" content="无限意蕴枯欲尽，悠悠闲处作奇峰">
+  <meta name="keywords" content="">
+
+  
+  
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@main/images/theme/fluid.png">
+  
+
+  
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('fluid-theme');
+        var defaultMode = 'dark';
+        var mode;
+        if (stored === 'dark' || stored === 'light') { mode = stored; }
+        else if (defaultMode === 'dark') { mode = 'dark'; }
+        else if (defaultMode === 'light') { mode = 'light'; }
+        else {
+          mode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        if (mode === 'dark') document.documentElement.setAttribute('data-user-color-scheme', 'dark');
+        else if (mode === 'light') document.documentElement.setAttribute('data-user-color-scheme', 'light');
+      } catch (e) {}
+    })();
+  </script>
+
+  
+  <style id="fluid-vars">
+    :root {
+      --link-hover-color: #30a9de;
+      --navbar-bg-color: #2f4154;
+      --board-bg-color: #ffffff;
+      
+      --banner-mask-alpha: 0.300000;
+      --banner-height: 50.000000vh;
+      --inner-banner-height: 50.000000vh;
+    }
+    [data-user-color-scheme="dark"] {
+      --board-bg-color: #252d38;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/styles/main.css">
+
+  
+  <link rel="canonical" href="https://delphuy.github.io/">
+  <meta property="og:site_name" content="辉哥哥&#39;s Blog">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="辉哥哥&#39;s Blog">
+  <meta property="og:description" content="无限意蕴枯欲尽，悠悠闲处作奇峰">
+  
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="辉哥哥&#39;s Blog">
+
+  <link rel="alternate" type="application/atom+xml" title="辉哥哥&#39;s Blog Atom" href="/atom.xml">
+  <link rel="alternate" type="application/rss+xml" title="辉哥哥&#39;s Blog RSS" href="/feed.xml">
+
+  
+  
+
+  <script type="application/json" id="fluid-config">{
+    "themeMode": "dark",
+    "enableTyped": true,
+    "showReadingProgress": true,
+    "showBackToTop": true,
+    "showCodeCopy": true,
+    "showSearch": true,
+    "memosShowHeatmap": true,
+    "openExternalInNewTab": true
+  }</script>
+  
+  <script type="text/plain" id="fluid-typed-strings"></script>
+<meta name="description" content="无限意蕴枯欲尽，悠悠闲处作奇峰">
+<link rel="canonical" href="https://delphuy.github.io/post/page/6/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"辉哥哥's Blog","url":"https://delphuy.github.io","description":"无限意蕴枯欲尽，悠悠闲处作奇峰","potentialAction":{"@type":"SearchAction","query-input":"required name=search_term_string","target":"https://delphuy.github.io/search?q={search_term_string}"}}</script>
+<meta property="og:title" content="辉哥哥's Blog">
+<meta property="og:description" content="无限意蕴枯欲尽，悠悠闲处作奇峰">
+<meta property="og:url" content="https://delphuy.github.io/post/page/6/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="辉哥哥's Blog">
+<meta property="og:image" content="/images/avatar.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://delphuy.github.io/post/page/6/">
+<meta name="twitter:title" content="辉哥哥's Blog">
+<meta name="twitter:description" content="无限意蕴枯欲尽，悠悠闲处作奇峰">
+<meta name="twitter:image" content="/images/avatar.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="辉哥哥's Blog">
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@main/images/icons/icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@main/images/icons/icon-192x192.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/icons/icon-192x192.png">
+<script>if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}</script>
+</head>
+<body class="blog">
+
+  
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.3-4.3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="icon-arrow-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-arrow-up" viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-date" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 2v4M8 2v4M3 10h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+      <symbol id="icon-category" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-tags" viewBox="0 0 24 24"><path d="M20.59 13.41 13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7" cy="7" r="1.5" fill="currentColor"/></symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 2v6l4 4-1 5h-6l-1-5 4-4V2z" fill="currentColor"/></symbol>
+      <symbol id="icon-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-shield" viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.5 9.4 8 10 4.5-.6 8-5 8-10V6l-8-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="reading-progress" id="reading-progress" style="display:none"></div>
+
+  <header>
+    
+<nav id="navbar" class="navbar scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="https://delphuy.github.io/">
+      <strong>辉哥哥&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <ul class="navbar-nav">
+      
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/memos">闪念</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/archives">归档</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/tags">标签</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/links">友链</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/post/about">关于</a>
+          </li>
+        
+      
+      
+        <li class="nav-item">
+          <button type="button" class="nav-link" data-action="open-search" aria-label="Search">
+            <svg class="icon"><use xlink:href="#icon-search"/></svg>
+          </button>
+        </li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+
+<div id="mobile-grid-menu">
+  <div class="mobile-grid-menu-inner">
+    <div class="container">
+      <div class="row">
+        
+          
+            <div class="mobile-grid-cell">
+              <a href="/">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>首页</span>
+                </div>
+              </a>
+            </div>
+          
+            <div class="mobile-grid-cell">
+              <a href="/memos">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>闪念</span>
+                </div>
+              </a>
+            </div>
+          
+            <div class="mobile-grid-cell">
+              <a href="/archives">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>归档</span>
+                </div>
+              </a>
+            </div>
+          
+            <div class="mobile-grid-cell">
+              <a href="/tags">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>标签</span>
+                </div>
+              </a>
+            </div>
+          
+            <div class="mobile-grid-cell">
+              <a href="/links">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>友链</span>
+                </div>
+              </a>
+            </div>
+          
+            <div class="mobile-grid-cell">
+              <a href="/post/about">
+                <div class="mobile-grid-item">
+                  <svg class="icon"><use xlink:href="#icon-link"/></svg>
+                  <span>关于</span>
+                </div>
+              </a>
+            </div>
+          
+        
+        
+          <div class="mobile-grid-cell">
+            <a href="javascript:;" data-action="open-search" aria-label="Search">
+              <div class="mobile-grid-item">
+                <svg class="icon"><use xlink:href="#icon-search"/></svg>
+                <span>搜索</span>
+              </div>
+            </a>
+          </div>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+  
+
+<div class="header-inner is-inner" style="height: 50.000000vh;">
+  <div id="banner" class="banner" style="background-image: url('/images/theme/custom-bgImg.jpg');">
+    <div class="full-bg-img">
+      <div class="mask">
+        <div class="banner-text text-center fade-in-up">
+          <div class="h2">
+            <span id="subtitle">辉哥哥&#39;s Blog</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </header>
+
+  <main>
+    
+      <div class="container">
+        <div id="board" class="">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+  
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/a832072d/">0071.距离</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/a832072d/">
+      <div>从一点到另一点
+
+不过一撇
+纷飞在无雪飘零的12月
+看不到心的迷离
+在你那双冰凉的小手
+找到温暖之处
+只一步
+便
+跨越所有距离</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-12-05T15:33:13+08:00">2010-12-05</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/shi-ge/">#诗歌</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/1f846eee/">0070.无题2</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/1f846eee/">
+      <div>太监是这样：
+
+当你感觉不爽，
+当着很多人面狠狠的抽了他，
+而后象征性的表示似乎手重了些，
+他就会感觉很开心，
+并且趁机撒娇：
+不嘛不嘛，道个歉好不好？</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-09-25T15:49:48+08:00">2010-09-25</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/wu-ti/">#无题</a> 
+          
+            <a href="/tag/za-lu/">#杂录</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <div class="col-12 col-md-4 m-auto index-img">
+      <a href="/post/4c2da78a/">
+        <img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/918.jpg" alt="0069.九一八">
+      </a>
+    </div>
+    <article class="col-12 col-md-8 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/4c2da78a/">0069.九一八</a>
+    </h2>
+
+    <a class="index-excerpt " href="/post/4c2da78a/">
+      <div>又是一年九一八。
+凤凰网首页有一个新闻“各地纪念九一八”，所谓的各地，也就4个地方。所谓的纪念越来越流于形式，甚至形式都不要了，索性找个理由不纪念了——例如我们的大上海，美其名曰“世博因素”，担心市民以为真的有防空危机——屁话一堆，要真的有这种觉悟，那防空警报也没算白拉。
+以前是在昆山，9.18也经历过几次，听见过满大街的警报响，行人驻足，车鸣笛。不得不说，我印象中，昆山是最好的一个小城，昆...</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-09-18T15:31:24+08:00">2010-09-18</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/za-lu/">#杂录</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/69704ce8/">0068.女友送的诗</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/69704ce8/">
+      <div>女友送的诗：
+
+——《抓一手云朵》
+抓一手云朵
+不再让它远行
+静静留在心底
+嗅它的清新
+因为 那清新是你
+抓一手云朵
+让它化成水滴
+慢慢融进眼里
+这样   我就可以更想你</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-07-26T15:30:42+08:00">2010-07-26</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/shi-ge/">#诗歌</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/be181287/">0067 不惑</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/be181287/">
+      <div>不惑源自40年
+岁月的积淀，我来到了路前
+仰望不惑
+我只能仰望，源于我的浅薄
+
+黑夜的星辰，闪闪烁烁
+弥望了双眼
+挑拨心悸中的抖落
+我看不见月亮
+晨风很暖
+我却在风中摇弋
+在梦想牵挂的远方
+我迷失了方向
+手中抓着那一缕执念
+企图找到那块壁障
+将之打碎
+狠狠的打碎
+我习惯于沉醉梦中
+编织生活的双刃剑
+我从不敢豪言放弃
+那是我活着的唯一的尊严
+我不是个稻草人
+空着心</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-06-25T15:29:29+08:00">2010-06-25</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/shi-ge/">#诗歌</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <div class="col-12 col-md-4 m-auto index-img">
+      <a href="/post/b80cf6b4/">
+        <img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/yu-ji.jpg" alt="0066. 雨季">
+      </a>
+    </div>
+    <article class="col-12 col-md-8 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/b80cf6b4/">0066. 雨季</a>
+    </h2>
+
+    <a class="index-excerpt " href="/post/b80cf6b4/">
+      <div>如果我没记错的话，江南以及秦淮地区现在应该已经进入梅雨季节了。
+所谓“一川烟草，满城风絮，梅子黄时雨”，柳絮纷飞的时候，我勘叹春的久违。毕业后这么多年的挣扎与打拼，竟然忽略了我已经不知道多少次没有注意到柳絮是何时来，又何时走；而善变的季节也令我忽视了所谓的春雨与夏荷。我们在莫名的忙碌着。
+记得第一次来南京，也是下雨。到公司面试却正好是中午，为时尚早。于是在雨中从公司走到景明佳园，又是一种久违...</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-06-04T15:25:45+08:00">2010-06-04</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/za-lu/">#杂录</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/b1451aed/">0065.轮回</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/b1451aed/">
+      <div>似乎是一个轮回。
+
+总结总是在刚开始的时候进行，却在结束的时候结束。漫长的经过是总结的全部，漫长的结果却是总结之外的事情。
+指针已经跳跃到五月末。骄阳一如既往的来临，在燥热而悸动的心里加热。只能说是小结。
+自想跳槽以来，事情似乎一路顺利的发展。年后的第一周便接来了面试，而接下来很顺利的被录用。只不过比较意外的是，我转行了。从制造业走向了IT业，从管理者走向了实践者。
+原公司国际惯例一样加以挽...</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-05-24T15:24:05+08:00">2010-05-24</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/za-lu/">#杂录</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/2dfd02d1/">0064.五月天、青玉案</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/2dfd02d1/">
+      <div>《青玉案》
+
+流年还似风吹去，
+暂不过，三十许。
+挪步今生归何处？
+寒暑春秋，晨钟暮鼓，逝者如斯夫。
+眉头不计悲情苦，遣倦犹堪来时路；
+——看淡起伏，而今当是、执手逍遥度！</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-05-07T15:22:01+08:00">2010-05-07</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/shi-ge/">#诗歌</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <article class="col-12 col-md-12 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/48fb37b7/">0063.老了</a>
+    </h2>
+
+    <a class="index-excerpt index-excerpt__noimg" href="/post/48fb37b7/">
+      <div>早上起床突然觉得两腿好酸，应该是这几天走路多了，而且似乎还奔跑过几分钟。
+
+放在4年前，这种情况几乎不会出现，哪怕顶着烈日打上一整天篮球也不会有第二天会酸痛的情况。
+那时候瘦是瘦点，身上没有一两多余脂肪。
+连续熬上2、3个通宵也吃的消。
+可惜现在不行了，腰上已经有了一圈波浪肉，几乎没想过熬夜会怎么样。
+就现在这样多跑几步就会出现大腿酸痛的情况。
+看来真的是老了。四年没运动，骨头都要锈掉了。
+...</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-04-25T15:18:50+08:00">2010-04-25</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/za-lu/">#杂录</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+      
+        
+<div class="row index-card">
+  
+    <div class="col-12 col-md-4 m-auto index-img">
+      <a href="/post/daf054ff/">
+        <img src="https://huigg-img.oss-cn-shanghai.aliyuncs.com/blog/yan-yu.jpg" alt="0062.烟雨">
+      </a>
+    </div>
+    <article class="col-12 col-md-8 mx-auto index-info">
+  
+    <h2 class="index-header">
+      
+      <a href="/post/daf054ff/">0062.烟雨</a>
+    </h2>
+
+    <a class="index-excerpt " href="/post/daf054ff/">
+      <div>一叶扁舟，半江明月，我从天边而来，看我迷离的江南。
+三尺青锋，一篓唐诗，我自远古而来，看我梦里的江南。
+今霄酒醒何处，楚天犹豁，乡关安在？
+心眸那把珍藏千年的油纸伞，就是你我断桥边许诺的情缘。
+梦里千万次依偎厮磨的人儿，能否告诉我，
+今生你会婷立在那一个轻风浅唱的杨柳岸？
+踏上烟雨的乡土，拂拭着心头的诗笺，
+让我牵翊飘摇在船头翻开亘古不变的情怀。
+我如一个天涯漂泊的游子，今日归来，
+你依旧是...</div>
+    </a>
+
+    <div class="index-btm post-metas">
+      <div class="post-meta">
+        <svg class="icon"><use xlink:href="#icon-date"/></svg>
+        <time datetime="2010-04-21T15:14:22+08:00">2010-04-21</time>
+      </div>
+      
+      
+        <div class="post-meta">
+          <svg class="icon"><use xlink:href="#icon-tags"/></svg>
+          
+            <a href="/tag/sui-yue/">#岁月</a> 
+          
+            <a href="/tag/shi-ge/">#诗歌</a>
+          
+        </div>
+      
+    </div>
+  </article>
+</div>
+
+      
+    
+  
+
+  
+
+  <ul class="pagination" aria-label="分页">
+    
+      <li><a class="page-prev" href="/post/page/5/" rel="prev">« 上一页</a></li>
+    
+
+    
+      <li class="page-info">6 / 13</li>
+    
+
+    
+      <li><a class="page-next" href="/post/page/7/" rel="next">下一页 »</a></li>
+    
+  </ul>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <button type="button" id="scroll-top-button" aria-label="返回顶部">
+        <svg class="icon"><use xlink:href="#icon-arrow-up"/></svg>
+      </button>
+    
+
+    
+<div id="search-modal" class="search-modal" role="dialog" aria-modal="true" aria-labelledby="search-modal-title">
+  <div class="search-modal-panel" role="document">
+    <span id="search-modal-title" class="visually-hidden">搜索</span>
+    <input class="search-modal-input" id="search-modal-input" type="search"
+           placeholder="搜索文章 / 标签 / 内容…" autocomplete="off">
+    <p class="search-modal-tip">↑ ↓ 选择 · Enter 进入 · Esc 关闭 · / 唤起 · ⌘K 唤起</p>
+    <div class="search-modal-results" id="search-modal-results"></div>
+    <div class="search-modal-empty" style="display:none"></div>
+    <button type="button" class="search-modal-close" data-action="close-search" aria-label="关闭搜索">×</button>
+  </div>
+</div>
+
+  </main>
+
+  <footer>
+    
+<div class="footer-inner">
+  <div class="container">
+    <p>©️
+      2006 - 
+      2026
+      辉哥哥&#39;s Blog
+       · 无限意蕴枯欲尽，悠悠闲处作奇峰
+    </p>
+    <p>
+      Designed by <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">Fluid</a>
+      · Ported to <a href="https://github.com/Gridea-Pro/gridea-pro-themes" target="_blank" rel="noopener">Gridea Pro</a>
+    </p>
+    
+    
+      <p>
+        <span id="busuanzi_container_site_pv">本站访问量 <span id="busuanzi_value_site_pv"></span></span>
+        ·
+        <span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span></span>
+      </p>
+    
+    <div><a href="https://huigg.xyz" target="_blank" rel="nofollow noopener"><span>陌生的人们会向你说点甜言蜜语  / 微笑的面孔隐藏了一层未知的暴风雨  </span></a> ♥ <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>墙上的镜子讥笑我如此幼稚的心理  / 熟悉的面孔掩盖着最难了解的你自己</span></a>
+<div><span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span>
+<script>
+var now = new Date();
+function createtime() {
+    var grt= new Date("01/15/2006 12:00:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+    now.setTime(now.getTime()+250);
+    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+    document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+}
+setInterval("createtime()",250);
+</script>
+</div>
+<div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=2023031045-1" rel="nofollow noopener" target="_blank"><img src="https://cdn.jsdelivr.net/gh/delphuy/delphuy.github.io@main/images/theme/police_beian.png" alt="police-icon" style="vertical-align:middle"/> <span>苏ICP备2023031045号-1</span></a></div></div>
+  </div>
+</div>
+
+  </footer>
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  <script src="/scripts/main.js" defer></script>
+
+  
+  <script src="/lib/snowflake.min.js"></script>
+
+  
+
+<script>console.log("\n%c ✦ Gridea Pro v1.3.0-beta.2.huigg.6 %c · Theme: fluid v1.0.0 · https://gridea.pro %c\n","color:#fadfa3;background:#111111;padding:9px 14px;border-radius:4px 0 0 4px;font-weight:500;font-size:12px","color:#e05c00;background:#fff3ec;padding:9px 14px;border-radius:0 4px 4px 0;font-size:11px","")</script>
+</body>
+</html>
