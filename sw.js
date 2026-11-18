@@ -1,5 +1,5 @@
 // Gridea Pro PWA Service Worker
-var CACHE_NAME = 'gridea-v1794985921';
+var CACHE_NAME = 'gridea-v1795002177';
 var OFFLINE_URL = '/offline.html';
 
 // 安装：预缓存离线页面
@@ -78,5 +78,7 @@ self.addEventListener('fetch', function(event) {
 });
 
 function isStaticAsset(url) {
+  // /api/search.json 等接口数据每次构建都变，进 cache-first 会让搜索结果过期
+  if (url.indexOf('/api/') !== -1) return false;
   return /\.(css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|json)(\?.*)?$/i.test(url);
 }

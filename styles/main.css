@@ -823,11 +823,19 @@ main {
 .reading-progress {
   position: fixed;
   top: 0; left: 0;
-  height: 2px;
-  background: var(--link-hover-color);
+  height: 3px;
+  background: linear-gradient(90deg, #1896c4, var(--link-hover-color));
   width: 0;
   z-index: 1100;
   transition: width .15s linear;
+  box-shadow: 0 0 6px var(--link-hover-color);
+  border-radius: 0 2px 2px 0;
+}
+
+/* 深色模式加粗 + 更强光晕：细线在深底上对比不足，靠辉光把它托出来 */
+[data-user-color-scheme="dark"] .reading-progress {
+  height: 4px;
+  box-shadow: 0 0 10px 2px var(--link-hover-color);
 }
 
 /* ---------- 13. Search modal ---------- */
@@ -1014,6 +1022,33 @@ main {
 .archive-item a:hover {
   color: var(--link-hover-color);
   padding-left: 4px;
+}
+
+/* Year collapse (details/summary) */
+.archive-year-block > summary.archive-year {
+  cursor: pointer;
+  list-style: none;
+}
+.archive-year-block > summary.archive-year::-webkit-details-marker {
+  display: none;
+}
+.archive-year::after {
+  content: "▸";
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--sec-text-color);
+  transition: transform 0.2s ease;
+}
+.archive-year-block[open] > .archive-year::after {
+  transform: rotate(90deg);
+}
+.archive-year .archive-count {
+  font-size: 1rem;
+  font-weight: normal;
+  opacity: 0.55;
+  margin-left: 0.3rem;
 }
 
 /* ---------- 16. Memos ---------- */
@@ -1268,7 +1303,8 @@ main {
 @media print {
   .navbar, .header-inner, #scroll-top-button,
   .search-modal, #mobile-grid-menu, .reading-progress,
-  .post-nav, .post-comments, .footer-inner { display: none !important; }
+  .post-nav, .post-comments, .footer-inner,
+  .post-toc { display: none !important; }
   body, #board {
     background: #fff !important;
     color: #000 !important;
@@ -1401,4 +1437,140 @@ main {
   :root:not([data-user-color-scheme="light"]) .v[data-class=v] hr {
     border-color: #3a4453;
   }
+}
+
+/* ============================================================================
+   23. Post image lightbox
+   ========================================================================== */
+.post img { cursor: zoom-in; }
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.86);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.lightbox-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 4px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.lightbox-img.is-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close .icon { font-size: 22px; line-height: 1; }
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: rotate(90deg);
+}
+
+/* =============================================================
+   24. Post TOC — right-side floating nav (desktop ≥1280px only)
+       层级缩进：h1/h2 顶格，h3 缩进，h4 再缩进
+   ============================================================= */
+.post-toc {
+  position: fixed;
+  top: 15vh;
+  right: 1rem;
+  width: 220px;
+  max-height: 68vh;
+  overflow-y: auto;
+  padding: 14px 10px;
+  background: var(--board-bg-color);
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 40;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+.post-toc-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+  padding: 0 8px 8px;
+  border-bottom: 1px solid var(--line-color);
+  margin-bottom: 6px;
+}
+
+.post-toc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-toc-item a {
+  display: block;
+  padding: 4px 8px;
+  color: var(--sec-text-color);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  border-radius: 0 4px 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.post-toc-item a:hover {
+  color: var(--link-hover-color);
+  background: var(--link-hover-bg-color);
+}
+
+.post-toc-item.active a {
+  color: var(--link-hover-color);
+  border-left-color: var(--link-hover-color);
+  font-weight: 600;
+}
+
+.post-toc-h3 a { padding-left: 20px; }
+.post-toc-h4 a { padding-left: 32px; font-size: 12px; }
+
+/* 窄屏隐藏 TOC（正文 col-md-10 两侧空隙不足） */
+@media (max-width: 1279.98px) {
+  .post-toc { display: none !important; }
 }

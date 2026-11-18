@@ -17,7 +17,8 @@
     showCodeCopy: true,
     showSearch: true,
     memosShowHeatmap: true,
-    openExternalInNewTab: true
+    openExternalInNewTab: true,
+    showToc: true
   };
   try {
     var cfgEl = document.getElementById('fluid-config');
@@ -419,6 +420,12 @@
     if (!post) return;
     post.querySelectorAll('a[href]').forEach(function (a) {
       var href = a.getAttribute('href') || '';
+      // 兜底：正文链接凡不带协议头、也不是站内路径（/ #锚 mailto: javascript:）的，
+      // 一律补 https://——漏写协议头的链接按相对路径解析会 404，不挑域名形态。
+      if (href && !/^(https?:\/\/|\/|#|mailto:|javascript:)/i.test(href)) {
+        href = 'https://' + href;
+        a.setAttribute('href', href);
+      }
       if (href.startsWith('http://') || href.startsWith('https://')) {
         if (!a.hasAttribute('target')) {
           a.setAttribute('target', '_blank');
@@ -462,6 +469,132 @@
     });
   }
 
+  /* ============================================================================
+     15. Post image lightbox (click to zoom, X / Esc / backdrop to close)
+     ========================================================================== */
+  function bindImageLightbox() {
+    var post = document.querySelector('article.post');
+    if (!post) return;
+
+    var overlay = null;
+    var figure = null;
+    var prevOverflow = '';
+
+    function ensureOverlay() {
+      if (overlay) return;
+      overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+
+      figure = document.createElement('img');
+      figure.className = 'lightbox-img';
+      figure.alt = '';
+      figure.addEventListener('load', function () {
+        figure.classList.add('is-loaded');
+      });
+
+      var closeBtn = document.createElement('button');
+      closeBtn.type = 'button';
+      closeBtn.className = 'lightbox-close';
+      closeBtn.setAttribute('aria-label', '关闭放大图片');
+      closeBtn.innerHTML = '<svg class="icon"><use xlink:href="#icon-close"/></svg>';
+
+      overlay.appendChild(figure);
+      overlay.appendChild(closeBtn);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay || closeBtn.contains(e.target)) close();
+      });
+      document.body.appendChild(overlay);
+    }
+
+    function open(img) {
+      ensureOverlay();
+      figure.classList.remove('is-loaded');
+      figure.src = img.currentSrc || img.src;
+      figure.alt = img.alt || '';
+      if (figure.complete && figure.naturalWidth > 0) figure.classList.add('is-loaded');
+      prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      overlay.classList.add('is-open');
+    }
+
+    function close() {
+      if (!overlay || !overlay.classList.contains('is-open')) return;
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = prevOverflow;
+    }
+
+    post.addEventListener('click', function (e) {
+      var img = e.target;
+      if (!(img instanceof HTMLImageElement)) return;
+      if (img.closest('.no-lightbox')) return;
+      e.preventDefault();
+      open(img);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') close();
+    });
+  }
+
+  /* ============================================================================
+     16. Post TOC — right-side floating nav with scroll-spy (desktop only)
+     ========================================================================== */
+  function bindToc() {
+    if (!cfg.showToc) return;
+    var post = document.querySelector('article.post');
+    var toc = document.getElementById('post-toc');
+    if (!post || !toc) return;
+
+    // 抓 h1–h4：用户技术笔记习惯用 # 一级标题（渲染为 h1），
+    // 只抓 h2-h4 会让这类文章全部漏掉
+    var heads = post.querySelectorAll('h1, h2, h3, h4');
+    if (heads.length < 2) return; // 标题太少不出目录
+
+    // 生成目录列表
+    var html = '<div class="post-toc-title">目录</div><ul class="post-toc-list">';
+    heads.forEach(function (h, i) {
+      if (!h.id) h.id = 'toc-head-' + i;
+      var level = h.tagName.toLowerCase(); // h2 / h3 / h4
+      html += '<li class="post-toc-item post-toc-' + level + '" data-target="' + h.id + '">' +
+              '<a href="#' + h.id + '">' + (h.textContent || '').trim() + '</a></li>';
+    });
+    html += '</ul>';
+    toc.innerHTML = html;
+    toc.style.display = ''; // 移除模板里的 display:none
+
+    // 点击平滑滚动（偏移给吸顶导航留空间）
+    toc.addEventListener('click', function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var target = document.getElementById(a.getAttribute('href').slice(1));
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      history.replaceState(null, '', a.getAttribute('href'));
+    });
+
+    // 滚动高亮当前节（scroll-spy）
+    var items = toc.querySelectorAll('.post-toc-item');
+    var rafPending = null;
+    function spy() {
+      rafPending = null;
+      var currentId = null;
+      var line = window.scrollY + 120;
+      heads.forEach(function (h) {
+        if (h.getBoundingClientRect().top + window.scrollY <= line) currentId = h.id;
+      });
+      items.forEach(function (li) {
+        li.classList.toggle('active', li.getAttribute('data-target') === currentId);
+      });
+    }
+    window.addEventListener('scroll', function () {
+      if (rafPending) return;
+      rafPending = requestAnimationFrame(spy);
+    }, { passive: true });
+    spy();
+  }
+
   /* ---------- Init ---------- */
   function init() {
     bindThemeToggle();
@@ -478,6 +611,8 @@
     bindExternalLinks();
     bindAnchorScroll();
     bindMemoDates();
+    bindImageLightbox();
+    bindToc();
   }
 
   if (document.readyState === 'loading') {
